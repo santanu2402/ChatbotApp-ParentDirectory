@@ -1,0 +1,4464 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    - how are you
+    - what's up
+    - how do you do
+    - hi there
+    - greetings
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+    - farewell
+    - take care
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - absolutely
+    - sure
+    - certainly
+    - okay
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+    - I disagree
+    - I refuse
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+    - fantastic
+    - superb
+    - excellent
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+    - terrible
+    - awful
+    - miserable
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+    - prove you're a bot
+    - prove you're human
+
+- intent: introduce_bot
+  examples: |
+    - Tell me about CinePulse Bot
+    - Who are you?
+    - Introduce CinePulse Bot
+    - What's your story?
+    - Can you tell me about yourself?
+    - Provide an introduction
+    - Who is behind CinePulse Bot?
+    - What can you tell me about the creators of CinePulse Bot?
+    - Share your origin story
+    - Inform me about your developers
+    - Tell me who developed you
+    - Who brought you to life?
+    - What's the background of CinePulse Bot?
+    - Explain CinePulse Bot to me
+
+- intent: general_question
+  examples: |
+    - how are you doing
+    - do you have feelings
+    - do you love me
+    - do you know apple siri
+    - do you know google assistant
+    - what's your favorite color
+    - tell me a joke
+    - can you recommend a movie
+
+- intent: user_query
+  examples: |
+    - How are you doing?
+    - What's your favorite color?
+    - Tell me a joke.
+    - Can you recommend a movie?
+
+- intent: thanks
+  examples: |
+    - Thank you
+    - Thanks
+    - Appreciate it
+    - Thanks a lot
+    - Thank you very much
+    - Thanks for your help
+    - Thanks for the information
+
+- intent: is_bot
+  examples: |
+    - Are you a bot?
+    - Is this a chatbot?
+    - Is there a human behind this?
+    - Are you powered by AI?
+
+- intent: ask_for_help
+  examples: |
+    - Can you help me?
+    - I need assistance.
+    - Help me with something.
+    - Can you guide me?
+    - I have a question.
+
+- intent: unknown
+  examples: |
+    - I don't know
+    - Not sure
+    - I have no idea
+    - What's that?
+
+- intent: bot_capabilities
+  examples: |
+    - What can you do?
+    - Tell me your capabilities.
+    - What are your features?
+    - Explain what you can help with.
+    - In what areas are you specialized?
+    - What is your expertise?
+    - What are you good at?
+    - Can you tell me your strengths?
+    - What kind of tasks can you perform?
+    - List your capabilities.
+    - What makes you unique?
+    - How can you assist me?
+    - Are there specific areas you specialize in?
+    - Tell me about your skills.
+
+- intent: bot_name
+  examples: |
+    - What is your name?
+    - Tell me your name
+    - May I know your name?
+    - How should I address you?
+    - Could you share your name?
+    - Who goes by the name Cinepulse Bot?
+    - Who goes by the name Cinepulse?
+    - Do you have a name?
+    - What do people call you?
+    - Any idea what you're called?
+    - What's the name you respond to?
+    - Inform me about your name
+    - Your official name, please?
+    - Identify yourself by name
+    - Give me your name
+    - Share your name with me
+    - Who am I talking to?
+    - Introduce yourself
+    - Mention your name
+    - What name do you use?
+    - Are you known as Cinepulse Bot?
+    - Are you known as Cinepulse?
+
+- intent: bot_inventor
+  examples: |
+    - Who's the genius behind your design?
+    - Any idea who programmed you?
+    - Tell me about the creator of this bot.
+    - Who's responsible for your development?
+    - Mention the person who coded you.
+    - Who is the mind behind your creation?
+    - I'm curious, who is your developer?
+    - Introduce me to the brains behind you.
+    - Enlighten me about the one who made you.
+    - What's the story behind your creation?
+    - Can you share the background of your development?
+    - Who is the architect of your existence?
+    - Let me know about your development team.
+    - Who deserves credit for your creation?
+    - Inform me about the team that built you.
+    - What talented individuals crafted you?
+    - Can you provide details about your developers?
+    - I want to know more about your creators.
+    - Any info on the brilliant minds who made you?
+    - Share some insights about those who developed you.
+
+- intent: negative_feedback
+  examples: |
+    - You're the worst chatbot
+    - Cinepulse app is awful
+    - Terrible experience with your app
+    - I can't stand this chatbot
+    - Your developers need to do better
+    - Cinepulse is a disaster
+    - App is a complete failure
+    - Developers are incompetent
+    - I regret using Cinepulse
+    - Your chatbot is useless
+    - Cinepulse app is a letdown
+    - Developers should be ashamed
+    - I despise your chatbot
+    - Cinepulse is a joke
+    - App is a total disappointment
+    - Developers are clueless
+    - This chatbot is a nightmare
+    - Cinepulse app is garbage
+    - Developers are a disappointment
+    - I'm frustrated with your chatbot
+
+- intent: positive_feedback
+  examples: |
+    - Nice app
+    - Good chatbot
+    - I love Cinepulse
+    - Great job developers
+    - Awesome app
+    - Your chatbot is amazing
+    - Well done
+    - I appreciate Cinepulse
+    - Your developers are awesome
+    - Fantastic job
+    - Cinepulse is excellent
+    - Good work team
+    - Your app is fantastic
+    - I enjoy using Cinepulse
+    - Well-designed chatbot
+    - Kudos to the developers
+    - Cinepulse is superb
+    - Your chatbot is impressive
+    - I like your app
+- intent: movie_title
+  examples: |
+    - Ironman Returns
+    - The Matrix
+    - Inception
+    - Gadar 2
+    - Jawan
+    - Avengers: Legacy
+    - The Dark Phoenix Rises
+    - Interstellar Odyssey
+    - Mission: Quantum Protocol
+    - Beyond the Stars
+    - The Lost Kingdom of Atlantis
+    - Edge of Tomorrow
+    - Blade Runner: Resurgence
+    - Starlight Chronicles
+    - The Time Traveler's Dilemma
+    - Ghost in the Shell: Redux
+    - Elysium Ascension
+    - Jurassic Reckoning
+    - The Forgotten Galaxy
+    - The Quantum Cipher
+    - The Midnight Serenade
+    - Cipher of Shadows
+    - Whispers in the Wind
+    - Quantum Echoes
+    - Velvet Enigma
+    - Serendipity's Embrace
+    - Nebula Reverie
+    - Shattered Reflections
+    - Astral Mirage
+    - Chronos Conundrum
+    - Crimson Nebula
+    - Labyrinth of Illusions
+    - Zenith of Zephyr
+    - Enchanted Alchemy
+    - Celestial Sonata
+    - The Fifth Element
+    - Project 17
+    - Zero Gravity
+    - Sector 9
+    - Infinity War
+    - Code 42
+    - Midnight 13
+    - Phoenix Rising
+    - 3:33 AM
+    - Twelve Dimensions
+    - Vortex
+    - Catalyst
+    - Ephemeral
+    - Nebula
+    - Cipher
+    - Odyssey
+    - Mirage
+    - Quasar
+    - Zenith
+    - Equinox
+    - the hidden journey
+    - quantum whispers
+    - kaleidoscope dreams
+    - midnight labyrinth
+    - stardust symphony
+    - enigma cipher
+    - celestial ballet
+    - solaris echoes
+    - crimson serenity
+    - ethereal voyage
+    - solar eclipse
+    - pixelated destiny
+    - lunar reverie
+    - astral cadence
+    - clandestine mirage
+    - nebula whispers
+    - oblivion saga
+    - nocturnal serenade
+    - metropolis whispers
+    - fractured dreams
+    - luminous echoes
+    - ethereal twilight
+    - sonata of shadows
+    - ephemeral odyssey
+    - serendipity chronicles
+    - lost
+    - Lost
+    - Sholay
+    - Dilwale Dulhania Le Jayenge
+    - Kabhi Khushi Kabhie Gham
+    - Lagaan
+    - Gully Boy
+    - Queen
+    - Dangal
+    - 3 Idiots
+    - Baahubali: The Beginning
+    - Baahubali: The Conclusion
+    - Padmaavat
+    - Andhadhun
+    - Article 15
+    - Uri: The Surgical Strike
+    - Raazi
+    - Drishyam
+    - PK
+    - Bajrangi Bhaijaan
+    - Mughal-e-Azam
+    - Padosan
+    - Mother India
+    - Koi Mil Gaya
+    - Kuch Kuch Hota Hai
+    - Rang De Basanti
+    - Hera Pheri
+    - Dhamaal
+    - Chak De! India
+    - Munna Bhai M.B.B.S.
+    - Black
+    - Barfi!
+    - Gangs of Wasseypur
+    - Jo Jeeta Wohi Sikandar
+    - Dabangg
+    - Chennai Express
+    - Kal Ho Naa Ho
+    - Hum Aapke Hain Koun
+    - Kal Ho Naa Ho
+    - Kaho Naa... Pyaar Hai
+    - Dil Chahta Hai
+    - Dil To Pagal Hai
+    - Mohabbatein
+    - Om Shanti Om
+    - Kabir Singh
+    - Good Newwz
+    - Article 15
+    - Badhaai Ho
+    - Super 30
+    - Chhichhore
+    - Stree
+    - Uri: The Surgical Strike
+    - Kesari
+    - Ludo
+    - Gunjan Saxena: The Kargil Girl
+    - Shubh Mangal Zyada Saavdhan
+    - Thappad
+    - Gulabo Sitabo
+    - Ludo
+    - Sardar Ka Grandson
+    - Sherni
+    - Roohi
+    - Titanic
+    - The Notebook
+    - A Walk to Remember
+    - Gone with the Wind
+    - The Fault in Our Stars
+    - Romeo and Juliet
+    - Pride and Prejudice
+    - Casablanca
+    - The English Patient
+    - La La Land
+    - Moulin Rouge!
+    - The Shape of Water
+    - The Bridges of Madison County
+    - Before Sunrise
+    - Before Sunset
+    - Before Midnight
+    - The Lake House
+    - Dear John
+    - Love Actually
+    - 500 Days of Summer
+    - The Time Traveler's Wife
+    - The Vow
+    - Dirty Dancing
+    - Ghost
+    - Pretty Woman
+    - Notting Hill
+    - Sleepless in Seattle
+    - When Harry Met Sally
+    - Annie Hall
+    - Silver Linings Playbook
+    - Jerry Maguire
+    - Eternal Sunshine of the Spotless Mind
+    - Amelie
+    - Her
+    - Blue Is the Warmest Color
+    - The Notebook
+    - Brokeback Mountain
+    - 50 First Dates
+    - About Time
+    - The Fault in Our Stars
+    - If Only
+    - Me Before You
+    - Stardust
+    - Ever After
+    - The Princess Bride
+    - Serendipity
+    - The Time Traveler's Wife
+    - Pride and Prejudice
+    - Notting Hill
+    - 10 Things I Hate About You
+    - Love, Rosie
+    - PS I Love You
+    - Serendipity
+    - The Proposal
+    - The Wedding Planner
+    - Something's Gotta Give
+    - The Age of Adaline
+    - Before We Go
+    - Begin Again
+    - Midnight in Paris
+    - About Time
+    - Crazy, Stupid, Love
+    - The Greatest Showman
+    - La La Land
+    - Moulin Rouge!
+    - Across the Universe
+    - Bohemian Rhapsody
+    - A Star is Born
+    - Rocketman
+    - Walk the Line
+    - Amadeus
+    - Ray
+    - Whiplash
+    - La La Land
+    - The Sound of Music
+    - Chicago
+    - Les Misérables
+    - Mamma Mia!
+    - A Star is Born
+    - Grease
+    - Gangs of Wasseypur
+    - Jo Jeeta Wohi Sikandar
+    - Andaz Apna Apna
+    - Kuch Kuch Hota Hai
+    - Dil Chahta Hai
+    - Devdas
+    - Kal Ho Naa Ho
+    - Kabhi Alvida Naa Kehna
+    - Kabhi Khushi Kabhie Gham
+    - Rockstar
+    - Jabariya Jodi
+    - Dhadak
+    - Shubh Mangal Saavdhan
+    - Badhaai Ho
+    - Stree
+    - Bareilly Ki Barfi
+    - Newton
+    - Tumbbad
+    - Piku
+    - Haider
+    - Raanjhanaa
+    - Padosan
+    - Amar Akbar Anthony
+    - Bombay
+    - Mother India
+    - Rang De Basanti
+    - Munna Bhai M.B.B.S.
+    - Bajrangi Bhaijaan
+    - Hera Pheri
+    - Ludo
+    - Gunjan Saxena: The Kargil Girl
+    - Sardar Ka Grandson
+    - Sherni
+    - Roohi
+    - Haathi Mere Saathi
+    - Amar Prem
+    - Amar Akbar Anthony
+    - Kati Patang
+    - Maine Pyar Kiya
+    - Mr. India
+    - Mera Naam Joker
+    - Amar Prem
+    - Umrao Jaan
+    - Sholay
+    - Pakeezah
+    - Guide
+    - Chupke Chupke
+    - Chalti Ka Naam Gaadi
+    - Anand
+    - Dilwale Dulhania Le Jayenge
+    - Mughal-e-Azam
+    - Awaara
+    - Mother India
+    - Do Bigha Zamin
+    - Hum Aapke Hain Koun
+    - Mother India
+    - Umrao Jaan
+    - Bobby
+    - Disco Dancer
+    - Mera Gaon Mera Desh
+    - Amar Prem
+    - Sharmeelee
+    - Aradhana
+    - Teesri Manzil
+    - Bawarchi
+    - Anupama
+    - Amar Prem
+    - Baazigar
+    - Hum
+    - Hum Dil De Chuke Sanam
+    - Pyaasa
+    - Dil Se
+    - Lagaan
+    - Kabhi Khushi Kabhie Gham
+    - Guru
+    - Black
+    - My Name is Khan
+    - Dil To Pagal Hai
+    - Hum Aapke Hain Koun
+    - Black Friday
+    - Dil Dhadakne Do
+    - Lootera
+    - Barfi!
+    - October
+    - Kedarnath
+    - Article 15
+    - Piku
+    - Detective Byomkesh Bakshy!
+    - Sonchiriya
+    - Masaan
+    - Kaala
+    - Thithi
+    - Court
+    - The Lunchbox
+    - English Vinglish
+    - Ship of Theseus
+    - Talaash
+    - Udaan
+    - Lunchbox
+    - Super Deluxe
+    - Peranbu
+    - Vada Chennai
+    - Andhadhun
+    - Kaithi
+    - Jersey
+    - Harishchandrachi Factory
+    - Secret Superstar
+    - Mahanati
+    - Article 15
+    - Kumbalangi Nights
+    - Joseph
+    - Trance
+    - Helen
+    - The Great Indian Kitchen
+    - Jallikattu
+    - Kappela
+    - Kuruthi
+    - Drishyam 2
+    - Sherni
+    - Radhe: Your Most Wanted Bhai
+    - Mumbai Saga
+    - Roohi
+    - Bhool Bhulaiyaa 2
+    - Maidaan
+    - RRR
+    - Laal Singh Chaddha
+    - Brahmastra
+    - Bhuj: The Pride of India
+    - Gangubai Kathiawadi
+    - Takht
+    - Shamshera
+    - Rocky Aur Rani Ki Prem Kahani
+    - Heropanti 2
+    - Anek
+    - Bhool Bhulaiyaa 2
+    - Cirkus
+    - Bachchan Pandey
+    - Ek Villain Returns
+    - Ganapath
+    - Thank God
+    - Animal
+    - Bhool Bhulaiyaa 2
+    - Circus
+    - Pathan
+    - Prithviraj
+    - Ram Setu
+    - Anek
+    - Koochie Koochie Hota Hai
+    - Don 3
+    - Kick 2
+    - Dhoom 4
+    - Farzi
+    - Andaz Apna Apna 2
+    - Hungama 2
+    - Bhool Bhulaiyaa 2
+    - Dostana 2
+    - Bajirao Mastani
+    - Manmarziyaan
+    - Dream Girl
+    - Badhaai Ho
+    - Piku
+    - Bareilly Ki Barfi
+    - Shubh Mangal Saavdhan
+    - Newton
+    - Tumbbad
+    - Stree
+    - Ludo
+    - Sherni
+    - Roohi
+    - Sardar Ka Grandson
+    - Gunjan Saxena: The Kargil Girl
+    - Uri: The Surgical Strike
+    - Kesari
+    - Thappad
+    - Article 15
+    - Dangal
+    - Chhichhore
+    - Super 30
+    - Raazi
+    - Badla
+    - Article 15
+    - Kabir Singh
+    - Gully Boy
+    - Bala
+    - Ludo
+    - Dil Bechara
+    - Gulabo Sitabo
+    - Shakuntala Devi
+    - Angrezi Medium
+    - Panga
+    - Gunjan Saxena: The Kargil Girl
+    - Laxmii
+    - Sadak 2
+    - Khuda Haafiz
+    - Dil Bechara
+    - Malang
+    - Thappad
+    - Tanhaji: The Unsung Warrior
+    - Love Aaj Kal
+    - Street Dancer 3D
+    - Baaghi 3
+    - Shubh Mangal Zyada Saavdhan
+    - Angrezi Medium
+    - Gulabo
+
+- intent: cast_name
+  examples: |
+    - Robert Downey Jr.
+    - Keanu Reeves
+    - Leonardo DiCaprio
+    - Sunny Deol
+    - Rakul Preet Singh
+    - Scarlett Johansson
+    - Sophie Turner
+    - Matthew McConaughey
+    - Tom Cruise
+    - Chris Pratt
+    - Charlize Theron
+    - Emily Blunt
+    - Harrison Ford
+    - Mark Hamill
+    - Natalie Portman
+    - Scarlett Johansson
+    - Chris Evans
+    - Anne Hathaway
+    - Tom Hardy
+    - Johnny Depp
+    - Dwayne Johnson
+    - Gal Gadot
+    - Emma Stone
+    - Benedict Cumberbatch
+    - Vin Diesel
+    - Samuel L. Jackson
+    - Jennifer Lawrence
+    - Will Smith
+    - Chris Hemsworth
+    - Angelina Jolie
+    - Brad Pitt
+    - Ryan Reynolds
+    - Jason Momoa
+    - Hugh Jackman
+    - Margot Robbie
+    - Sandra Bullock
+    - Jennifer Aniston
+    - Julia Roberts
+    - Liam Neeson
+    - Charlize Theron
+    - Daniel Radcliffe
+    - Emma Watson
+    - Rupert Grint
+    - Morgan Freeman
+    - Kate Winslet
+    - Adam Sandler
+    - Nicole Kidman
+    - Mila Kunis
+    - Jake Gyllenhaal
+    - Cameron Diaz
+    - Tom Hanks
+    - Nicole Kidman
+    - Hugh Grant
+    - Denzel Washington
+    - Matthew Perry
+    - Courteney Cox
+    - Jennifer Lopez
+    - Jake Johnson
+    - Brie Larson
+    - Meryl Streep
+    - Cate Blanchett
+    - Eddie Murphy
+    - John Krasinski
+    - Emily Blunt
+    - Chris Pine
+    - Hugh Laurie
+    - Jim Carrey
+    - Scarlett Johansson
+    - Michael B. Jordan
+    - Daniel Craig
+    - Chris Rock
+    - Anthony Mackie
+    - Julia Louis-Dreyfus
+    - Will Ferrell
+    - Gal Gadot
+    - Kristen Wiig
+    - Daniel Kaluuya
+    - Sacha Baron Cohen
+    - Margot Robbie
+    - Idris Elba
+    - Henry Cavill
+    - Millie Bobby Brown
+    - Saoirse Ronan
+    - Florence Pugh
+    - Adam Driver
+    - Zendaya
+    - Timothée Chalamet
+    - Anya Taylor-Joy
+    - Robert Pattinson
+    - Elizabeth Olsen
+    - Anthony Hopkins
+    - Viola Davis
+    - Lin-Manuel Miranda
+    - Amy Adams
+    - Joaquin Phoenix
+    - Mads Mikkelsen
+    - Carey Mulligan
+    - Andrew Garfield
+    - Rachel McAdams
+    - Tessa Thompson
+    - Chris Evans
+    - Emma Stone
+    - Ryan Gosling
+    - Natalie Portman
+    - Mahershala Ali
+    - Tilda Swinton
+    - Chadwick Boseman
+    - Charlize Theron
+    - Nicole Kidman
+    - Zendaya
+    - Timothée Chalamet
+    - Anya Taylor-Joy
+    - Robert Pattinson
+    - Elizabeth Olsen
+    - Anthony Hopkins
+    - Viola Davis
+    - Lin-Manuel Miranda
+    - Amy Adams
+    - Joaquin Phoenix
+    - Mads Mikkelsen
+    - Carey Mulligan
+    - Andrew Garfield
+    - Rachel McAdams
+    - Tessa Thompson
+    - Chris Evans
+    - Emma Stone
+    - Ryan Gosling
+    - Natalie Portman
+    - Mahershala Ali
+    - Tilda Swinton
+    - Chadwick Boseman
+    - Robert
+    - Keanu
+    - Leonardo
+    - Sunny
+    - Rakul
+    - Scarlett
+    - Sophie
+    - Matthew
+    - Tom
+    - Chris
+    - Charlize
+    - Emily
+    - Harrison
+    - Mark
+    - Natalie
+    - Scarlett
+    - Anne
+    - Tom
+    - Johnny
+    - Dwayne
+    - Gal
+    - Emma
+    - Benedict
+    - Vin
+    - Samuel
+    - Jennifer
+    - Will
+    - Chris
+    - Angelina
+    - Brad
+    - Ryan
+    - Jason
+    - Hugh
+    - Raj
+    - Aishwarya
+    - Shahrukh
+    - Deepika
+    - Ranveer
+    - Priyanka
+    - Salman
+    - Kareena
+    - Akshay
+    - Alia
+    - Aamir
+    - Katrina
+    - Hrithik
+    - Anushka
+    - Varun
+    - Kangana
+    - Sidharth
+    - Jacqueline
+    - Ayushmann
+    - Kriti
+    - Vicky
+    - Shraddha
+    - Rajkummar
+    - Taapsee
+    - Sushant
+    - Kiara
+    - Ranbir
+    - Disha
+    - John
+    - Vidya
+    - Kartik
+    - Sonam
+    - Tiger
+    - Parineeti
+    - Shahid
+    - Janhvi
+    - Saif
+    - Sara
+    - Arjun
+    - Ananya
+    - Akshaye
+    - Yami
+    - Ayushman
+    - Bhumi
+    - Varun
+    - Radhika
+    - Randeep
+    - Ishaan
+    - Rajkumar
+    - Tara
+    - Aditya
+    - Mouni
+    - Siddhant
+    - Pooja
+    - Rajkummar
+    - Rakul
+    - Shakti
+    - Rhea
+    - Rajat
+    - Kajal
+    - Aayushman
+    - Neha
+    - Shiva
+    - Amrita
+    - Vijay
+    - Lisa
+    - Nikhil
+    - Sanya
+    - Siddhartha
+    - Sonakshi
+    - Aditya
+    - Tamannaah
+    - Irfan
+    - Dia
+    - Sushmita
+    - Sanjay
+    - Shilpa
+    - Rahul
+    - Swara
+    - Kunal
+    - Padmini
+    - Siddharth
+    - Preeti
+    - Prabhas
+    - Tabu
+    - Arjun Kapoor
+    - Shraddha Kapoor
+    - Ranbir Kapoor
+    - Alia Bhatt
+    - Varun Dhawan
+    - Deepika Padukone
+    - Ranveer Singh
+    - Kareena Kapoor
+    - Shahrukh Khan
+    - Aishwarya Rai
+    - Salman Khan
+    - Priyanka Chopra
+    - Hrithik Roshan
+    - Anushka Sharma
+    - Akshay Kumar
+    - Kriti Sanon
+    - Vicky Kaushal
+    - Sonam Kapoor
+    - Tiger Shroff
+    - Jacqueline Fernandez
+    - Ayushmann Khurrana
+    - Kiara Advani
+    - Siddharth Malhotra
+    - Disha Patani
+    - John Abraham
+    - Vidya Balan
+    - Kartik Aaryan
+    - Sonakshi Sinha
+    - Rajkummar Rao
+    - Taapsee Pannu
+    - Sushant Singh Rajput
+    - Kiara Advani
+    - Rajkummar Rao
+    - Tara Sutaria
+    - Aditya Roy Kapur
+    - Mouni Roy
+    - Siddhant Chaturvedi
+    - Pooja Hegde
+    - Rajkummar Rao
+    - Rakul Preet Singh
+    - Shakti Kapoor
+    - Rhea Chakraborty
+    - Rajat Kapoor
+    - Kajal Aggarwal
+    - Aayushman Khurana
+    - Neha Sharma
+    - Shiva Rajkumar
+    - Amrita Rao
+    - Vijay Devarakonda
+    - Lisa Haydon
+    - Nikhil Siddhartha
+    - Sanya Malhotra
+    - Siddhartha Roy Kapur
+    - Sonakshi Sinha
+    - Aditya Roy Kapur
+    - Tamannaah Bhatia
+    - Irfan Khan
+    - Dia Mirza
+    - Sushmita Sen
+    - Sanjay Dutt
+    - Shilpa Shetty
+    - Rahul Khanna
+    - Swara Bhaskar
+    - Kunal Khemu
+    - Padmini Kolhapure
+    - Siddharth Roy Kapur
+    - Preeti Zinta
+    - Prabhas Raju Uppalapati
+    - Tabu
+    - Vivek Oberoi
+    - Neena Gupta
+    - Arjun Rampal
+    - Hema Malini
+    - Rajeev Khandelwal
+    - Shefali Shah
+    - Tiger Shroff
+    - Urvashi Rautela
+    - Sonu Sood
+    - Genelia D'Souza
+    - Prateik Babbar
+    - Malaika Arora
+    - Jimmy Sheirgill
+    - Pankaj Tripathi
+    - Nora Fatehi
+    - Riteish Deshmukh
+    - Sana Khan
+    - Sanjay Kapoor
+    - Manisha Koirala
+    - Alok Nath
+    - Asin Thottumkal
+    - Rajpal Yadav
+    - Neha Dhupia
+    - Sunil Shetty
+    - Twinkle Khanna
+    - Rana Daggubati
+    - Koena Mitra
+    - Shreyas Talpade
+    - Hazel Keech
+    - Vidyut Jammwal
+    - Surveen Chawla
+    - Abhishek Bachchan
+    - Udita Goswami
+    - Akshaye Khanna
+    - Celina Jaitly
+    - Ayushman Khurana
+    - Esha Gupta
+    - Dharmendra Deol
+    - Daisy Shah
+    - Randeep Hooda
+    - Kalki Koechlin
+    - Arshad Warsi
+    - Amrita Rao
+    - Boman Irani
+    - Jacqueline Fernandez
+    - Naseeruddin Shah
+    - Raima Sen
+    - Abhay Deol
+    - Adah Sharma
+    - Anil Kapoor
+    - Madhuri Dixit
+    - Chunky Pandey
+    - Jiah Khan
+    - Sharman Joshi
+    - Nargis Fakhri
+    - Imran Khan
+    - Aditi Rao Hydari
+    - Fardeen Khan
+    - Soha Ali Khan
+    - Bobby Deol
+    - Zoya Afroz
+    - Kajol Mukherjee
+    - Asrani
+    - Rishi Kapoor
+    - Hina Khan
+    - Jackie Shroff
+    - Esha Deol
+    - Ameesha Patel
+    - Mahima Chaudhary
+    - Mithun Chakraborty
+    - Sheeba Chaddha
+    - Nana Patekar
+    - Twinkle Khanna
+    - Shahid Kapoor
+    - Javed Jaffrey
+    - Kriti Kharbanda
+    - Govinda Ahuja
+    - Diya Mirza
+    - Salman Khan
+    - Amrapali Dubey
+    - Anupam Kher
+    - Mahie Gill
+    - Jeetendra Kapoor
+    - Zarine Khan
+    - Paresh Rawal
+    - Koel Mallick
+    - Dharmendra Deol
+    - Kajal Aggarwal
+    - Jimmy Shergill
+    - Ayesha Takia
+    - Rajendra Prasad
+    - Sakshi Chaudhary
+    - Sanjay Dutt
+    - Prachi Desai
+    - Vinod Khanna
+    - Zareen Khan
+    - Prem Chopra
+    - Diana Penty
+    - Abhishek Bachchan
+    - Kangana Ranaut
+    - John Abraham
+    - Ileana D'Cruz
+    - Varun Dhawan
+    - Nushrat Bharucha
+    - Raj Babbar
+    - Mithila Palkar
+    - Manoj Bajpayee
+    - Mahira Khan
+    - Jackie Shroff
+    - Shradha Kapoor
+    - Naseeruddin Shah
+    - Aafreen Siddiqui
+    - Vivek Oberoi
+    - Geetanjali Thapa
+    - Aditya Roy Kapur
+    - Nandana Sen
+    - Bobby Deol
+    - Sridevi Kapoor
+    - Aditya Chopra
+    - Celina Jaitley
+    - Aftab Shivdasani
+    - Sagarika Ghatge
+    - Shahrukh Khan
+    - Priya Ahuja
+    - Randeep Hooda
+    - Sonam Kapoor
+    - Sunny Deol
+    - Pooja Bhatt
+    - Shakti Kapoor
+    - Rhea Chakraborty
+    - Shahid Kapoor
+    - Sania Mirza
+    - Rajkumar Rao
+    - Neeti Mohan
+
+- intent: genre
+  examples: |
+    - Action
+    - Adventure
+    - Animation
+    - Comedy
+    - Crime
+    - Documentary
+    - Drama
+    - Family
+    - Fantasy
+    - History
+    - Horror
+    - Music
+    - Mystery
+    - Romance
+    - Science Fiction
+    - TV Movie
+    - Thriller
+    - War
+    - Western
+
+- intent: get_director_with_movie_title
+  examples: |
+    - Who was the director of the movie Jawan?
+    - Please inform me about the director of Pathaan.
+    - I'm curious, who directed Inception?
+    - Can you share with me the name of the director for The Matrix?
+    - Do you know the filmmaker behind Jawan?
+    - Share details about the director of the film Pathaan.
+    - I'd like to know the director of Inception, please.
+    - Could you tell me the name of the director for The Matrix?
+    - Provide information on Jawan's director.
+    - I'm interested in knowing the director of Pathaan.
+    - Tell me about the director of Inception.
+    - Share the director's name for The Matrix.
+    - Who was at the helm of Jawan as the director?
+    - Inform me about the director of the movie Pathaan.
+    - I'm curious, who directed the film Inception?
+    - What's the name of the director of The Matrix?
+    - Who directed the movie "Eternal Quest"?
+    - Can you tell me the director of "Mystic Shadows"?
+    - I'm curious, who directed "Whispering Winds"?
+    - Please share the name of the director for "Starlight Secrets."
+    - Do you know the filmmaker behind "Enchanted Kingdom"?
+    - Share details about the director of the film "Cryptic Chronicles."
+    - I'd like to know the director of "Moonlit Sonata," please.
+    - Could you tell me the name of the director for "Beyond the Horizon"?
+    - Provide information on the director of "Silent Serenade."
+    - I'm interested in knowing the director of "Shifting Realities."
+    - Tell me about the director of "Celestial Harmony."
+    - Share the director's name for "Echoes of Eternity."
+    - Who was at the helm of "Whispers in the Dark" as the director?
+    - Inform me about the director of the movie "Stellar Odyssey."
+    - I'm curious, who directed the film "Lunar Labyrinth"?
+    - What's the name of the director of "Galactic Enigma"?
+    - Who directed the movie Starfall 9?
+    - Can you tell me the director of Project 13?
+    - I'm curious, who directed Infinite Horizon 42?
+    - Please share the name of the director for Sector 7.
+    - Do you know the filmmaker behind Code Zero: Dawn?
+    - Share details about the director of the film Chronicles of 21.
+    - I'd like to know the director of Quantum Realm 33, please.
+    - Could you tell me the name of the director for Zero Gravity 88?
+    - provide information on the director of "cybernetic evolution 17."
+    - i'm interested in knowing the director of "apex 5."
+    - tell me about the director of "dimension x: 24."
+    - share the director's name for "twilight protocol 12."
+    - who was at the helm of "nebula 6" as the director?
+    - inform me about the director of the movie "lunar eclipsia 77."
+    - i'm curious, who directed the film "starlight 55"?
+    - what's the name of the director of "quantum shift 63"?
+
+- intent: get_director_without_movie_title
+  examples: |
+    - Who directed that movie?
+    - Can you tell me the director?
+    - Director please.
+    - Who is the director of this film?
+    - Movie directed by whom?
+    - Tell me the director.
+    - Directed by?
+    - Director of this movie?
+    - Who directed it?
+    - I need the director's name.
+    - Can you provide the director?
+    - Tell me about the director.
+    - Directed by whom?
+    - I want to know the director.
+    - Who is the director of the movie?
+    - Who directed that film?
+    - Inform me about the director, please.
+    - Could you share the director's name?
+    - Director, if you may?
+    - Any idea who directed this movie?
+    - Provide information on the director.
+    - Please enlighten me on the director.
+    - I'm curious about the director of this film.
+    - Any details on the director?
+    - Could you inform me about the director, please?
+    - Share the name of the director.
+    - Who's at the helm of this movie?
+    - Directed by whom?
+    - I'm interested in the director of this film.
+    - Do you have details on the director?
+    - Share the director's name, please.
+    - Any insights on who directed it?
+    - Can you provide the director's name?
+    - Tell me about the director behind this movie.
+    - Directed by whom, exactly?
+    - Enlighten me about the director.
+    - Any information on the director?
+    - Who's the director of this movie?
+    - Provide the director's name, if you can.
+    - I'm curious, who directed it?
+    - Tell me about the director of this film.
+    - Directed by whom, do you know?
+    - Who's responsible for directing this movie?
+    - Inform me about the director, please.
+    - Can you provide details on the director?
+
+
+- intent: get_overview_with_movie_title
+  examples: |
+    - What is the overview of the movie Jawan?
+    - Can you provide an overview of Pathaan?
+    - I'm curious, what is the overview of Inception?
+    - Could you share with me the overview of The Matrix?
+    - Do you know the plot behind Jawan?
+    - Share details about the overview of the film Pathaan.
+    - I'd like to know the overview of Inception, please.
+    - Can you give me an overview of The Matrix?
+    - Provide information on Jawan's plot overview.
+    - I'm interested in knowing the overview of Pathaan.
+    - Tell me about the overview of Inception.
+    - Share the overview of The Matrix.
+    - What was the directorial overview of Jawan?
+    - Inform me about the overview of the movie Pathaan.
+    - I'm curious, what is the overview of the film Inception?
+    - Can you provide the overview of The Matrix?
+    - What's the overview of the movie "Eternal Quest"?
+    - Can you tell me the overview of "Mystic Shadows"?
+    - I'm curious, what is the overview of "Whispering Winds"?
+    - Please share the overview of "Starlight Secrets."
+    - Do you know the overview behind "Enchanted Kingdom"?
+    - Share details about the overview of the film "Cryptic Chronicles."
+    - I'd like to know the overview of "Moonlit Sonata," please.
+    - Could you tell me the overview of "Beyond the Horizon"?
+    - Provide information on the overview of "Silent Serenade."
+    - I'm interested in knowing the overview of "Shifting Realities."
+    - Tell me about the overview of "Celestial Harmony."
+    - Share the overview for "Echoes of Eternity."
+    - What was the directorial overview of "Whispers in the Dark"?
+    - Inform me about the overview of the movie "Stellar Odyssey."
+    - I'm curious, what is the overview of the film "Lunar Labyrinth"?
+    - Can you provide the overview of "Galactic Enigma"?
+    - What's the overview of the movie Starfall 9?
+    - Can you tell me the overview of Project 13?
+    - I'm curious, what is the overview of Infinite Horizon 42?
+    - Please share the overview of Sector 7.
+    - Do you know the overview behind Code Zero: Dawn?
+    - Share details about the overview of the film Chronicles of 21.
+    - I'd like to know the overview of Quantum Realm 33, please.
+    - Could you tell me the overview of Zero Gravity 88?
+    - Provide information on the overview of "Cybernetic Evolution 17."
+    - I'm interested in knowing the overview of "Apex 5."
+    - Tell me about the overview of "Dimension X: 24."
+    - Share the overview for "Twilight Protocol 12."
+    - What was the directorial overview of "Nebula 6"?
+    - Inform me about the overview of the movie "Lunar Eclipsia 77."
+    - I'm curious, what is the overview of the film "Starlight 55"?
+    - Can you provide the overview of "Quantum Shift 63"?
+
+- intent: get_overview_without_movie_title
+  examples: |
+    - What's the overview of that film?
+    - Can you provide an overview, please?
+    - Overview, if you may?
+    - What's the synopsis of this film?
+    - Any idea about the plot?
+    - Tell me the overview.
+    - Overview of this movie?
+    - What's the film's overview?
+    - Can you tell me the overview?
+    - Overview, if you have it.
+    - I need the overview, please.
+    - Provide the overview.
+    - Can you give me an overview?
+    - Overview, please.
+    - Tell me about the film's overview.
+    - Overview details?
+    - Share details about the overview.
+    - What's the plot summary?
+    - Any insights into the overview?
+    - Could you inform me about the overview?
+    - What's the overview of this movie?
+    - Enlighten me about the overview.
+    - Any information on the overview?
+    - Overview details, please.
+    - I'm curious, what's the overview?
+    - Tell me about the movie's overview.
+    - Overview, if you know it.
+    - I'm interested in the overview.
+    - Overview, please.
+    - What's the overview, do you know?
+    - Any insights on the overview?
+    - Who's responsible for the overview?
+    - Inform me about the overview.
+    - Can you provide details on the overview?
+    - Overview of the movie?
+    - Can you share the movie's overview?
+    - I'd like to know the overview of the movie.
+    - Tell me about the overview of this movie.
+    - Overview, if you have information.
+    - What can you tell me about the movie's overview?
+    - Share the details of the movie's overview.
+    - Enlighten me about the overview of the movie.
+    - Can you provide an overview of the movie, please?
+    - Overview of the movie, if you know it.
+
+- intent: get_genres_with_movie_title
+  examples: |
+    - What are the genres of the movie Jawan?
+    - Can you provide the genres of Pathaan?
+    - I'm curious, what are the genres of Inception?
+    - Could you share with me the genres of The Matrix?
+    - Do you know the genres for Jawan?
+    - Share details about the genres of the film Pathaan.
+    - I'd like to know the genres of Inception, please.
+    - Can you give me the genres of The Matrix?
+    - Provide information on Jawan's genres.
+    - I'm interested in knowing the genres of Pathaan.
+    - Tell me about the genres of Inception.
+    - Share the genres of The Matrix.
+    - What was the directorial genres of Jawan?
+    - Inform me about the genres of the movie Pathaan.
+    - I'm curious, what are the genres of the film Inception?
+    - Can you provide the genres of The Matrix?
+    - What are the genres of the movie "Eternal Quest"?
+    - Can you tell me the genres of "Mystic Shadows"?
+    - I'm curious, what are the genres of "Whispering Winds"?
+    - Please share the genres of "Starlight Secrets."
+    - Do you know the genres behind "Enchanted Kingdom"?
+    - Share details about the genres of the film "Cryptic Chronicles."
+    - I'd like to know the genres of "Moonlit Sonata," please.
+    - Could you tell me the genres of "Beyond the Horizon"?
+    - Provide information on the genres of "Silent Serenade."
+    - I'm interested in knowing the genres of "Shifting Realities."
+    - Tell me about the genres of "Celestial Harmony."
+    - Share the genres for "Echoes of Eternity."
+    - What was the directorial genres of "Whispers in the Dark"?
+    - Inform me about the genres of the movie "Stellar Odyssey."
+    - I'm curious, what are the genres of the film "Lunar Labyrinth"?
+    - Can you provide the genres of "Galactic Enigma"?
+    - What are the genres of the movie Starfall 9?
+    - Can you tell me the genres of Project 13?
+    - I'm curious, what are the genres of Infinite Horizon 42?
+    - Please share the genres of Sector 7.
+    - Do you know the genres behind Code Zero: Dawn?
+    - Share details about the genres of the film Chronicles of 21.
+    - I'd like to know the genres of Quantum Realm 33, please.
+    - Could you tell me the genres of Zero Gravity 88?
+    - Provide information on the genres of "Cybernetic Evolution 17."
+    - I'm interested in knowing the genres of "Apex 5."
+    - Tell me about the genres of "Dimension X: 24."
+    - Share the genres for "Twilight Protocol 12."
+    - What was the directorial genres of "Nebula 6"?
+    - Inform me about the genres of the movie "Lunar Eclipsia 77."
+    - I'm curious, what are the genres of the film "Starlight 55"?
+    - Can you provide the genres of "Quantum Shift 63"?
+
+
+- intent: get_genres_without_movie_title
+  examples: |
+    - What are the genres of that film?
+    - Can you provide the genres, please?
+    - Genres, if you may?
+    - What are the genres of this film?
+    - Any idea about the genre?
+    - Tell me the genres.
+    - Genres of this movie?
+    - What are the film's genres?
+    - Can you tell me the genres?
+    - Genres, if you have them.
+    - I need the genres, please.
+    - Provide the genres.
+    - Can you give me the genres?
+    - Genres, please.
+    - Tell me about the film's genres.
+    - Genre details?
+    - Share details about the genres.
+    - What are the genre details?
+    - Any insights into the genres?
+    - Could you inform me about the genres?
+    - What are the genres of this movie?
+    - Enlighten me about the genres.
+    - Any information on the genres?
+    - Genre details, please.
+    - I'm curious, what are the genres?
+    - Tell me about the movie's genres.
+    - Genres, if you know them.
+    - I'm interested in the genres.
+    - Genres, please.
+    - What are the genres, do you know?
+    - Any insights on the genres?
+    - Who's responsible for the genres?
+    - Inform me about the genres.
+    - Can you provide details on the genres?
+    - Genres of the movie?
+    - Can you share the movie's genres?
+    - I'd like to know the genres of the movie.
+    - Tell me about the genres of this movie.
+    - Genres, if you have information.
+    - What can you tell me about the movie's genres?
+    - Share the details of the movie's genres.
+    - Enlighten me about the genres of the movie.
+    - Can you provide the genres of the movie, please?
+    - Genres of the movie, if you know them.
+
+
+- intent: get_rating_with_movie_title
+  examples: |
+    - What is the rating of the movie Jawan?
+    - Can you provide the rating of Pathaan?
+    - I'm curious, what is the rating of Inception?
+    - Could you share with me the rating of The Matrix?
+    - Do you know the rating for Jawan?
+    - Share details about the rating of the film Pathaan.
+    - I'd like to know the rating of Inception, please.
+    - Can you give me the rating of The Matrix?
+    - Provide information on Jawan's rating.
+    - I'm interested in knowing the rating of Pathaan.
+    - Tell me about the rating of Inception.
+    - Share the rating of The Matrix.
+    - What was the directorial rating of Jawan?
+    - Inform me about the rating of the movie Pathaan.
+    - I'm curious, what is the rating of the film Inception?
+    - Can you provide the rating of The Matrix?
+    - What's the rating of the movie "Eternal Quest"?
+    - Can you tell me the rating of "Mystic Shadows"?
+    - I'm curious, what is the rating of "Whispering Winds"?
+    - Please share the rating of "Starlight Secrets."
+    - Do you know the rating behind "Enchanted Kingdom"?
+    - Share details about the rating of the film "Cryptic Chronicles."
+    - I'd like to know the rating of "Moonlit Sonata," please.
+    - Could you tell me the rating of "Beyond the Horizon"?
+    - Provide information on the rating of "Silent Serenade."
+    - I'm interested in knowing the rating of "Shifting Realities."
+    - Tell me about the rating of "Celestial Harmony."
+    - Share the rating for "Echoes of Eternity."
+    - What was the directorial rating of "Whispers in the Dark"?
+    - Inform me about the rating of the movie "Stellar Odyssey."
+    - I'm curious, what is the rating of the film "Lunar Labyrinth"?
+    - Can you provide the rating of "Galactic Enigma"?
+    - What's the rating of the movie Starfall 9?
+    - Can you tell me the rating of Project 13?
+    - I'm curious, what is the rating of Infinite Horizon 42?
+    - Please share the rating of Sector 7.
+    - Do you know the rating behind Code Zero: Dawn?
+    - Share details about the rating of the film Chronicles of 21.
+    - I'd like to know the rating of Quantum Realm 33, please.
+    - Could you tell me the rating of Zero Gravity 88?
+    - Provide information on the rating of "Cybernetic Evolution 17."
+    - I'm interested in knowing the rating of "Apex 5."
+    - Tell me about the rating of "Dimension X: 24."
+    - Share the rating for "Twilight Protocol 12."
+    - What was the directorial rating of "Nebula 6"?
+    - Inform me about the rating of the movie "Lunar Eclipsia 77."
+    - I'm curious, what is the rating of the film "Starlight 55"?
+    - Can you provide the rating of "Quantum Shift 63"?
+
+
+- intent: get_rating_without_movie_title
+  examples: |
+    - What is the rating of that film?
+    - Can you provide the rating, please?
+    - Rating, if you may?
+    - What is the rating of this film?
+    - Any idea about the movie rating?
+    - Tell me the rating.
+    - Rating of this movie?
+    - What is the film's rating?
+    - Can you tell me the rating?
+    - Rating, if you have it.
+    - I need the rating, please.
+    - Provide the rating.
+    - Can you give me the rating?
+    - Rating, please.
+    - Tell me about the film's rating.
+    - Rating details?
+    - Share details about the rating.
+    - What is the movie's rating?
+    - Any insights into the rating?
+    - Could you inform me about the rating?
+    - What is the rating of this movie?
+    - Enlighten me about the rating.
+    - Any information on the rating?
+    - Rating details, please.
+    - I'm curious, what is the rating?
+    - Tell me about the movie's rating.
+    - Rating, if you know it.
+    - I'm interested in the rating.
+    - Rating, please.
+    - What is the rating, do you know?
+    - Any insights on the rating?
+    - Who's responsible for the rating?
+    - Inform me about the rating.
+    - Can you provide details on the rating?
+    - Rating of the movie?
+    - Can you share the movie's rating?
+    - I'd like to know the rating of the movie.
+    - Tell me about the rating of this movie.
+    - Rating, if you have information.
+    - What can you tell me about the movie's rating?
+    - Share the details of the movie's rating.
+    - Enlighten me about the rating of the movie.
+    - Can you provide the rating of the movie, please?
+    - Rating of the movie, if you know it.
+
+
+- intent: get_released_date_with_movie_title
+  examples: |
+    - When was the movie Jawan released?
+    - Can you provide the release date of Pathaan?
+    - I'm curious, when was Inception released?
+    - Could you share with me the release date of The Matrix?
+    - Do you know the release date for Jawan?
+    - Share details about the release date of the film Pathaan.
+    - I'd like to know the release date of Inception, please.
+    - Can you give me the release date of The Matrix?
+    - Provide information on Jawan's release date.
+    - I'm interested in knowing the release date of Pathaan.
+    - Tell me about the release date of Inception.
+    - Share the release date of The Matrix.
+    - What was the directorial release date of Jawan?
+    - Inform me about the release date of the movie Pathaan.
+    - I'm curious, when was the film Inception released?
+    - Can you provide the release date of The Matrix?
+    - When was the movie "Eternal Quest" released?
+    - Can you tell me the release date of "Mystic Shadows"?
+    - I'm curious, when was "Whispering Winds" released?
+    - Please share the release date of "Starlight Secrets."
+    - Do you know the release date behind "Enchanted Kingdom"?
+    - Share details about the release date of the film "Cryptic Chronicles."
+    - I'd like to know the release date of "Moonlit Sonata," please.
+    - Could you tell me the release date of "Beyond the Horizon"?
+    - Provide information on the release date of "Silent Serenade."
+    - I'm interested in knowing the release date of "Shifting Realities."
+    - Tell me about the release date of "Celestial Harmony."
+    - Share the release date for "Echoes of Eternity."
+    - What was the directorial release date of "Whispers in the Dark"?
+    - Inform me about the release date of the movie "Stellar Odyssey."
+    - I'm curious, when was the film "Lunar Labyrinth" released?
+    - Can you provide the release date of "Galactic Enigma"?
+    - When was the movie Starfall 9 released?
+    - Can you tell me the release date of Project 13?
+    - I'm curious, when was Infinite Horizon 42 released?
+    - Please share the release date of Sector 7.
+    - Do you know the release date behind Code Zero: Dawn?
+    - Share details about the release date of the film Chronicles of 21.
+    - I'd like to know the release date of Quantum Realm 33, please.
+    - Could you tell me the release date of Zero Gravity 88?
+    - Provide information on the release date of "Cybernetic Evolution 17."
+    - I'm interested in knowing the release date of "Apex 5."
+    - Tell me about the release date of "Dimension X: 24."
+    - Share the release date for "Twilight Protocol 12."
+    - What was the directorial release date of "Nebula 6"?
+    - Inform me about the release date of the movie "Lunar Eclipsia 77."
+    - I'm curious, when was the film "Starlight 55" released?
+    - Can you provide the release date of "Quantum Shift 63"?
+
+
+- intent: get_released_date_without_movie_title
+  examples: |
+    - When was that film released?
+    - Can you provide the release date, please?
+    - Release date, if you may?
+    - When was this film released?
+    - Any idea about the release date?
+    - Tell me the release date.
+    - Release date of this movie?
+    - When was the film released?
+    - Can you tell me the release date?
+    - Release date, if you have it.
+    - I need the release date, please.
+    - Provide the release date.
+    - Can you give me the release date?
+    - Release date, please.
+    - Tell me about the film's release date.
+    - Release date details?
+    - Share details about the release date.
+    - When was the movie released?
+    - Any insights into the release date?
+    - Could you inform me about the release date?
+    - When was this movie released?
+    - Enlighten me about the release date.
+    - Any information on the release date?
+    - Release date details, please.
+    - I'm curious, when was it released?
+    - Tell me about the movie's release date.
+    - Release date, if you know it.
+    - I'm interested in the release date.
+    - Release date, please.
+    - When was it released, do you know?
+    - Any insights on the release date?
+    - Who's responsible for the release date?
+    - Inform me about the release date.
+    - Can you provide details on the release date?
+    - Release date of the movie?
+    - Can you share the movie's release date?
+    - I'd like to know the release date of the movie.
+    - Tell me about the release date of this movie.
+    - Release date, if you have information.
+    - What can you tell me about the movie's release date?
+    - Share the details of the movie's release date.
+    - Enlighten me about the release date of the movie.
+    - Can you provide the release date of the movie, please?
+    - Release date of the movie, if you know it.
+
+
+- intent: get_released_status_with_movie_title
+  examples: |
+    - Is the movie Jawan released?
+    - Can you confirm the release status of Pathaan?
+    - I'm curious, has Inception been released?
+    - Could you tell me the release status of The Matrix?
+    - Is Jawan already out?
+    - Share details about the release status of the film Pathaan.
+    - I'd like to know if Inception has been released, please.
+    - Can you confirm if The Matrix is already out?
+    - Provide information on Jawan's release status.
+    - I'm interested in knowing the release status of Pathaan.
+    - Tell me if Inception has been released.
+    - Share the release status of The Matrix.
+    - What was the directorial release status of Jawan?
+    - Inform me about the release status of the movie Pathaan.
+    - I'm curious, has the film Inception been released?
+    - Can you confirm the release status of The Matrix?
+    - Is "Eternal Quest" released?
+    - Can you tell me if "Mystic Shadows" has been released?
+    - I'm curious, has "Whispering Winds" been released?
+    - Please share the release status of "Starlight Secrets."
+    - Do you know if "Enchanted Kingdom" is released?
+    - Share details about the release status of the film "Cryptic Chronicles."
+    - I'd like to know if "Moonlit Sonata" has been released, please.
+    - Could you tell me if "Beyond the Horizon" is already out?
+    - Provide information on the release status of "Silent Serenade."
+    - I'm interested in knowing if "Shifting Realities" has been released.
+    - Tell me if "Celestial Harmony" has been released.
+    - Share the release status for "Echoes of Eternity."
+    - What was the directorial release status of "Whispers in the Dark"?
+    - Inform me about the release status of the movie "Stellar Odyssey."
+    - I'm curious, has the film "Lunar Labyrinth" been released?
+    - Can you confirm the release status of "Galactic Enigma"?
+    - Is "Starfall 9" released?
+    - Can you tell me if Project 13 has been released?
+    - I'm curious, has Infinite Horizon 42 been released?
+    - Please share the release status of Sector 7.
+    - Do you know if Code Zero: Dawn is released?
+    - Share details about the release status of the film Chronicles of 21.
+    - I'd like to know if Quantum Realm 33 has been released, please.
+    - Could you tell me if Zero Gravity 88 is already out?
+    - Provide information on the release status of "Cybernetic Evolution 17."
+    - I'm interested in knowing if "Apex 5" has been released.
+    - Tell me if "Dimension X: 24" has been released.
+    - Share the release status for "Twilight Protocol 12."
+    - What was the directorial release status of "Nebula 6"?
+    - Inform me about the release status of the movie "Lunar Eclipsia 77."
+    - I'm curious, has the film "Starlight 55" been released?
+    - Can you confirm the release status of "Quantum Shift 63"?
+
+
+- intent: get_released_status_without_movie_title
+  examples: |
+    - What is the released status of that film?
+    - Can you provide the released status, please?
+    - Released status, if you may?
+    - What is the released status of this film?
+    - Any idea about the released status?
+    - Tell me the released status.
+    - Released status of this movie?
+    - What is the film's released status?
+    - Can you tell me the released status?
+    - Released status, if you have it.
+    - I need the released status, please.
+    - Provide the released status.
+    - Can you give me the released status?
+    - Released status, please.
+    - Tell me about the film's released status.
+    - Released status details?
+    - Share details about the released status.
+    - What is the movie's released status?
+    - Any insights into the released status?
+    - Could you inform me about the released status?
+    - What is the released status of this movie?
+    - Enlighten me about the released status.
+    - Any information on the released status?
+    - Released status details, please.
+    - I'm curious, what is the released status?
+    - Tell me about the movie's released status.
+    - Released status, if you know it.
+    - I'm interested in the released status.
+    - Released status, please.
+    - What is the released status, do you know?
+    - Any insights on the released status?
+    - Who's responsible for the released status?
+    - Inform me about the released status.
+    - Can you provide details on the released status?
+    - Released status of the movie?
+    - Can you share the movie's released status?
+    - I'd like to know the released status of the movie.
+    - Tell me about the released status of this movie.
+    - Released status, if you have information.
+    - What can you tell me about the movie's released status?
+    - Share the details of the movie's released status.
+    - Enlighten me about the released status of the movie.
+    - Can you provide the released status of the movie, please?
+    - Released status of the movie, if you know it.
+
+- intent: get_runtime_with_movie_title
+  examples: |
+    - What is the runtime of the movie Jawan?
+    - Can you provide the runtime of Pathaan?
+    - I'm curious, what is the runtime of Inception?
+    - Could you share with me the runtime of The Matrix?
+    - Do you know the duration of Jawan?
+    - Share details about the runtime of the film Pathaan.
+    - I'd like to know the runtime of Inception, please.
+    - Can you give me the duration of The Matrix?
+    - Provide information on Jawan's runtime.
+    - I'm interested in knowing the runtime of Pathaan.
+    - Tell me about the runtime of Inception.
+    - Share the duration of The Matrix.
+    - What was the directorial runtime of Jawan?
+    - Inform me about the runtime of the movie Pathaan.
+    - I'm curious, what is the runtime of the film Inception?
+    - Can you provide the duration of The Matrix?
+    - What is the runtime of the movie "Eternal Quest"?
+    - Can you tell me the duration of "Mystic Shadows"?
+    - I'm curious, what is the runtime of "Whispering Winds"?
+    - Please share the runtime of "Starlight Secrets."
+    - Do you know the duration behind "Enchanted Kingdom"?
+    - Share details about the runtime of the film "Cryptic Chronicles."
+    - I'd like to know the runtime of "Moonlit Sonata," please.
+    - Could you tell me the duration of "Beyond the Horizon"?
+    - Provide information on the runtime of "Silent Serenade."
+    - I'm interested in knowing the runtime of "Shifting Realities."
+    - Tell me about the runtime of "Celestial Harmony."
+    - Share the duration for "Echoes of Eternity."
+    - What was the directorial runtime of "Whispers in the Dark"?
+    - Inform me about the runtime of the movie "Stellar Odyssey."
+    - I'm curious, what is the runtime of the film "Lunar Labyrinth"?
+    - Can you provide the duration of "Galactic Enigma"?
+    - What's the runtime of the movie Starfall 9?
+    - Can you tell me the duration of Project 13?
+    - I'm curious, what is the runtime of Infinite Horizon 42?
+    - Please share the runtime of Sector 7.
+    - Do you know the duration behind Code Zero: Dawn?
+    - Share details about the runtime of the film Chronicles of 21.
+    - I'd like to know the runtime of Quantum Realm 33, please.
+    - Could you tell me the duration of Zero Gravity 88?
+    - Provide information on the runtime of "Cybernetic Evolution 17."
+    - I'm interested in knowing the runtime of "Apex 5."
+    - Tell me about the runtime of "Dimension X: 24."
+    - Share the duration for "Twilight Protocol 12."
+    - What was the directorial runtime of "Nebula 6"?
+    - Inform me about the runtime of the movie "Lunar Eclipsia 77."
+    - I'm curious, what is the runtime of the film "Starlight 55"?
+    - Can you provide the duration of "Quantum Shift 63"?
+
+
+- intent: get_runtime_without_movie_title
+  examples: |
+    - What is the runtime of that film?
+    - Can you provide the runtime, please?
+    - Runtime, if you may?
+    - What is the runtime of this film?
+    - Any idea about the runtime?
+    - Tell me the runtime.
+    - Runtime of this movie?
+    - What is the film's runtime?
+    - Can you tell me the runtime?
+    - Runtime, if you have it.
+    - I need the runtime, please.
+    - Provide the runtime.
+    - Can you give me the runtime?
+    - Runtime, please.
+    - Tell me about the film's runtime.
+    - Runtime details?
+    - Share details about the runtime.
+    - What is the movie's runtime?
+    - Any insights into the runtime?
+    - Could you inform me about the runtime?
+    - What is the runtime of this movie?
+    - Enlighten me about the runtime.
+    - Any information on the runtime?
+    - Runtime details, please.
+    - I'm curious, what is the runtime?
+    - Tell me about the movie's runtime.
+    - Runtime, if you know it.
+    - I'm interested in the runtime.
+    - Runtime, please.
+    - What is the runtime, do you know?
+    - Any insights on the runtime?
+    - Who's responsible for the runtime?
+    - Inform me about the runtime.
+    - Can you provide details on the runtime?
+    - Runtime of the movie?
+    - Can you share the movie's runtime?
+    - I'd like to know the runtime of the movie.
+    - Tell me about the runtime of this movie.
+    - Runtime, if you have information.
+    - What can you tell me about the movie's runtime?
+    - Share the details of the movie's runtime.
+    - Enlighten me about the runtime of the movie.
+    - Can you provide the runtime of the movie, please?
+    - Runtime of the movie, if you know it.
+
+
+- intent: get_budget_with_movie_title
+  examples: |
+    - What was the budget of the movie Jawan?
+    - Can you provide the budget of Pathaan?
+    - I'm curious, what was the budget of Inception?
+    - Could you share with me the budget of The Matrix?
+    - Do you know the budget for Jawan?
+    - Share details about the budget of the film Pathaan.
+    - I'd like to know the budget of Inception, please.
+    - Can you give me the budget of The Matrix?
+    - Provide information on Jawan's budget.
+    - I'm interested in knowing the budget of Pathaan.
+    - Tell me about the budget of Inception.
+    - Share the budget of The Matrix.
+    - What was the directorial budget of Jawan?
+    - Inform me about the budget of the movie Pathaan.
+    - I'm curious, what was the budget of the film Inception?
+    - Can you provide the budget of The Matrix?
+    - What was the budget of the movie "Eternal Quest"?
+    - Can you tell me the budget of "Mystic Shadows"?
+    - I'm curious, what was the budget of "Whispering Winds"?
+    - Please share the budget of "Starlight Secrets."
+    - Do you know the budget behind "Enchanted Kingdom"?
+    - Share details about the budget of the film "Cryptic Chronicles."
+    - I'd like to know the budget of "Moonlit Sonata," please.
+    - Could you tell me the budget of "Beyond the Horizon"?
+    - Provide information on the budget of "Silent Serenade."
+    - I'm interested in knowing the budget of "Shifting Realities."
+    - Tell me about the budget of "Celestial Harmony."
+    - Share the budget for "Echoes of Eternity."
+    - What was the directorial budget of "Whispers in the Dark"?
+    - Inform me about the budget of the movie "Stellar Odyssey."
+    - I'm curious, what was the budget of the film "Lunar Labyrinth"?
+    - Can you provide the budget of "Galactic Enigma"?
+    - What was the budget of the movie Starfall 9?
+    - Can you tell me the budget of Project 13?
+    - I'm curious, what was the budget of Infinite Horizon 42?
+    - Please share the budget of Sector 7.
+    - Do you know the budget behind Code Zero: Dawn?
+    - Share details about the budget of the film Chronicles of 21.
+    - I'd like to know the budget of Quantum Realm 33, please.
+    - Could you tell me the budget of Zero Gravity 88?
+    - Provide information on the budget of "Cybernetic Evolution 17."
+    - I'm interested in knowing the budget of "Apex 5."
+    - Tell me about the budget of "Dimension X: 24."
+    - Share the budget for "Twilight Protocol 12."
+    - What was the directorial budget of "Nebula 6"?
+    - Inform me about the budget of the movie "Lunar Eclipsia 77."
+    - I'm curious, what was the budget of the film "Starlight 55"?
+    - Can you provide the budget of "Quantum Shift 63"?
+
+
+- intent: get_budget_without_movie_title
+  examples: |
+    - What is the budget of that film?
+    - Can you provide the budget, please?
+    - Budget, if you may?
+    - What is the budget of this film?
+    - Any idea about the budget?
+    - Tell me the budget.
+    - Budget of this movie?
+    - What is the film's budget?
+    - Can you tell me the budget?
+    - Budget, if you have it.
+    - I need the budget, please.
+    - Provide the budget.
+    - Can you give me the budget?
+    - Budget, please.
+    - Tell me about the film's budget.
+    - Budget details?
+    - Share details about the budget.
+    - What is the movie's budget?
+    - Any insights into the budget?
+    - Could you inform me about the budget?
+    - What is the budget of this movie?
+    - Enlighten me about the budget.
+    - Any information on the budget?
+    - Budget details, please.
+    - I'm curious, what is the budget?
+    - Tell me about the movie's budget.
+    - Budget, if you know it.
+    - I'm interested in the budget.
+    - Budget, please.
+    - What is the budget, do you know?
+    - Any insights on the budget?
+    - Who's responsible for the budget?
+    - Inform me about the budget.
+    - Can you provide details on the budget?
+    - Budget of the movie?
+    - Can you share the movie's budget?
+    - I'd like to know the budget of the movie.
+    - Tell me about the budget of this movie.
+    - Budget, if you have information.
+    - What can you tell me about the movie's budget?
+    - Share the details of the movie's budget.
+    - Enlighten me about the budget of the movie.
+    - Can you provide the budget of the movie, please?
+    - Budget of the movie, if you know it.
+
+- intent: get_revenue_with_movie_title
+  examples: |
+    - What was the revenue of the movie Jawan?
+    - Can you provide the revenue of Pathaan?
+    - I'm curious, what was the revenue of Inception?
+    - Could you share with me the revenue of The Matrix?
+    - Do you know the revenue for Jawan?
+    - Share details about the revenue of the film Pathaan.
+    - I'd like to know the revenue of Inception, please.
+    - Can you give me the revenue of The Matrix?
+    - Provide information on Jawan's revenue.
+    - I'm interested in knowing the revenue of Pathaan.
+    - Tell me about the revenue of Inception.
+    - Share the revenue of The Matrix.
+    - What was the directorial revenue of Jawan?
+    - Inform me about the revenue of the movie Pathaan.
+    - I'm curious, what was the revenue of the film Inception?
+    - Can you provide the revenue of The Matrix?
+    - What was the revenue of the movie "Eternal Quest"?
+    - Can you tell me the revenue of "Mystic Shadows"?
+    - I'm curious, what was the revenue of "Whispering Winds"?
+    - Please share the revenue of "Starlight Secrets."
+    - Do you know the revenue behind "Enchanted Kingdom"?
+    - Share details about the revenue of the film "Cryptic Chronicles."
+    - I'd like to know the revenue of "Moonlit Sonata," please.
+    - Could you tell me the revenue of "Beyond the Horizon"?
+    - Provide information on the revenue of "Silent Serenade."
+    - I'm interested in knowing the revenue of "Shifting Realities."
+    - Tell me about the revenue of "Celestial Harmony."
+    - Share the revenue for "Echoes of Eternity."
+    - What was the directorial revenue of "Whispers in the Dark"?
+    - Inform me about the revenue of the movie "Stellar Odyssey."
+    - I'm curious, what was the revenue of the film "Lunar Labyrinth"?
+    - Can you provide the revenue of "Galactic Enigma"?
+    - What was the revenue of the movie Starfall 9?
+    - Can you tell me the revenue of Project 13?
+    - I'm curious, what was the revenue of Infinite Horizon 42?
+    - Please share the revenue of Sector 7.
+    - Do you know the revenue behind Code Zero: Dawn?
+    - Share details about the revenue of the film Chronicles of 21.
+    - I'd like to know the revenue of Quantum Realm 33, please.
+    - Could you tell me the revenue of Zero Gravity 88?
+    - Provide information on the revenue of "Cybernetic Evolution 17."
+    - I'm interested in knowing the revenue of "Apex 5."
+    - Tell me about the revenue of "Dimension X: 24."
+    - Share the revenue for "Twilight Protocol 12."
+    - What was the directorial revenue of "Nebula 6"?
+    - Inform me about the revenue of the movie "Lunar Eclipsia 77."
+    - I'm curious, what was the revenue of the film "Starlight 55"?
+    - Can you provide the revenue of "Quantum Shift 63"?
+
+
+- intent: get_revenue_without_movie_title
+  examples: |
+    - What is the revenue of that film?
+    - Can you provide the revenue, please?
+    - Revenue, if you may?
+    - What is the revenue of this film?
+    - Any idea about the revenue?
+    - Tell me the revenue.
+    - Revenue of this movie?
+    - What is the film's revenue?
+    - Can you tell me the revenue?
+    - Revenue, if you have it.
+    - I need the revenue, please.
+    - Provide the revenue.
+    - Can you give me the revenue?
+    - Revenue, please.
+    - Tell me about the film's revenue.
+    - Revenue details?
+    - Share details about the revenue.
+    - What is the movie's revenue?
+    - Any insights into the revenue?
+    - Could you inform me about the revenue?
+    - What is the revenue of this movie?
+    - Enlighten me about the revenue.
+    - Any information on the revenue?
+    - Revenue details, please.
+    - I'm curious, what is the revenue?
+    - Tell me about the movie's revenue.
+    - Revenue, if you know it.
+    - I'm interested in the revenue.
+    - Revenue, please.
+    - What is the revenue, do you know?
+    - Any insights on the revenue?
+    - Who's responsible for the revenue?
+    - Inform me about the revenue.
+    - Can you provide details on the revenue?
+    - Revenue of the movie?
+    - Can you share the movie's revenue?
+    - I'd like to know the revenue of the movie.
+    - Tell me about the revenue of this movie.
+    - Revenue, if you have information.
+    - What can you tell me about the movie's revenue?
+    - Share the details of the movie's revenue.
+    - Enlighten me about the revenue of the movie.
+    - Can you provide the revenue of the movie, please?
+    - Revenue of the movie, if you know it.
+
+- intent: get_country_of_origin_with_movie_title
+  examples: |
+    - What is the country of origin for the movie Jawan?
+    - Can you provide the country of origin for Pathaan?
+    - I'm curious, what is the country of origin for Inception?
+    - Could you share with me the country of origin for The Matrix?
+    - Do you know where Jawan originated from?
+    - Share details about the country of origin of the film Pathaan.
+    - I'd like to know the country of origin of Inception, please.
+    - Can you tell me the country of origin for The Matrix?
+    - Provide information on Jawan's country of origin.
+    - I'm interested in knowing the country of origin for Pathaan.
+    - Tell me about the country of origin for Inception.
+    - Share the country of origin for The Matrix.
+    - What was the directorial country of origin of Jawan?
+    - Inform me about the country of origin of the movie Pathaan.
+    - I'm curious, what is the country of origin for the film Inception?
+    - Can you provide the country of origin for The Matrix?
+    - What is the country of origin for the movie "Eternal Quest"?
+    - Can you tell me the country of origin for "Mystic Shadows"?
+    - I'm curious, what is the country of origin for "Whispering Winds"?
+    - Please share the country of origin for "Starlight Secrets."
+    - Do you know the origin of "Enchanted Kingdom"?
+    - Share details about the country of origin of the film "Cryptic Chronicles."
+    - I'd like to know the country of origin for "Moonlit Sonata," please.
+    - Could you tell me the country of origin for "Beyond the Horizon"?
+    - Provide information on the country of origin for "Silent Serenade."
+    - I'm interested in knowing the country of origin for "Shifting Realities."
+    - Tell me about the country of origin for "Celestial Harmony."
+    - Share the country of origin for "Echoes of Eternity."
+    - What was the directorial country of origin of "Whispers in the Dark"?
+    - Inform me about the country of origin of the movie "Stellar Odyssey."
+    - I'm curious, what is the country of origin for the film "Lunar Labyrinth"?
+    - Can you provide the country of origin for "Galactic Enigma"?
+    - What's the country of origin for the movie Starfall 9?
+    - Can you tell me the country of origin for Project 13?
+    - I'm curious, what is the country of origin for Infinite Horizon 42?
+    - Please share the country of origin for Sector 7.
+    - Do you know the origin behind Code Zero: Dawn?
+    - Share details about the country of origin of the film Chronicles of 21.
+    - I'd like to know the country of origin for Quantum Realm 33, please.
+    - Could you tell me the country of origin for Zero Gravity 88?
+    - Provide information on the country of origin for "Cybernetic Evolution 17."
+    - I'm interested in knowing the country of origin for "Apex 5."
+    - Tell me about the country of origin for "Dimension X: 24."
+    - Share the country of origin for "Twilight Protocol 12."
+    - What was the directorial country of origin of "Nebula 6"?
+    - Inform me about the country of origin of the movie "Lunar Eclipsia 77."
+    - I'm curious, what is the country of origin for the film "Starlight 55"?
+    - Can you provide the country of origin for "Quantum Shift 63"?
+
+
+- intent: get_country_of_origin_without_movie_title
+  examples: |
+    - What is the country of origin of that film?
+    - Can you provide the country of origin, please?
+    - Country of origin, if you may?
+    - What is the country of origin of this film?
+    - Any idea about the country of origin?
+    - Tell me the country of origin.
+    - Country of origin of this movie?
+    - What is the film's country of origin?
+    - Can you tell me the country of origin?
+    - Country of origin, if you have it.
+    - I need the country of origin, please.
+    - Provide the country of origin.
+    - Can you give me the country of origin?
+    - Country of origin, please.
+    - Tell me about the film's country of origin.
+    - Country of origin details?
+    - Share details about the country of origin.
+    - What is the movie's country of origin?
+    - Any insights into the country of origin?
+    - Could you inform me about the country of origin?
+    - What is the country of origin of this movie?
+    - Enlighten me about the country of origin.
+    - Any information on the country of origin?
+    - Country of origin details, please.
+    - I'm curious, what is the country of origin?
+    - Tell me about the movie's country of origin.
+    - Country of origin, if you know it.
+    - I'm interested in the country of origin.
+    - Country of origin, please.
+    - What is the country of origin, do you know?
+    - Any insights on the country of origin?
+    - Who's responsible for the country of origin?
+    - Inform me about the country of origin.
+    - Can you provide details on the country of origin?
+    - Country of origin of the movie?
+    - Can you share the movie's country of origin?
+    - I'd like to know the country of origin of the movie.
+    - Tell me about the country of origin of this movie.
+    - Country of origin, if you have information.
+    - What can you tell me about the movie's country of origin?
+    - Share the details of the movie's country of origin.
+    - Enlighten me about the country of origin of the movie.
+    - Can you provide the country of origin of the movie, please?
+    - Country of origin of the movie, if you know it.
+
+- intent: get_language_spoken_with_movie_title
+  examples: |
+    - What languages are spoken in the movie Jawan?
+    - Can you provide the spoken languages for Pathaan?
+    - I'm curious, what languages are spoken in Inception?
+    - Could you share with me the languages spoken in The Matrix?
+    - Do you know the spoken languages in Jawan?
+    - Share details about the languages spoken in the film Pathaan.
+    - I'd like to know the spoken languages in Inception, please.
+    - Can you tell me the languages spoken in The Matrix?
+    - Provide information on the languages spoken in Jawan.
+    - I'm interested in knowing the spoken languages in Pathaan.
+    - Tell me about the languages spoken in Inception.
+    - Share the spoken languages in The Matrix.
+    - What were the directorial spoken languages of Jawan?
+    - Inform me about the spoken languages in the movie Pathaan.
+    - I'm curious, what are the spoken languages in the film Inception?
+    - Can you provide the spoken languages in The Matrix?
+    - What languages are spoken in the movie "Eternal Quest"?
+    - Can you tell me the spoken languages in "Mystic Shadows"?
+    - I'm curious, what languages are spoken in "Whispering Winds"?
+    - Please share the spoken languages in "Starlight Secrets."
+    - Do you know the spoken languages in "Enchanted Kingdom"?
+    - Share details about the languages spoken in the film "Cryptic Chronicles."
+    - I'd like to know the spoken languages in "Moonlit Sonata," please.
+    - Could you tell me the spoken languages in "Beyond the Horizon"?
+    - Provide information on the languages spoken in "Silent Serenade."
+    - I'm interested in knowing the spoken languages in "Shifting Realities."
+    - Tell me about the languages spoken in "Celestial Harmony."
+    - Share the spoken languages in "Echoes of Eternity."
+    - What were the directorial spoken languages of "Whispers in the Dark"?
+    - Inform me about the spoken languages in the movie "Stellar Odyssey."
+    - I'm curious, what are the spoken languages in the film "Lunar Labyrinth"?
+    - Can you provide the spoken languages in "Galactic Enigma"?
+    - What are the spoken languages in the movie Starfall 9?
+    - Can you tell me the spoken languages in Project 13?
+    - I'm curious, what languages are spoken in Infinite Horizon 42?
+    - Please share the spoken languages in Sector 7.
+    - Do you know the spoken languages behind Code Zero: Dawn?
+    - Share details about the languages spoken in the film Chronicles of 21.
+    - I'd like to know the spoken languages in Quantum Realm 33, please.
+    - Could you tell me the spoken languages in Zero Gravity 88?
+    - Provide information on the languages spoken in "Cybernetic Evolution 17."
+    - I'm interested in knowing the spoken languages in "Apex 5."
+    - Tell me about the languages spoken in "Dimension X: 24."
+    - Share the spoken languages in "Twilight Protocol 12."
+    - What were the directorial spoken languages of "Nebula 6"?
+    - Inform me about the spoken languages in the movie "Lunar Eclipsia 77."
+    - I'm curious, what languages are spoken in the film "Starlight 55"?
+    - Can you provide the spoken languages in "Quantum Shift 63"?
+
+
+- intent: get_language_spoken_without_movie_title
+  examples: |
+    - What is the language spoken in that film?
+    - Can you provide the language spoken, please?
+    - Language spoken, if you may?
+    - What is the language spoken in this film?
+    - Any idea about the language spoken?
+    - Tell me the language spoken.
+    - Language spoken in this movie?
+    - What is the film's language spoken?
+    - Can you tell me the language spoken?
+    - Language spoken, if you have it.
+    - I need the language spoken, please.
+    - Provide the language spoken.
+    - Can you give me the language spoken?
+    - Language spoken, please.
+    - Tell me about the film's language spoken.
+    - Language spoken details?
+    - Share details about the language spoken.
+    - What is the movie's language spoken?
+    - Any insights into the language spoken?
+    - Could you inform me about the language spoken?
+    - What is the language spoken in this movie?
+    - Enlighten me about the language spoken.
+    - Any information on the language spoken?
+    - Language spoken details, please.
+    - I'm curious, what is the language spoken?
+    - Tell me about the movie's language spoken.
+    - Language spoken, if you know it.
+    - I'm interested in the language spoken.
+    - Language spoken, please.
+    - What is the language spoken, do you know?
+    - Any insights on the language spoken?
+    - Who's responsible for the language spoken?
+    - Inform me about the language spoken.
+    - Can you provide details on the language spoken?
+    - Language spoken in the movie?
+    - Can you share the movie's language spoken?
+    - I'd like to know the language spoken in the movie.
+    - Tell me about the language spoken in this movie.
+    - Language spoken, if you have information.
+    - What can you tell me about the movie's language spoken?
+    - Share the details of the movie's language spoken.
+    - Enlighten me about the language spoken in the movie.
+    - Can you provide the language spoken in the movie, please?
+    - Language spoken in the movie, if you know it.
+
+- intent: get_cast_with_movie_title
+  examples: |
+    - Who are the cast members of the movie Jawan?
+    - Can you provide the cast of Pathaan?
+    - I'm curious, who are the actors in Inception?
+    - Could you share with me the names of the cast for The Matrix?
+    - Do you know the actors in Jawan?
+    - Share details about the cast of the film Pathaan.
+    - I'd like to know the cast of Inception, please.
+    - Can you give me the names of the cast for The Matrix?
+    - Provide information on Jawan's cast.
+    - I'm interested in knowing the cast of Pathaan.
+    - Tell me about the cast of Inception.
+    - Share the names of the cast for The Matrix.
+    - Who were the actors in Jawan?
+    - Inform me about the cast of the movie Pathaan.
+    - I'm curious, who are the actors in the film Inception?
+    - What are the names of the cast for The Matrix?
+    - Who were the actors in "Eternal Quest"?
+    - Can you tell me the cast of "Mystic Shadows"?
+    - I'm curious, who are the actors in "Whispering Winds"?
+    - Please share the names of the cast for "Starlight Secrets."
+    - Do you know the actors in "Enchanted Kingdom"?
+    - Share details about the cast of the film "Cryptic Chronicles."
+    - I'd like to know the cast of "Moonlit Sonata," please.
+    - Could you tell me the names of the cast for "Beyond the Horizon"?
+    - Provide information on the cast of "Silent Serenade."
+    - I'm interested in knowing the cast of "Shifting Realities."
+    - Tell me about the cast of "Celestial Harmony."
+    - Share the names of the cast for "Echoes of Eternity."
+    - Who were the actors in "Whispers in the Dark"?
+    - Inform me about the cast of the movie "Stellar Odyssey."
+    - I'm curious, who are the actors in the film "Lunar Labyrinth"?
+    - What are the names of the cast for "Galactic Enigma"?
+    - Who were the actors in Starfall 9?
+    - Can you tell me the cast of Project 13?
+    - I'm curious, who are the actors in Infinite Horizon 42?
+    - Please share the names of the cast for Sector 7.
+    - Do you know the actors in Code Zero: Dawn?
+    - Share details about the cast of the film Chronicles of 21.
+    - I'd like to know the cast of Quantum Realm 33, please.
+    - Could you tell me the names of the cast for Zero Gravity 88?
+    - Provide information on the cast of "Cybernetic Evolution 17."
+    - I'm interested in knowing the cast of "Apex 5."
+    - Tell me about the cast of "Dimension X: 24."
+    - Share the names of the cast for "Twilight Protocol 12."
+    - Who were the actors in "Nebula 6"?
+    - Inform me about the cast of the movie "Lunar Eclipsia 77."
+    - I'm curious, who are the actors in the film "Starlight 55"?
+    - What are the names of the cast for "Quantum Shift 63"?
+
+
+- intent: get_cast_without_movie_title
+  examples: |
+    - Who are the actors in that film?
+    - Can you provide the cast, please?
+    - Cast, if you may?
+    - Who played the roles in this film?
+    - Any idea about the cast?
+    - Tell me the cast.
+    - Cast of this movie?
+    - Who are the film's actors?
+    - Can you tell me the cast?
+    - Cast, if you have it.
+    - I need the cast, please.
+    - Provide the cast.
+    - Can you give me the cast?
+    - Cast, please.
+    - Tell me about the film's cast.
+    - Cast details?
+    - Share details about the cast.
+    - Who are the actors in the movie?
+    - Any insights into the cast?
+    - Could you inform me about the cast?
+    - Who played the roles in this movie?
+    - Enlighten me about the cast.
+    - Any information on the cast?
+    - Cast details, please.
+    - I'm curious, who are the actors?
+    - Tell me about the movie's cast.
+    - Cast, if you know it.
+    - I'm interested in the cast.
+    - Cast, please.
+    - Who are the actors, do you know?
+    - Any insights on the cast?
+    - Who's responsible for the cast?
+    - Inform me about the cast.
+    - Can you provide details on the cast?
+    - Cast of the movie?
+    - Can you share the movie's cast?
+    - I'd like to know the cast of the movie.
+    - Tell me about the cast of this movie.
+    - Cast, if you have information.
+    - What can you tell me about the movie's cast?
+    - Share the details of the movie's cast.
+    - Enlighten me about the cast of the movie.
+    - Can you provide the cast of the movie, please?
+    - Cast of the movie, if you know it.
+
+- intent: get_production_company_with_movie_title
+  examples: |
+    - What is the production company behind the movie Jawan?
+    - Can you provide the production company for Pathaan?
+    - I'm curious, who produced Inception?
+    - Could you share with me the production company for The Matrix?
+    - Do you know the production company behind Jawan?
+    - Share details about the production company of the film Pathaan.
+    - I'd like to know the production company of Inception, please.
+    - Can you give me the production company for The Matrix?
+    - Provide information on Jawan's production company.
+    - I'm interested in knowing the production company of Pathaan.
+    - Tell me about the production company of Inception.
+    - Share the production company for The Matrix.
+    - Who was the production company for Jawan?
+    - Inform me about the production company of the movie Pathaan.
+    - I'm curious, who produced the film Inception?
+    - What is the production company behind The Matrix?
+    - What was the production company of "Eternal Quest"?
+    - Can you tell me the production company of "Mystic Shadows"?
+    - I'm curious, who produced "Whispering Winds"?
+    - Please share the production company for "Starlight Secrets."
+    - Do you know the production company behind "Enchanted Kingdom"?
+    - Share details about the production company of the film "Cryptic Chronicles."
+    - I'd like to know the production company of "Moonlit Sonata," please.
+    - Could you tell me the production company of "Beyond the Horizon"?
+    - Provide information on the production company of "Silent Serenade."
+    - I'm interested in knowing the production company of "Shifting Realities."
+    - Tell me about the production company of "Celestial Harmony."
+    - Share the production company for "Echoes of Eternity."
+    - Who was the production company for "Whispers in the Dark"?
+    - Inform me about the production company of the movie "Stellar Odyssey."
+    - I'm curious, who produced the film "Lunar Labyrinth"?
+    - What is the production company behind "Galactic Enigma"?
+    - Who was the production company for Starfall 9?
+    - Can you tell me the production company of Project 13?
+    - I'm curious, who produced Infinite Horizon 42?
+    - Please share the production company for Sector 7.
+    - Do you know the production company behind Code Zero: Dawn?
+    - Share details about the production company of the film Chronicles of 21.
+    - I'd like to know the production company of Quantum Realm 33, please.
+    - Could you tell me the production company of Zero Gravity 88?
+    - Provide information on the production company of "Cybernetic Evolution 17."
+    - I'm interested in knowing the production company of "Apex 5."
+    - Tell me about the production company of "Dimension X: 24."
+    - Share the production company for "Twilight Protocol 12."
+    - Who was the production company for "Nebula 6"?
+    - Inform me about the production company of the movie "Lunar Eclipsia 77."
+    - I'm curious, who produced the film "Starlight 55"?
+    - What is the production company behind "Quantum Shift 63"?
+
+
+- intent: get_production_company_without_movie_title
+  examples: |
+    - What is the production company of that film?
+    - Can you provide the production company, please?
+    - Production company, if you may?
+    - Who produced this film?
+    - Any idea about the production company?
+    - Tell me the production company.
+    - Production company of this movie?
+    - What is the film's production company?
+    - Can you tell me the production company?
+    - Production company, if you have it.
+    - I need the production company, please.
+    - Provide the production company.
+    - Can you give me the production company?
+    - Production company, please.
+    - Tell me about the film's production company.
+    - Production company details?
+    - Share details about the production company.
+    - Who was the production company for the movie?
+    - Any insights into the production company?
+    - Could you inform me about the production company?
+    - Who produced this movie?
+    - Enlighten me about the production company.
+    - Any information on the production company?
+    - Production company details, please.
+    - I'm curious, what's the production company?
+    - Tell me about the movie's production company.
+    - Production company, if you know it.
+    - I'm interested in the production company.
+    - Production company, please.
+    - What is the production company, do you know?
+    - Any insights on the production company?
+    - Who's responsible for the production company?
+    - Inform me about the production company.
+    - Can you provide details on the production company?
+    - Production company of the movie?
+    - Can you share the movie's production company?
+    - I'd like to know the production company of the movie.
+    - Tell me about the production company of this movie.
+    - Production company, if you have information.
+    - What can you tell me about the movie's production company?
+    - Share the details of the movie's production company.
+    - Enlighten me about the production company of the movie.
+    - Can you provide the production company of the movie, please?
+    - Production company of the movie, if you know it.
+
+- intent: get_playback_singer_with_movie_title
+  examples: |
+    - Who were the playback singers for the movie Jawan?
+    - Can you provide the playback singers for Pathaan?
+    - I'm curious, who sang for Inception?
+    - Could you share with me the names of the playback singers for The Matrix?
+    - Do you know the playback singers behind Jawan?
+    - Share details about the playback singers of the film Pathaan.
+    - I'd like to know the playback singers of Inception, please.
+    - Can you give me the playback singers for The Matrix?
+    - Provide information on Jawan's playback singers.
+    - I'm interested in knowing the playback singers of Pathaan.
+    - Tell me about the playback singers of Inception.
+    - Share the names of the playback singers for The Matrix.
+    - Who were the playback singers for Jawan?
+    - Inform me about the playback singers of the movie Pathaan.
+    - I'm curious, who sang for the film Inception?
+    - What are the names of the playback singers for The Matrix?
+    - Who sang for the movie "Eternal Quest"?
+    - Can you tell me the playback singers of "Mystic Shadows"?
+    - I'm curious, who sang for "Whispering Winds"?
+    - Please share the names of the playback singers for "Starlight Secrets."
+    - Do you know the playback singers behind "Enchanted Kingdom"?
+    - Share details about the playback singers of the film "Cryptic Chronicles."
+    - I'd like to know the playback singers of "Moonlit Sonata," please.
+    - Could you tell me the playback singers of "Beyond the Horizon"?
+    - Provide information on the playback singers of "Silent Serenade."
+    - I'm interested in knowing the playback singers of "Shifting Realities."
+    - Tell me about the playback singers of "Celestial Harmony."
+    - Share the names of the playback singers for "Echoes of Eternity."
+    - Who were the playback singers for "Whispers in the Dark"?
+    - Inform me about the playback singers of the movie "Stellar Odyssey."
+    - I'm curious, who sang for the film "Lunar Labyrinth"?
+    - What are the names of the playback singers for "Galactic Enigma"?
+    - Who were the playback singers for Starfall 9?
+    - Can you tell me the playback singers of Project 13?
+    - I'm curious, who sang for Infinite Horizon 42?
+    - Please share the names of the playback singers for Sector 7.
+    - Do you know the playback singers behind Code Zero: Dawn?
+    - Share details about the playback singers of the film Chronicles of 21.
+    - I'd like to know the playback singers of Quantum Realm 33, please.
+    - Could you tell me the playback singers of Zero Gravity 88?
+    - Provide information on the playback singers of "Cybernetic Evolution 17."
+    - I'm interested in knowing the playback singers of "Apex 5."
+    - Tell me about the playback singers of "Dimension X: 24."
+    - Share the names of the playback singers for "Twilight Protocol 12."
+    - Who were the playback singers for "Nebula 6"?
+    - Inform me about the playback singers of the movie "Lunar Eclipsia 77."
+    - I'm curious, who sang for the film "Starlight 55"?
+    - What are the names of the playback singers for "Quantum Shift 63"?
+
+
+- intent: get_playback_singer_without_movie_title
+  examples: |
+    - Who were the playback singers of that film?
+    - Can you provide the playback singers, please?
+    - Playback singers, if you may?
+    - Who sang for this film?
+    - Any idea about the playback singers?
+    - Tell me the playback singers.
+    - Playback singers of this movie?
+    - Who were the playback singers for the film?
+    - Can you tell me the playback singers?
+    - Playback singers, if you have it.
+    - I need the playback singers, please.
+    - Provide the playback singers.
+    - Can you give me the playback singers?
+    - Playback singers, please.
+    - Tell me about the film's playback singers.
+    - Playback singers details?
+    - Share details about the playback singers.
+    - Who were the playback singers for the movie?
+    - Any insights into the playback singers?
+    - Could you inform me about the playback singers?
+    - Who sang for this movie?
+    - Enlighten me about the playback singers.
+    - Any information on the playback singers?
+    - Playback singers details, please.
+    - I'm curious, who were the playback singers?
+    - Tell me about the movie's playback singers.
+    - Playback singers, if you know it.
+    - I'm interested in the playback singers.
+    - Playback singers, please.
+    - Who were the playback singers, do you know?
+    - Any insights on the playback singers?
+    - Who's responsible for the playback singers?
+    - Inform me about the playback singers.
+    - Can you provide details on the playback singers?
+    - Playback singers of the movie?
+    - Can you share the movie's playback singers?
+    - I'd like to know the playback singers of the movie.
+    - Tell me about the playback singers of this movie.
+    - Playback singers, if you have information.
+    - What can you tell me about the movie's playback singers?
+    - Share the details of the movie's playback singers.
+    - Enlighten me about the playback singers of the movie.
+    - Can you provide the playback singers of the movie, please?
+    - Playback singers of the movie, if you know it.
+
+- intent: get_costume_designer_with_movie_title
+  examples: |
+    - Who was the costume designer for the movie Jawan?
+    - Please inform me about the costume designer of Pathaan.
+    - I'm curious, who designed costumes for Inception?
+    - Can you share with me the name of the costume designer for The Matrix?
+    - Do you know the costume designer behind Jawan?
+    - Share details about the costume designer of the film Pathaan.
+    - I'd like to know the costume designer of Inception, please.
+    - Could you tell me the name of the costume designer for The Matrix?
+    - Provide information on Jawan's costume designer.
+    - I'm interested in knowing the costume designer of Pathaan.
+    - Tell me about the costume designer of Inception.
+    - Share the costume designer's name for The Matrix.
+    - Who was the costume designer of Jawan?
+    - Inform me about the costume designer of the movie Pathaan.
+    - I'm curious, who designed costumes for the film Inception?
+    - What's the name of the costume designer for The Matrix?
+    - Who designed costumes for the movie "Eternal Quest"?
+    - Can you tell me the costume designer of "Mystic Shadows"?
+    - I'm curious, who designed costumes for "Whispering Winds"?
+    - Please share the name of the costume designer for "Starlight Secrets."
+    - Do you know the costume designer behind "Enchanted Kingdom"?
+    - Share details about the costume designer of the film "Cryptic Chronicles."
+    - I'd like to know the costume designer of "Moonlit Sonata," please.
+    - Could you tell me the name of the costume designer for "Beyond the Horizon"?
+    - Provide information on the costume designer of "Silent Serenade."
+    - I'm interested in knowing the costume designer of "Shifting Realities."
+    - Tell me about the costume designer of "Celestial Harmony."
+    - Share the costume designer's name for "Echoes of Eternity."
+    - Who was the costume designer for "Whispers in the Dark"?
+    - Inform me about the costume designer of the movie "Stellar Odyssey."
+    - I'm curious, who designed costumes for the film "Lunar Labyrinth"?
+    - What's the name of the costume designer for "Galactic Enigma"?
+    - Who designed costumes for Starfall 9?
+    - Can you tell me the costume designer of Project 13?
+    - I'm curious, who designed costumes for Infinite Horizon 42?
+    - Please share the name of the costume designer for Sector 7.
+    - Do you know the costume designer behind Code Zero: Dawn?
+    - Share details about the costume designer of the film Chronicles of 21.
+    - I'd like to know the costume designer of Quantum Realm 33, please.
+    - Could you tell me the name of the costume designer for Zero Gravity 88?
+    - provide information on the costume designer of "Cybernetic Evolution 17."
+    - i'm interested in knowing the costume designer of "apex 5."
+    - tell me about the costume designer of "dimension x: 24."
+    - share the costume designer's name for "twilight protocol 12."
+    - who was the costume designer for "nebula 6"?
+    - inform me about the costume designer of the movie "lunar eclipsia 77."
+    - i'm curious, who designed costumes for the film "starlight 55"?
+    - what's the name of the costume designer for "quantum shift 63"?
+
+
+- intent: get_costume_designer_without_movie_title
+  examples: |
+    - Who was the costume designer of that film?
+    - Can you provide the costume designer, please?
+    - Costume designer, if you may?
+    - Who designed costumes for this film?
+    - Any idea about the costume designer?
+    - Tell me the costume designer.
+    - Costume designer of this movie?
+    - Who was the costume designer for the film?
+    - Can you tell me the costume designer?
+    - Costume designer, if you have it.
+    - I need the costume designer, please.
+    - Provide the costume designer.
+    - Can you give me the costume designer?
+    - Costume designer, please.
+    - Tell me about the film's costume designer.
+    - Costume designer details?
+    - Share details about the costume designer.
+    - Who was the costume designer for the movie?
+    - Any insights into the costume designer?
+    - Could you inform me about the costume designer?
+    - Who designed costumes for this movie?
+    - Enlighten me about the costume designer.
+    - Any information on the costume designer?
+    - Costume designer details, please.
+    - I'm curious, who was the costume designer?
+    - Tell me about the movie's costume designer.
+    - Costume designer, if you know it.
+    - I'm interested in the costume designer.
+    - Costume designer, please.
+    - Who was the costume designer, do you know?
+    - Any insights on the costume designer?
+    - Who's responsible for the costume designer?
+    - Inform me about the costume designer.
+    - Can you provide details on the costume designer?
+    - Costume designer of the movie?
+    - Can you share the movie's costume designer?
+    - I'd like to know the costume designer of the movie.
+    - Tell me about the costume designer of this movie.
+    - Costume designer, if you have information.
+    - What can you tell me about the movie's costume designer?
+    - Share the details of the movie's costume designer.
+    - Enlighten me about the costume designer of the movie.
+    - Can you provide the costume designer of the movie, please?
+    - Costume designer of the movie, if you know it.
+
+
+- intent: get_writer_with_movie_title
+  examples: |
+    - Who was the writer for the movie Jawan?
+    - Please inform me about the writer of Pathaan.
+    - I'm curious, who wrote Inception?
+    - Can you share with me the name of the writer for The Matrix?
+    - Do you know the writer behind Jawan?
+    - Share details about the writer of the film Pathaan.
+    - I'd like to know the writer of Inception, please.
+    - Could you tell me the name of the writer for The Matrix?
+    - Provide information on Jawan's writer.
+    - I'm interested in knowing the writer of Pathaan.
+    - Tell me about the writer of Inception.
+    - Share the writer's name for The Matrix.
+    - Who was the writer of Jawan?
+    - Inform me about the writer of the movie Pathaan.
+    - I'm curious, who wrote the film Inception?
+    - What's the name of the writer for The Matrix?
+    - Who wrote the movie "Eternal Quest"?
+    - Can you tell me the writer of "Mystic Shadows"?
+    - I'm curious, who wrote "Whispering Winds"?
+    - Please share the name of the writer for "Starlight Secrets."
+    - Do you know the writer behind "Enchanted Kingdom"?
+    - Share details about the writer of the film "Cryptic Chronicles."
+    - I'd like to know the writer of "Moonlit Sonata," please.
+    - Could you tell me the name of the writer for "Beyond the Horizon"?
+    - Provide information on the writer of "Silent Serenade."
+    - I'm interested in knowing the writer of "Shifting Realities."
+    - Tell me about the writer of "Celestial Harmony."
+    - Share the writer's name for "Echoes of Eternity."
+    - Who was the writer for "Whispers in the Dark"?
+    - Inform me about the writer of the movie "Stellar Odyssey."
+    - I'm curious, who wrote the film "Lunar Labyrinth"?
+    - What's the name of the writer for "Galactic Enigma"?
+    - Who wrote the movie Starfall 9?
+    - Can you tell me the writer of Project 13?
+    - I'm curious, who wrote Infinite Horizon 42?
+    - Please share the name of the writer for Sector 7.
+    - Do you know the writer behind Code Zero: Dawn?
+    - Share details about the writer of the film Chronicles of 21.
+    - I'd like to know the writer of Quantum Realm 33, please.
+    - Could you tell me the name of the writer for Zero Gravity 88?
+    - provide information on the writer of "Cybernetic Evolution 17."
+    - i'm interested in knowing the writer of "apex 5."
+    - tell me about the writer of "dimension x: 24."
+    - share the writer's name for "twilight protocol 12."
+    - who was the writer for "nebula 6"?
+    - inform me about the writer of the movie "lunar eclipsia 77."
+    - i'm curious, who wrote the film "starlight 55"?
+    - what's the name of the writer for "quantum shift 63"?
+
+
+- intent: get_writer_without_movie_title
+  examples: |
+    - Who was the writer of that film?
+    - Can you provide the writer, please?
+    - Writer, if you may?
+    - Who wrote for this film?
+    - Any idea about the writer?
+    - Tell me the writer.
+    - Writer of this movie?
+    - Who was the writer for the film?
+    - Can you tell me the writer?
+    - Writer, if you have it.
+    - I need the writer, please.
+    - Provide the writer.
+    - Can you give me the writer?
+    - Writer, please.
+    - Tell me about the film's writer.
+    - Writer details?
+    - Share details about the writer.
+    - Who was the writer for the movie?
+    - Any insights into the writer?
+    - Could you inform me about the writer?
+    - Who wrote for this movie?
+    - Enlighten me about the writer.
+    - Any information on the writer?
+    - Writer details, please.
+    - I'm curious, who was the writer?
+    - Tell me about the movie's writer.
+    - Writer, if you know it.
+    - I'm interested in the writer.
+    - Writer, please.
+    - Who was the writer, do you know?
+    - Any insights on the writer?
+    - Who's responsible for the writer?
+    - Inform me about the writer.
+    - Can you provide details on the writer?
+    - Writer of the movie?
+    - Can you share the movie's writer?
+    - I'd like to know the writer of the movie.
+    - Tell me about the writer of this movie.
+    - Writer, if you have information.
+    - What can you tell me about the movie's writer?
+    - Share the details of the movie's writer.
+    - Enlighten me about the writer of the movie.
+    - Can you provide the writer of the movie, please?
+    - Writer of the movie, if you know it.
+
+- intent: get_composer_with_movie_title
+  examples: |
+    - Who was the composer of the movie Jawan?
+    - Please inform me about the composer of Pathaan.
+    - I'm curious, who composed Inception?
+    - Can you share with me the name of the composer for The Matrix?
+    - Do you know the composer behind Jawan?
+    - Share details about the composer of the film Pathaan.
+    - I'd like to know the composer of Inception, please.
+    - Could you tell me the name of the composer for The Matrix?
+    - Provide information on Jawan's composer.
+    - I'm interested in knowing the composer of Pathaan.
+    - Tell me about the composer of Inception.
+    - Share the composer's name for The Matrix.
+    - Who was the composer of Jawan?
+    - Inform me about the composer of the movie Pathaan.
+    - I'm curious, who composed the film Inception?
+    - What's the name of the composer for The Matrix?
+    - Who composed the movie "Eternal Quest"?
+    - Can you tell me the composer of "Mystic Shadows"?
+    - I'm curious, who composed "Whispering Winds"?
+    - Please share the name of the composer for "Starlight Secrets."
+    - Do you know the composer behind "Enchanted Kingdom"?
+    - Share details about the composer of the film "Cryptic Chronicles."
+    - I'd like to know the composer of "Moonlit Sonata," please.
+    - Could you tell me the name of the composer for "Beyond the Horizon"?
+    - Provide information on the composer of "Silent Serenade."
+    - I'm interested in knowing the composer of "Shifting Realities."
+    - Tell me about the composer of "Celestial Harmony."
+    - Share the composer's name for "Echoes of Eternity."
+    - Who was the composer for "Whispers in the Dark"?
+    - Inform me about the composer of the movie "Stellar Odyssey."
+    - I'm curious, who composed the film "Lunar Labyrinth"?
+    - What's the name of the composer for "Galactic Enigma"?
+    - Who composed the movie Starfall 9?
+    - Can you tell me the composer of Project 13?
+    - I'm curious, who composed Infinite Horizon 42?
+    - Please share the name of the composer for Sector 7.
+    - Do you know the composer behind Code Zero: Dawn?
+    - Share details about the composer of the film Chronicles of 21.
+    - I'd like to know the composer of Quantum Realm 33, please.
+    - Could you tell me the name of the composer for Zero Gravity 88?
+    - provide information on the composer of "Cybernetic Evolution 17."
+    - i'm interested in knowing the composer of "apex 5."
+    - tell me about the composer of "dimension x: 24."
+    - share the composer's name for "twilight protocol 12."
+    - who was the composer for "nebula 6"?
+    - inform me about the composer of the movie "lunar eclipsia 77."
+    - i'm curious, who composed the film "starlight 55"?
+    - what's the name of the composer for "quantum shift 63"?
+
+
+- intent: get_composer_without_movie_title
+  examples: |
+    - Who was the composer of that film?
+    - Can you provide the composer, please?
+    - Composer, if you may?
+    - Who composed for this film?
+    - Any idea about the composer?
+    - Tell me the composer.
+    - Composer of this movie?
+    - Who was the composer for the film?
+    - Can you tell me the composer?
+    - Composer, if you have it.
+    - I need the composer, please.
+    - Provide the composer.
+    - Can you give me the composer?
+    - Composer, please.
+    - Tell me about the film's composer.
+    - Composer details?
+    - Share details about the composer.
+    - Who was the composer for the movie?
+    - Any insights into the composer?
+    - Could you inform me about the composer?
+    - Who composed for this movie?
+    - Enlighten me about the composer.
+    - Any information on the composer?
+    - Composer details, please.
+    - I'm curious, who was the composer?
+    - Tell me about the movie's composer.
+    - Composer, if you know it.
+    - I'm interested in the composer.
+    - Composer, please.
+    - Who was the composer, do you know?
+    - Any insights on the composer?
+    - Who's responsible for the composer?
+    - Inform me about the composer.
+    - Can you provide details on the composer?
+    - Composer of the movie?
+    - Can you share the movie's composer?
+    - I'd like to know the composer of the movie.
+    - Tell me about the composer of this movie.
+    - Composer, if you have information.
+    - What can you tell me about the movie's composer?
+    - Share the details of the movie's composer.
+    - Enlighten me about the composer of the movie.
+    - Can you provide the composer of the movie, please?
+    - Composer of the movie, if you know it.
+
+- intent: get_choreographer_with_movie_title
+  examples: |
+    - Who was the choreographer of the movie Jawan?
+    - Please inform me about the choreographer of Pathaan.
+    - I'm curious, who choreographed Inception?
+    - Can you share with me the name of the choreographer for The Matrix?
+    - Do you know the choreographer behind Jawan?
+    - Share details about the choreographer of the film Pathaan.
+    - I'd like to know the choreographer of Inception, please.
+    - Could you tell me the name of the choreographer for The Matrix?
+    - Provide information on Jawan's choreographer.
+    - I'm interested in knowing the choreographer of Pathaan.
+    - Tell me about the choreographer of Inception.
+    - Share the choreographer's name for The Matrix.
+    - Who was the choreographer of Jawan?
+    - Inform me about the choreographer of the movie Pathaan.
+    - I'm curious, who choreographed the film Inception?
+    - What's the name of the choreographer for The Matrix?
+    - Who choreographed the movie "Eternal Quest"?
+    - Can you tell me the choreographer of "Mystic Shadows"?
+    - I'm curious, who choreographed "Whispering Winds"?
+    - Please share the name of the choreographer for "Starlight Secrets."
+    - Do you know the choreographer behind "Enchanted Kingdom"?
+    - Share details about the choreographer of the film "Cryptic Chronicles."
+    - I'd like to know the choreographer of "Moonlit Sonata," please.
+    - Could you tell me the name of the choreographer for "Beyond the Horizon"?
+    - Provide information on the choreographer of "Silent Serenade."
+    - I'm interested in knowing the choreographer of "Shifting Realities."
+    - Tell me about the choreographer of "Celestial Harmony."
+    - Share the choreographer's name for "Echoes of Eternity."
+    - Who was the choreographer for "Whispers in the Dark"?
+    - Inform me about the choreographer of the movie "Stellar Odyssey."
+    - I'm curious, who choreographed the film "Lunar Labyrinth"?
+    - What's the name of the choreographer for "Galactic Enigma"?
+    - Who choreographed the movie Starfall 9?
+    - Can you tell me the choreographer of Project 13?
+    - I'm curious, who choreographed Infinite Horizon 42?
+    - Please share the name of the choreographer for Sector 7.
+    - Do you know the choreographer behind Code Zero: Dawn?
+    - Share details about the choreographer of the film Chronicles of 21.
+    - I'd like to know the choreographer of Quantum Realm 33, please.
+    - Could you tell me the name of the choreographer for Zero Gravity 88?
+    - provide information on the choreographer of "Cybernetic Evolution 17."
+    - i'm interested in knowing the choreographer of "apex 5."
+    - tell me about the choreographer of "dimension x: 24."
+    - share the choreographer's name for "twilight protocol 12."
+    - who was the choreographer for "nebula 6"?
+    - inform me about the choreographer of the movie "lunar eclipsia 77."
+    - i'm curious, who choreographed the film "starlight 55"?
+    - what's the name of the choreographer for "quantum shift 63"?
+
+
+- intent: get_choreographer_without_movie_title
+  examples: |
+    - Who was the choreographer of that film?
+    - Can you provide the choreographer, please?
+    - Choreographer, if you may?
+    - Who choreographed for this film?
+    - Any idea about the choreographer?
+    - Tell me the choreographer.
+    - Choreographer of this movie?
+    - Who was the choreographer for the film?
+    - Can you tell me the choreographer?
+    - Choreographer, if you have it.
+    - I need the choreographer, please.
+    - Provide the choreographer.
+    - Can you give me the choreographer?
+    - Choreographer, please.
+    - Tell me about the film's choreographer.
+    - Choreographer details?
+    - Share details about the choreographer.
+    - Who was the choreographer for the movie?
+    - Any insights into the choreographer?
+    - Could you inform me about the choreographer?
+    - Who choreographed for this movie?
+    - Enlighten me about the choreographer.
+    - Any information on the choreographer?
+    - Choreographer details, please.
+    - I'm curious, who was the choreographer?
+    - Tell me about the movie's choreographer.
+    - Choreographer, if you know it.
+    - I'm interested in the choreographer.
+    - Choreographer, please.
+    - Who was the choreographer, do you know?
+    - Any insights on the choreographer?
+    - Who's responsible for the choreographer?
+    - Inform me about the choreographer.
+    - Can you provide details on the choreographer?
+    - Choreographer of the movie?
+    - Can you share the movie's choreographer?
+    - I'd like to know the choreographer of the movie.
+    - Tell me about the choreographer of this movie.
+    - Choreographer, if you have information.
+    - What can you tell me about the movie's choreographer?
+    - Share the details of the movie's choreographer.
+    - Enlighten me about the choreographer of the movie.
+    - Can you provide the choreographer of the movie, please?
+    - Choreographer of the movie, if you know it.
+
+- intent: get_editor_with_movie_title
+  examples: |
+    - Who was the editor of the movie Jawan?
+    - Please inform me about the editor of Pathaan.
+    - I'm curious, who edited Inception?
+    - Can you share with me the name of the editor for The Matrix?
+    - Do you know the editor behind Jawan?
+    - Share details about the editor of the film Pathaan.
+    - I'd like to know the editor of Inception, please.
+    - Could you tell me the name of the editor for The Matrix?
+    - Provide information on Jawan's editor.
+    - I'm interested in knowing the editor of Pathaan.
+    - Tell me about the editor of Inception.
+    - Share the editor's name for The Matrix.
+    - Who was the editor of Jawan?
+    - Inform me about the editor of the movie Pathaan.
+    - I'm curious, who edited the film Inception?
+    - What's the name of the editor for The Matrix?
+    - Who edited the movie "Eternal Quest"?
+    - Can you tell me the editor of "Mystic Shadows"?
+    - I'm curious, who edited "Whispering Winds"?
+    - Please share the name of the editor for "Starlight Secrets."
+    - Do you know the editor behind "Enchanted Kingdom"?
+    - Share details about the editor of the film "Cryptic Chronicles."
+    - I'd like to know the editor of "Moonlit Sonata," please.
+    - Could you tell me the name of the editor for "Beyond the Horizon"?
+    - Provide information on the editor of "Silent Serenade."
+    - I'm interested in knowing the editor of "Shifting Realities."
+    - Tell me about the editor of "Celestial Harmony."
+    - Share the editor's name for "Echoes of Eternity."
+    - Who was the editor for "Whispers in the Dark"?
+    - Inform me about the editor of the movie "Stellar Odyssey."
+    - I'm curious, who edited the film "Lunar Labyrinth"?
+    - What's the name of the editor for "Galactic Enigma"?
+    - Who edited the movie Starfall 9?
+    - Can you tell me the editor of Project 13?
+    - I'm curious, who edited Infinite Horizon 42?
+    - Please share the name of the editor for Sector 7.
+    - Do you know the editor behind Code Zero: Dawn?
+    - Share details about the editor of the film Chronicles of 21.
+    - I'd like to know the editor of Quantum Realm 33, please.
+    - Could you tell me the name of the editor for Zero Gravity 88?
+    - provide information on the editor of "Cybernetic Evolution 17."
+    - i'm interested in knowing the editor of "apex 5."
+    - tell me about the editor of "dimension x: 24."
+    - share the editor's name for "twilight protocol 12."
+    - who was the editor for "nebula 6"?
+    - inform me about the editor of the movie "lunar eclipsia 77."
+    - i'm curious, who edited the film "starlight 55"?
+    - what's the name of the editor for "quantum shift 63"?
+
+
+- intent: get_editor_without_movie_title
+  examples: |
+    - Who was the editor of that film?
+    - Can you provide the editor, please?
+    - Editor, if you may?
+    - Who edited for this film?
+    - Any idea about the editor?
+    - Tell me the editor.
+    - Editor of this movie?
+    - Who was the editor for the film?
+    - Can you tell me the editor?
+    - Editor, if you have it.
+    - I need the editor, please.
+    - Provide the editor.
+    - Can you give me the editor?
+    - Editor, please.
+    - Tell me about the film's editor.
+    - Editor details?
+    - Share details about the editor.
+    - Who was the editor for the movie?
+    - Any insights into the editor?
+    - Could you inform me about the editor?
+    - Who edited for this movie?
+    - Enlighten me about the editor.
+    - Any information on the editor?
+    - Editor details, please.
+    - I'm curious, who was the editor?
+    - Tell me about the movie's editor.
+    - Editor, if you know it.
+    - I'm interested in the editor.
+    - Editor, please.
+    - Who was the editor, do you know?
+    - Any insights on the editor?
+    - Who's responsible for the editor?
+    - Inform me about the editor.
+    - Can you provide details on the editor?
+    - Editor of the movie?
+    - Can you share the movie's editor?
+    - I'd like to know the editor of the movie.
+    - Tell me about the editor of this movie.
+    - Editor, if you have information.
+    - What can you tell me about the movie's editor?
+    - Share the details of the movie's editor.
+    - Enlighten me about the editor of the movie.
+    - Can you provide the editor of the movie, please?
+    - Editor of the movie, if you know it.
+
+- intent: get_producer_with_movie_title
+  examples: |
+    - Who was the producer of the movie Jawan?
+    - Please inform me about the producer of Pathaan.
+    - I'm curious, who produced Inception?
+    - Can you share with me the name of the producer for The Matrix?
+    - Do you know the producer behind Jawan?
+    - Share details about the producer of the film Pathaan.
+    - I'd like to know the producer of Inception, please.
+    - Could you tell me the name of the producer for The Matrix?
+    - Provide information on Jawan's producer.
+    - I'm interested in knowing the producer of Pathaan.
+    - Tell me about the producer of Inception.
+    - Share the producer's name for The Matrix.
+    - Who was the producer of Jawan?
+    - Inform me about the producer of the movie Pathaan.
+    - I'm curious, who produced the film Inception?
+    - What's the name of the producer for The Matrix?
+    - Who produced the movie "Eternal Quest"?
+    - Can you tell me the producer of "Mystic Shadows"?
+    - I'm curious, who produced "Whispering Winds"?
+    - Please share the name of the producer for "Starlight Secrets."
+    - Do you know the producer behind "Enchanted Kingdom"?
+    - Share details about the producer of the film "Cryptic Chronicles."
+    - I'd like to know the producer of "Moonlit Sonata," please.
+    - Could you tell me the name of the producer for "Beyond the Horizon"?
+    - Provide information on the producer of "Silent Serenade."
+    - I'm interested in knowing the producer of "Shifting Realities."
+    - Tell me about the producer of "Celestial Harmony."
+    - Share the producer's name for "Echoes of Eternity."
+    - Who was the producer for "Whispers in the Dark"?
+    - Inform me about the producer of the movie "Stellar Odyssey."
+    - I'm curious, who produced the film "Lunar Labyrinth"?
+    - What's the name of the producer for "Galactic Enigma"?
+    - Who produced the movie Starfall 9?
+    - Can you tell me the producer of Project 13?
+    - I'm curious, who produced Infinite Horizon 42?
+    - Please share the name of the producer for Sector 7.
+    - Do you know the producer behind Code Zero: Dawn?
+    - Share details about the producer of the film Chronicles of 21.
+    - I'd like to know the producer of Quantum Realm 33, please.
+    - Could you tell me the name of the producer for Zero Gravity 88?
+    - provide information on the producer of "Cybernetic Evolution 17."
+    - i'm interested in knowing the producer of "apex 5."
+    - tell me about the producer of "dimension x: 24."
+    - share the producer's name for "twilight protocol 12."
+    - who was the producer for "nebula 6"?
+    - inform me about the producer of the movie "lunar eclipsia 77."
+    - i'm curious, who produced the film "starlight 55"?
+    - what's the name of the producer for "quantum shift 63"?
+
+
+- intent: get_producer_without_movie_title
+  examples: |
+    - Who was the producer of that film?
+    - Can you provide the producer, please?
+    - Producer, if you may?
+    - Who produced for this film?
+    - Any idea about the producer?
+    - Tell me the producer.
+    - Producer of this movie?
+    - Who was the producer for the film?
+    - Can you tell me the producer?
+    - Producer, if you have it.
+    - I need the producer, please.
+    - Provide the producer.
+    - Can you give me the producer?
+    - Producer, please.
+    - Tell me about the film's producer.
+    - Producer details?
+    - Share details about the producer.
+    - Who was the producer for the movie?
+    - Any insights into the producer?
+    - Could you inform me about the producer?
+    - Who produced for this movie?
+    - Enlighten me about the producer.
+    - Any information on the producer?
+    - Producer details, please.
+    - I'm curious, who was the producer?
+    - Tell me about the movie's producer.
+    - Producer, if you know it.
+    - I'm interested in the producer.
+    - Producer, please.
+    - Who was the producer, do you know?
+    - Any insights on the producer?
+    - Who's responsible for the producer?
+    - Inform me about the producer.
+    - Can you provide details on the producer?
+    - Producer of the movie?
+    - Can you share the movie's producer?
+    - I'd like to know the producer of the movie.
+    - Tell me about the producer of this movie.
+    - Producer, if you have information.
+    - What can you tell me about the movie's producer?
+    - Share the details of the movie's producer.
+    - Enlighten me about the producer of the movie.
+    - Can you provide the producer of the movie, please?
+    - Producer of the movie, if you know it.
+
+- intent: is_released_with_movie_title
+  examples: |
+    - Has the movie Jawan been released?
+    - Can you confirm if Pathaan has been released?
+    - Is Inception already released?
+    - Can you tell me if The Matrix is already released?
+    - Has Jawan been released?
+    - Can you confirm the release status of Pathaan?
+    - Is Inception already out?
+    - Can you tell me if The Matrix has been released?
+    - Has Jawan been released yet?
+    - Can you confirm the release status of Pathaan?
+    - Is Inception already released?
+    - Can you tell me if The Matrix is out?
+    - Has Jawan been released?
+    - Can you confirm if Pathaan has been released?
+    - Is Inception already out?
+    - Can you tell me if The Matrix has been released?
+    - Has the movie "Eternal Quest" been released?
+    - Can you confirm if "Mystic Shadows" has been released?
+    - Is "Whispering Winds" already released?
+    - Can you tell me if "Starlight Secrets" is already out?
+    - Has "Enchanted Kingdom" been released?
+    - Can you confirm the release status of "Cryptic Chronicles"?
+    - Is "Moonlit Sonata" already released?
+    - Can you tell me if "Beyond the Horizon" has been released?
+    - Has the movie "Silent Serenade" been released?
+    - Can you confirm if "Shifting Realities" has been released?
+    - Is "Celestial Harmony" already out?
+    - Can you tell me if "Echoes of Eternity" has been released?
+    - Has "Whispers in the Dark" been released?
+    - Can you confirm the release status of "Stellar Odyssey"?
+    - Is "Lunar Labyrinth" already released?
+    - Can you tell me if "Galactic Enigma" has been released?
+    - Has "Starfall 9" been released?
+    - Can you confirm if Project 13 has been released?
+    - Is Infinite Horizon 42 already out?
+    - Can you tell me if Sector 7 has been released?
+    - Has "Code Zero: Dawn" been released?
+    - Can you confirm the release status of "Chronicles of 21"?
+    - Is "Quantum Realm 33" already released?
+    - Can you tell me if Zero Gravity 88 has been released?
+    - Has "Cybernetic Evolution 17" been released?
+    - Can you confirm if "Apex 5" has been released?
+    - Is "Dimension X: 24" already out?
+    - Can you tell me if "Twilight Protocol 12" has been released?
+    - Has "Nebula 6" been released?
+    - Can you confirm the release status of "Lunar Eclipsia 77"?
+    - Is "Starlight 55" already released?
+    - Can you tell me if "Quantum Shift 63" has been released?
+
+- intent: is_released_without_movie_title
+  examples: |
+    - Has that movie been released?
+    - Can you confirm if it's been released, please?
+    - Release status, if you may?
+    - Is this film already out?
+    - Any idea if it's been released?
+    - Tell me the release status.
+    - Release status of this movie?
+    - Has this film been released?
+    - Can you tell me the release status?
+    - Release status, if you have it.
+    - I need the release status, please.
+    - Provide the release status.
+    - Can you give me the release status?
+    - Release status, please.
+    - Tell me about the film's release status.
+    - Release status details?
+    - Share details about the release status.
+    - Has the movie been released yet?
+    - Any insights into the release status?
+    - Could you inform me about the release status?
+    - Has it been released?
+    - Enlighten me about the release status.
+    - Any information on the release status?
+    - Release status details, please.
+    - I'm curious, has it been released?
+    - Tell me about the movie's release status.
+    - Release status, if you know it.
+    - I'm interested in the release status.
+    - Release status, please.
+    - Has it been released, do you know?
+    - Any insights on the release status?
+    - Who's responsible for the release status?
+    - Inform me about the release status.
+    - Can you provide details on the release status?
+    - Release status of the movie?
+    - Can you share the movie's release status?
+    - I'd like to know the release status of the movie.
+    - Tell me about the release status of this movie.
+    - Release status, if you have information.
+    - What can you tell me about the movie's release status?
+    - Share the details of the movie's release status.
+    - Enlighten me about the release status of the movie.
+    - Can you provide the release status of the movie, please?
+    - Release status of the movie, if you know it.
+- intent: is_good_with_movie_title
+  examples: |
+    - Is the movie Jawan well-received?
+    - Can you tell me if Pathaan is a well-regarded movie?
+    - I'm curious, is Inception acclaimed?
+    - Could you share with me if The Matrix is considered excellent?
+    - Do you know if Jawan is a highly-praised movie?
+    - Is Pathaan a critically-acclaimed film?
+    - Can you tell me if Inception is considered impressive?
+    - Is The Matrix celebrated?
+    - Is Jawan positively reviewed?
+    - Can you tell me if Pathaan is a highly-rated film?
+    - Is Inception regarded as a top-tier movie?
+    - Can you share if The Matrix is praised by critics?
+    - Is Jawan well-received?
+    - Can you tell me if Pathaan is a well-regarded film?
+    - Is Inception praised?
+    - Can you share with me if The Matrix is considered excellent?
+    - Is "Eternal Quest" well-regarded?
+    - Can you tell me if "Mystic Shadows" is highly-praised?
+    - I'm curious, is "Whispering Winds" well-received?
+    - Could you share with me if "Starlight Secrets" is considered impressive?
+    - Do you know if "Enchanted Kingdom" is highly-rated?
+    - Is "Cryptic Chronicles" regarded as a top-tier film?
+    - Can you tell me if "Moonlit Sonata" is praised by critics?
+    - Is "Beyond the Horizon" positively reviewed?
+    - Is "Silent Serenade" a highly-regarded film?
+    - Can you share if "Shifting Realities" is praised by critics?
+    - Is "Celestial Harmony" well-received?
+    - Can you tell me if "Echoes of Eternity" is well-regarded?
+    - Is "Whispers in the Dark" celebrated?
+    - Can you share if "Stellar Odyssey" is considered impressive?
+    - Is "Lunar Labyrinth" regarded as a top-tier movie?
+    - Can you tell me if "Galactic Enigma" is highly-rated?
+    - Is "Starfall 9" praised?
+    - Can you share if "Project 13" is positively reviewed?
+    - Is "Infinite Horizon 42" well-received?
+    - Can you tell me if "Sector 7" is well-regarded?
+    - Is "Code Zero: Dawn" celebrated?
+    - Can you share if "Chronicles of 21" is considered excellent?
+    - Is "Quantum Realm 33" highly-praised?
+    - Can you tell me if "Zero Gravity 88" is praised?
+    - Is "Cybernetic Evolution 17" regarded as a top-tier film?
+    - Can you share if "Apex 5" is positively reviewed?
+    - Is "Dimension X: 24" well-received?
+    - Can you tell me if "Twilight Protocol 12" is celebrated?
+    - Is "Nebula 6" considered impressive?
+    - Can you share if "Lunar Eclipsia 77" is highly-rated?
+    - Is "Starlight 55" positively reviewed?
+    - Can you tell me if "Quantum Shift 63" is well-regarded?
+    - Is the movie Jawan good?
+    - Can you tell me if Pathaan is a good movie?
+    - I'm curious, is Inception a good film?
+    - Could you share with me if The Matrix is good?
+    - Do you know if Jawan is a good movie?
+    - Is Pathaan a good film?
+    - Can you tell me if Inception is a good movie?
+    - Is The Matrix considered good?
+    - Is Jawan a good movie?
+    - Can you tell me if Pathaan is a good film?
+    - Is Inception considered a good movie?
+    - Can you share if The Matrix is a good film?
+    - Is Jawan a good movie?
+    - Can you tell me if Pathaan is a good film?
+    - Is Inception a good movie?
+    - Can you share with me if The Matrix is good?
+    - Is "Eternal Quest" a good movie?
+    - Can you tell me if "Mystic Shadows" is good?
+    - I'm curious, is "Whispering Winds" a good film?
+    - Could you share with me if "Starlight Secrets" is good?
+    - Do you know if "Enchanted Kingdom" is a good movie?
+    - Is "Cryptic Chronicles" a good film?
+    - Can you tell me if "Moonlit Sonata" is a good movie?
+    - Is "Beyond the Horizon" considered a good movie?
+    - Is "Silent Serenade" a good film?
+    - Can you share if "Shifting Realities" is a good movie?
+    - Is "Celestial Harmony" a good movie?
+    - Can you tell me if "Echoes of Eternity" is good?
+    - Is "Whispers in the Dark" a good film?
+    - Can you share if "Stellar Odyssey" is a good movie?
+    - Is "Lunar Labyrinth" a good movie?
+    - Can you tell me if "Galactic Enigma" is a good film?
+    - Is "Starfall 9" considered a good movie?
+    - Can you share if "Project 13" is a good film?
+    - Is "Infinite Horizon 42" a good movie?
+    - Can you tell me if "Sector 7" is a good film?
+    - Is "Code Zero: Dawn" considered a good movie?
+    - Can you share if "Chronicles of 21" is a good film?
+    - Is "Quantum Realm 33" a good movie?
+    - Can you tell me if "Zero Gravity 88" is good?
+    - Is "Cybernetic Evolution 17" a good film?
+    - Can you share if "Apex 5" is a good movie?
+    - Is "Dimension X: 24" a good movie?
+    - Can you tell me if "Twilight Protocol 12" is good?
+    - Is "Nebula 6" a good movie?
+    - Can you share if "Lunar Eclipsia 77" is a good film?
+    - Is "Starlight 55" a good movie?
+    - Can you tell me if "Quantum Shift 63" is good?
+
+- intent: is_good_without_movie_title
+  examples: |
+    - Is that movie well-received?
+    - Can you tell me if it's a well-regarded movie, please?
+    - Celebrated or not, if you may?
+    - Is this film considered impressive?
+    - Any idea if it's a highly-praised movie?
+    - Tell me if it's a positively reviewed movie.
+    - Well-regarded or not, please.
+    - Is this film celebrated?
+    - Can you tell me if it's a positively reviewed movie?
+    - Praised or not, if you have that information.
+    - I need to know if it's considered excellent, please.
+    - Provide information about whether it's highly-rated.
+    - Can you give me insights into whether it's considered impressive?
+    - Celebrated or not, please.
+    - Tell me about the movie's regard.
+    - Is it a well-regarded film?
+    - Celebrated or not, if you know it.
+    - I'm interested in knowing if it's a positively reviewed movie.
+    - Well-regarded or not, please.
+    - Has it been rated as excellent, do you know?
+    - Any insights on whether it's praised?
+    - Who's responsible for deciding if it's celebrated?
+    - Inform me about whether it's praised.
+    - Can you provide details on whether it's considered impressive?
+    - Is it a well-regarded movie?
+    - Can you share whether it's a celebrated film?
+    - I'd like to know if it's positively reviewed.
+    - Tell me about whether it's highly-rated.
+    - Well-regarded or not, if you have information.
+    - What can you tell me about the movie's regard?
+    - Share the details about whether it's positively reviewed.
+    - Enlighten me about whether it's celebrated.
+    - Can you provide insights into whether it's considered excellent, please?
+    - Celebrated or not, if you know it.
+    - Is that movie good?
+    - Can you tell me if it's a good movie, please?
+    - Good or not, if you may?
+    - Is this film considered good?
+    - Any idea if it's a good movie?
+    - Tell me if it's a good movie.
+    - Good or not, please.
+    - Is this film good?
+    - Can you tell me if it's a good movie?
+    - Good or not, if you have that information.
+    - I need to know if it's a good movie, please.
+    - Provide information about whether it's a good movie.
+    - Can you give me insights into whether it's a good movie?
+    - Good or not, please.
+    - Tell me about the movie's goodness.
+    - Is it a good film?
+    - Good or not, if you know it.
+    - I'm interested in knowing if it's a good movie.
+    - Good or not, please.
+    - Has it been rated as good, do you know?
+    - Any insights on whether it's good?
+    - Who's responsible for deciding if it's good?
+    - Inform me about whether it's a good movie.
+    - Can you provide details on whether it's a good movie?
+    - Is it a good movie?
+    - Can you share whether it's a good film?
+    - I'd like to know if it's a good movie.
+    - Tell me about whether it's a good movie.
+    - Good or not, if you have information.
+    - What can you tell me about the movie's goodness?
+    - Share the details about whether it's a good movie.
+    - Enlighten me about whether it's a good movie.
+    - Can you provide insights into whether it's a good movie, please?
+    - Good or not, if you know it.
+- intent: is_bad_with_movie_title
+  examples: |
+    - Is the movie Jawan poorly received?
+    - Can you tell me if Pathaan is considered a disappointment?
+    - I'm curious, is Inception criticized?
+    - Could you share with me if The Matrix is regarded as a bad movie?
+    - Do you know if Jawan is negatively reviewed?
+    - Is Pathaan considered a flop?
+    - Can you tell me if Inception is panned by critics?
+    - Is The Matrix deemed as a bad film?
+    - Is Jawan negatively regarded?
+    - Can you tell me if Pathaan is considered a letdown?
+    - Is Inception criticized as a subpar movie?
+    - Can you share if The Matrix is viewed as a disappointment?
+    - Is Jawan poorly received?
+    - Can you tell me if Pathaan is negatively regarded?
+    - Is Inception criticized?
+    - Can you share with me if The Matrix is considered a bad film?
+    - Is "Eternal Quest" poorly received?
+    - Can you tell me if "Mystic Shadows" is viewed as a disappointment?
+    - I'm curious, is "Whispering Winds" negatively reviewed?
+    - Could you share with me if "Starlight Secrets" is regarded as a bad movie?
+    - Do you know if "Enchanted Kingdom" is negatively regarded?
+    - Is "Cryptic Chronicles" panned by critics?
+    - Can you tell me if "Moonlit Sonata" is considered a letdown?
+    - Is "Beyond the Horizon" criticized as a subpar movie?
+    - Can you share if "Silent Serenade" is viewed as a disappointment?
+    - Is "Shifting Realities" negatively reviewed?
+    - Can you tell me if "Celestial Harmony" is deemed as a bad film?
+    - Is "Echoes of Eternity" poorly received?
+    - Can you share if "Whispers in the Dark" is considered a letdown?
+    - Is "Stellar Odyssey" criticized?
+    - Can you tell me if "Lunar Labyrinth" is negatively regarded?
+    - Is "Galactic Enigma" deemed as a bad movie?
+    - Is "Starfall 9" viewed as a disappointment?
+    - Can you share if "Project 13" is negatively reviewed?
+    - Is "Infinite Horizon 42" poorly received?
+    - Can you tell me if "Sector 7" is considered a letdown?
+    - Is "Code Zero: Dawn" criticized as a subpar movie?
+    - Can you share if "Chronicles of 21" is regarded as a bad film?
+    - Is "Quantum Realm 33" negatively regarded?
+    - Can you tell me if "Zero Gravity 88" is deemed as a bad movie?
+    - Is "Cybernetic Evolution 17" viewed as a disappointment?
+    - Can you share if "Apex 5" is negatively reviewed?
+    - Is "Dimension X: 24" poorly received?
+    - Can you tell me if "Twilight Protocol 12" is considered a letdown?
+    - Is "Nebula 6" criticized?
+    - Can you share if "Lunar Eclipsia 77" is deemed as a bad film?
+    - Is "Starlight 55" viewed as a disappointment?
+    - Can you tell me if "Quantum Shift 63" is negatively regarded?
+    - Is the movie Jawan bad?
+    - Can you tell me if Pathaan is a bad movie?
+    - I'm curious, is Inception a disappointing film?
+    - Could you share with me if The Matrix is bad?
+    - Do you know if Jawan is a poorly received movie?
+    - Is Pathaan a flop?
+    - Can you tell me if Inception is panned by critics?
+    - Is The Matrix deemed as a bad film?
+    - Is Jawan negatively regarded?
+    - Can you tell me if Pathaan is a letdown?
+    - Is Inception criticized as a subpar movie?
+    - Can you share if The Matrix is a disappointment?
+    - Is Jawan bad?
+    - Can you tell me if Pathaan is negatively regarded?
+    - Is Inception criticized?
+    - Can you share with me if The Matrix is bad?
+    - Is "Eternal Quest" bad?
+    - Can you tell me if "Mystic Shadows" is a disappointing film?
+    - I'm curious, is "Whispering Winds" negatively reviewed?
+    - Could you share with me if "Starlight Secrets" is bad?
+    - Do you know if "Enchanted Kingdom" is a poorly received movie?
+    - Is "Cryptic Chronicles" a flop?
+    - Can you tell me if "Moonlit Sonata" is panned by critics?
+    - Is "Beyond the Horizon" deemed as a bad film?
+    - Can you share if "Silent Serenade" is a disappointment?
+    - Is "Shifting Realities" negatively regarded?
+    - Can you tell me if "Celestial Harmony" is bad?
+    - Is "Echoes of Eternity" bad?
+    - Can you share if "Whispers in the Dark" is a letdown?
+    - Is "Stellar Odyssey" criticized?
+    - Can you tell me if "Lunar Labyrinth" is negatively regarded?
+    - Is "Galactic Enigma" deemed as a bad movie?
+    - Is "Starfall 9" a disappointment?
+    - Can you share if "Project 13" is negatively reviewed?
+    - Is "Infinite Horizon 42" bad?
+    - Can you tell me if "Sector 7" is a bad film?
+    - Is "Code Zero: Dawn" criticized as a subpar movie?
+    - Can you share if "Chronicles of 21" is bad?
+    - Is "Quantum Realm 33" a disappointment?
+    - Can you tell me if "Zero Gravity 88" is a bad movie?
+    - Is "Cybernetic Evolution 17" negatively regarded?
+    - Can you share if "Apex 5" is bad?
+    - Is "Dimension X: 24" a disappointment?
+    - Can you tell me if "Twilight Protocol 12" is negatively regarded?
+    - Is "Nebula 6" bad?
+    - Can you share if "Lunar Eclipsia 77" is a disappointment?
+    - Is "Starlight 55" criticized?
+    - Can you tell me if "Quantum Shift 63" is negatively regarded?
+
+
+- intent: is_bad_without_movie_title
+  examples: |
+    - Is that movie poorly received?
+    - Can you tell me if it's considered a disappointment, please?
+    - Deemed as a bad film or not, if you may?
+    - Is this film criticized?
+    - Any idea if it's negatively reviewed?
+    - Tell me if it's a flop.
+    - Negatively regarded or not, please.
+    - Is this film deemed as a bad movie?
+    - Is it negatively regarded?
+    - Can you tell me if it's considered a letdown?
+    - Criticized as a subpar movie or not, please.
+    - Provide information about whether it's viewed as a disappointment.
+    - Can you give me insights into whether it's considered a bad film?
+    - Negatively regarded or not, please.
+    - Tell me about the movie's reception.
+    - Is it poorly received?
+    - Negatively regarded or not, if you know it.
+    - I'm interested in knowing if it's negatively reviewed.
+    - Deemed as a bad film or not, please.
+    - Has it been rated as a disappointment, do you know?
+    - Any insights on whether it's a flop?
+    - Who's responsible for deciding if it's viewed as a disappointment?
+    - Inform me about whether it's negatively reviewed.
+    - Can you provide details on whether it's criticized?
+    - Is it deemed as a bad movie?
+    - Can you share whether it's negatively regarded?
+    - I'd like to know if it's viewed as a disappointment.
+    - Tell me about whether it's considered a bad film.
+    - Negatively regarded or not, if you have information.
+    - What can you tell me about the movie's reception?
+    - Share the details about whether it's negatively reviewed.
+    - Enlighten me about whether it's deemed as a bad movie.
+    - Can you provide insights into whether it's considered a bad film, please?
+    - Negatively regarded or not, if you know it.
+    - Is that movie bad?
+    - Can you tell me if it's a bad movie, please?
+    - Bad or not, if you may?
+    - Is this film considered bad?
+    - Any idea if it's a bad movie?
+    - Tell me if it's a bad movie.
+    - Bad or not, please.
+    - Is this film bad?
+    - Can you tell me if it's a bad movie?
+    - Bad or not, if you have that information.
+    - I need to know if it's a bad movie, please.
+    - Provide information about whether it's a bad movie.
+    - Can you give me insights into whether it's a bad movie?
+    - Bad or not, please.
+    - Tell me about the movie's quality.
+    - Is it a bad film?
+    - Bad or not, if you know it.
+    - I'm interested in knowing if it's a bad movie.
+    - Bad or not, please.
+    - Has it been rated as bad, do you know?
+    - Any insights on whether it's bad?
+    - Who's responsible for deciding if it's bad?
+    - Inform me about whether it's a bad movie.
+    - Can you provide details on whether it's a bad movie?
+    - Is it a bad movie?
+    - Can you share whether it's a bad film?
+    - I'd like to know if it's a bad movie.
+    - Tell me about whether it's a bad movie.
+    - Bad or not, if you have information.
+    - What can you tell me about the movie's quality?
+    - Share the details about whether it's a bad movie.
+    - Enlighten me about whether it's a bad movie.
+    - Can you provide insights into whether it's a bad movie, please?
+    - Bad or not, if you know it.
+
+- intent: whether_movie_has_cast_with_movie_title_and_cast_name
+  examples: |
+    - Does the movie Jawan have Tom Hanks in its cast?
+    - Can you confirm if Scarlett Johansson is part of the cast for the movie Pathaan?
+    - I'm curious, does Inception feature Brad Pitt in its cast?
+    - Could you share with me whether Emma Watson is part of the cast for The Matrix?
+    - Do you know if Jawan includes Leonardo DiCaprio in its cast?
+    - Can you confirm whether Julia Roberts is part of the cast for the film Pathaan?
+    - I'd like to know, does Inception have Chris Hemsworth in its cast?
+    - Can you tell me if Keanu Reeves is part of the cast for The Matrix?
+    - Does the movie "Eternal Quest" have Angelina Jolie in its cast?
+    - Can you confirm if Robert Downey Jr. is part of the cast for "Mystic Shadows"?
+    - I'm curious, does "Whispering Winds" feature Natalie Portman in its cast?
+    - Could you share with me whether Johnny Depp is part of the cast for "Starlight Secrets"?
+    - Do you know if "Enchanted Kingdom" includes Jennifer Lawrence in its cast?
+    - Can you confirm whether Chris Evans is part of the cast for the film "Cryptic Chronicles"?
+    - I'd like to know, does "Moonlit Sonata" have Charlize Theron in its cast?
+    - Can you tell me if Hugh Jackman is part of the cast for "Beyond the Horizon"?
+    - Does the movie "Silent Serenade" include Anne Hathaway in its cast?
+    - Can you confirm if Ryan Reynolds is part of the cast for "Shifting Realities"?
+    - I'm curious, does "Celestial Harmony" feature Dwayne Johnson in its cast?
+    - Could you share with me whether Margot Robbie is part of the cast for "Echoes of Eternity"?
+    - Does the movie "Whispers in the Dark" have Will Smith in its cast?
+    - Can you confirm if Charlize Theron is part of the cast for "Stellar Odyssey"?
+    - I'd like to know, does "Lunar Labyrinth" have Chris Pratt in its cast?
+    - Can you tell me if Scarlett Johansson is part of the cast for "Galactic Enigma"?
+    - Does the movie "Starfall 9" include Tom Cruise in its cast?
+    - Can you confirm whether Chris Hemsworth is part of the cast for "Project 13"?
+    - I'm curious, does "Infinite Horizon 42" feature Emma Stone in its cast?
+    - Could you share with me whether Jennifer Lawrence is part of the cast for "Sector 7"?
+    - Do you know if "Code Zero: Dawn" includes Leonardo DiCaprio in its cast?
+    - Can you confirm if Angelina Jolie is part of the cast for "Chronicles of 21"?
+    - I'd like to know, does "Quantum Realm 33" have Brad Pitt in its cast?
+    - Can you tell me if Tom Hanks is part of the cast for "Zero Gravity 88"?
+    - Does the movie "Cybernetic Evolution 17" include Scarlett Johansson in its cast?
+    - Can you confirm whether Ryan Reynolds is part of the cast for "Apex 5"?
+    - I'm curious, does "Dimension X: 24" feature Chris Evans in its cast?
+    - Could you share with me whether Margot Robbie is part of the cast for "Twilight Protocol 12"?
+    - Does the movie "Nebula 6" have Robert Downey Jr. in its cast?
+    - Can you confirm if Natalie Portman is part of the cast for "Lunar Eclipsia 77"?
+    - I'd like to know, does Will Smith have a role in "Starlight 55"?
+    - Can you tell me if Hugh Jackman is part of the cast for "Quantum Shift 63"?
+
+
+- intent: whether_movie_has_cast_without_movie_title_and_cast_name
+  examples: |
+    - Does this movie have a well-known cast?
+    - Can you confirm if there's a notable cast associated with this film?
+    - I'm curious, does this movie feature recognized actors in its cast?
+    - Could you share with me whether this movie includes known performers in its cast?
+    - Do you know if this movie boasts a noteworthy cast?
+    - Can you confirm whether there's a well-known cast for this film?
+    - I'd like to know, does this movie have a cast of renowned actors?
+    - Can you tell me if there's a recognized cast associated with this film?
+    - Does it have a notable cast?
+    - Can you confirm if it features recognized actors in its cast?
+    - I'm curious, does it include known performers in its cast?
+    - Could you share with me whether it boasts a noteworthy cast?
+    - Do you know if it has a well-known cast?
+    - Can you confirm whether it includes a recognized cast?
+    - I'd like to know, does it have a cast of renowned actors?
+    - Can you tell me if it features recognized actors in its cast?
+    - Does it include known performers in its cast?
+    - Can you confirm if it has a notable cast?
+    - I'm curious, does it feature recognized actors in its cast?
+    - Could you share with me whether it boasts a noteworthy cast?
+    - Does it have a well-known cast?
+    - Can you confirm if it includes known performers in its cast?
+    - I'd like to know, does it have a recognized cast?
+    - Can you tell me if it boasts a noteworthy cast?
+    - Does it have a cast of renowned actors?
+    - Can you confirm if it includes recognized actors in its cast?
+    - I'm curious, does it boast a noteworthy cast?
+    - Could you share with me whether it has known performers in its cast?
+    - Does it have a recognized cast?
+    - Can you confirm if it features a notable cast?
+    - I'd like to know, does it include recognized actors in its cast?
+    - Can you tell me if it has known performers in its cast?
+    - Does it have a notable cast?
+    - Can you confirm if it boasts a noteworthy cast?
+    - I'm curious, does it have a recognized cast?
+    - Could you share with me whether it includes a cast of renowned actors?
+
+- intent: is_director_with_movie_title_and_director_name
+  examples: |
+    - Is the director of the movie "Eternal Quest" John Smith?
+    - Can you confirm if the director of "Mystic Shadows" is Emily Johnson?
+    - I'm curious, is the director of "Whispering Winds" Michael Anderson?
+    - Could you share with me whether the director of "Starlight Secrets" is David Brown?
+    - Do you know if the filmmaker behind "Enchanted Kingdom" is Sarah Miller?
+    - Is the director of the film "Cryptic Chronicles" Daniel White?
+    - Can you confirm if the director of "Moonlit Sonata" is Jessica Taylor?
+    - I'd like to know, is the director of "Beyond the Horizon" Christopher Robinson?
+    - Can you tell me if the name of the director for "Silent Serenade" is Richard Davis?
+    - Does "Shifting Realities" have James Johnson as the director?
+    - Is the director of "Celestial Harmony" Nicole Roberts?
+    - Can you confirm if the director of "Echoes of Eternity" is Mark Thompson?
+    - I'm curious, is the director of "Whispers in the Dark" Andrew Wilson?
+    - Could you share with me whether the director of "Stellar Odyssey" is Jennifer Harris?
+    - Do you know if the filmmaker behind "Lunar Labyrinth" is Brian Martinez?
+    - Is the director of "Galactic Enigma" Alex Turner?
+    - Can you confirm if the director of "Starfall 9" is Michelle Parker?
+    - I'd like to know, is the director of "Project 13" Christopher White?
+    - Can you tell me if the name of the director for "Infinite Horizon 42" is Sarah Davis?
+    - Does "Sector 7" have James Johnson as the director?
+    - Is the director of "Code Zero: Dawn" Nicole Roberts?
+    - Can you confirm if the director of "Chronicles of 21" is Michael Anderson?
+    - I'm curious, is the director of "Quantum Realm 33" Jennifer Harris?
+    - Could you share with me whether the director of "Zero Gravity 88" is Daniel White?
+    - Do you know if the filmmaker behind "Cybernetic Evolution 17" is Emily Johnson?
+    - Is the director of "Apex 5" Mark Thompson?
+    - Can you confirm if the director of "Dimension X: 24" is Richard Davis?
+    - I'd like to know, is the director of "Twilight Protocol 12" Christopher Robinson?
+    - Can you tell me if the name of the director for "Nebula 6" is Jessica Taylor?
+    - Does "Lunar Eclipsia 77" have Alex Turner as the director?
+    - Is the director of "Starlight 55" Sarah Miller?
+    - Can you confirm if the director of "Quantum Shift 63" is Brian Martinez?
+    - Is the director of the movie "Eternal Quest" John Smith?
+    - Can you confirm if the director of "Mystic Shadows" is Emily Johnson?
+    - I'm curious, is the director of "Whispering Winds" Michael Anderson?
+    - Could you share with me whether the director of "Starlight Secrets" is David Brown?
+    - Do you know if the filmmaker behind "Enchanted Kingdom" is Sarah Miller?
+    - Is the director of the film "Cryptic Chronicles" Daniel White?
+    - Can you confirm if the director of "Moonlit Sonata" is Jessica Taylor?
+    - I'd like to know, is the director of "Beyond the Horizon" Christopher Robinson?
+    - Can you tell me if the name of the director for "Silent Serenade" is Richard Davis?
+    - Does "Shifting Realities" have James Johnson as the director?
+    - Is the director of "Celestial Harmony" Nicole Roberts?
+    - Can you confirm if the director of "Echoes of Eternity" is Mark Thompson?
+    - I'm curious, is the director of "Whispers in the Dark" Andrew Wilson?
+    - Could you share with me whether the director of "Stellar Odyssey" is Jennifer Harris?
+    - Do you know if the filmmaker behind "Lunar Labyrinth" is Brian Martinez?
+    - Is the director of "Galactic Enigma" Alex Turner?
+    - Can you confirm if the director of "Starfall 9" is Michelle Parker?
+    - I'd like to know, is the director of "Project 13" Christopher White?
+    - Can you tell me if the name of the director for "Infinite Horizon 42" is Sarah Davis?
+    - Does "Sector 7" have James Johnson as the director?
+    - Is the director of "Code Zero: Dawn" Nicole Roberts?
+    - Can you confirm if the director of "Chronicles of 21" is Michael Anderson?
+    - I'm curious, is the director of "Quantum Realm 33" Jennifer Harris?
+    - Could you share with me whether the director of "Zero Gravity 88" is Daniel White?
+    - Do you know if the filmmaker behind "Cybernetic Evolution 17" is Emily Johnson?
+    - Is the director of "Apex 5" Mark Thompson?
+    - Can you confirm if the director of "Dimension X: 24" is Richard Davis?
+    - I'd like to know, is the director of "Twilight Protocol 12" Christopher Robinson?
+    - Can you tell me if the name of the director for "Nebula 6" is Jessica Taylor?
+    - Does "Lunar Eclipsia 77" have Alex Turner as the director?
+    - Is the director of "Starlight 55" Sarah Miller?
+    - Can you confirm if the director of "Quantum Shift 63" is Brian Martinez?
+
+
+- intent: is_director_without_movie_title_and_director_name
+  examples: |
+    - Is this movie directed by a reputable director?
+    - Can you confirm if the director is known for this movie?
+    - Is the filmmaker behind this movie recognized in the industry?
+    - Could you provide information about the director of this movie?
+    - Is the director of this film renowned?
+    - Can you share details about the director of this movie?
+    - I'm curious, is this movie directed by a well-known filmmaker?
+    - Is the director of this film considered accomplished?
+    - Can you provide insights into the director of this movie?
+    - Tell me if this movie is directed by a notable director.
+    - Is the director behind this movie celebrated?
+    - Can you share information about the director of this film?
+    - I'd like to know, is this movie directed by an acclaimed filmmaker?
+    - Is the director of this movie regarded as skilled?
+    - Can you confirm if this film is directed by a known director?
+    - Is the director of this movie praised in the industry?
+    - Tell me if this movie is directed by a recognized filmmaker.
+    - Is the director of this film acknowledged for their work?
+    - Can you provide details about the director of this movie?
+    - I'm curious, is this movie directed by an experienced filmmaker?
+    - Is the director behind this movie well-regarded?
+    - Can you share information about the director of this film?
+    - I'd like to know, is this movie directed by a respected filmmaker?
+    - Is the director of this movie acclaimed in the industry?
+    - Can you confirm if this film is directed by a reputable director?
+    - Is the director of this movie known for their talent?
+    - Can you provide insights into the director of this film?
+    - Tell me if this movie is directed by a distinguished filmmaker.
+    - Is the director of this film recognized for their contributions?
+    - Can you share details about the director of this movie?
+    - I'm curious, is this movie directed by a notable filmmaker?
+    - Is the director behind this movie considered a master in their craft?
+    - Can you confirm if this film is directed by an accomplished director?
+    - Is the director of this movie celebrated in the industry?
+    - Tell me if this movie is directed by a renowned filmmaker.
+    - Is the director of this film acknowledged for their expertise?
+    - Can you provide information about the director of this movie?
+    - I'd like to know, is this movie directed by a well-respected filmmaker?
+
+- intent: is_genre_belongs_with_movie_title_and_genre
+  examples: |
+    - Does the movie "Jawan" belong to the action genre?
+    - Can you confirm if the genre of "Pathaan" is drama?
+    - Is "Inception" classified under the science fiction genre?
+    - Could you share if "The Matrix" falls into the category of action?
+    - Is the genre of "Jawan" action?
+    - Can you confirm if "Pathaan" is a drama?
+    - Is "Inception" considered science fiction?
+    - Could you share if "The Matrix" is an action film?
+    - Does the movie "Jawan" fall under the action genre?
+    - Can you confirm if the genre of "Pathaan" is drama?
+    - Is "Inception" considered science fiction?
+    - Could you share if "The Matrix" is an action movie?
+    - Does "Eternal Quest" belong to the fantasy genre?
+    - Can you confirm if "Mystic Shadows" is a thriller?
+    - Is "Whispering Winds" categorized under fantasy?
+    - Could you share if "Starlight Secrets" is a romantic film?
+    - Does "Enchanted Kingdom" fall under the fantasy genre?
+    - Can you confirm if "Cryptic Chronicles" is a mystery?
+    - Is "Moonlit Sonata" classified as a musical film?
+    - Could you share if "Beyond the Horizon" belongs to the adventure genre?
+    - Does "Silent Serenade" fall under the drama genre?
+    - Can you confirm if "Shifting Realities" is a science fiction movie?
+    - Is "Celestial Harmony" categorized under fantasy?
+    - Could you share if "Echoes of Eternity" is a fantasy film?
+    - Does "Whispers in the Dark" belong to the horror genre?
+    - Can you confirm if "Stellar Odyssey" is a space opera?
+    - Is "Lunar Labyrinth" classified as a fantasy film?
+    - Could you share if "Galactic Enigma" falls under the science fiction genre?
+    - Does "Starfall 9" belong to the action genre?
+    - Can you confirm if "Project 13" is a sci-fi thriller?
+    - Is "Infinite Horizon 42" categorized under science fiction?
+    - Could you share if "Sector 7" is an action film?
+    - Does "Code Zero: Dawn" fall under the action-adventure genre?
+    - Can you confirm if "Chronicles of 21" is a mystery film?
+    - Is "Quantum Realm 33" classified as a sci-fi adventure?
+    - Could you share if "Zero Gravity 88" belongs to the mystery genre?
+    - Does "Cybernetic Evolution 17" fall under the cyberpunk genre?
+    - Can you confirm if "Apex 5" is a science fiction movie?
+    - Is "Dimension X: 24" categorized under the thriller genre?
+    - Could you share if "Twilight Protocol 12" is a mystery film?
+    - Does "Nebula 6" belong to the science fiction genre?
+    - Can you confirm if "Lunar Eclipsia 77" is a fantasy film?
+    - Is "Starlight 55" classified as a romantic drama?
+    - Could you share if "Quantum Shift 63" falls under the thriller genre?
+    - Does the movie "Jawan" belong to the crime genre?
+    - Can you confirm if the genre of "Pathaan" is documentary?
+    - Is "Inception" classified under the drama genre?
+    - Could you share if "The Matrix" falls into the category of horror?
+    - Is the genre of "Jawan" music?
+    - Can you confirm if "Pathaan" is a mystery?
+    - Is "Inception" considered romance?
+    - Could you share if "The Matrix" is a TV movie?
+    - Does the movie "Jawan" belong to the thriller genre?
+    - Can you confirm if the genre of "Pathaan" is war?
+    - Is "Inception" classified under the western genre?
+    - Could you share if "The Matrix" falls into the category of animation?
+    - Is the genre of "Jawan" family?
+    - Can you confirm if "Pathaan" is fantasy?
+    - Is "Inception" considered a history film?
+    - Could you share if "The Matrix" is a comedy?
+    - Does the movie "Jawan" belong to the adventure genre?
+    - Can you confirm if the genre of "Pathaan" is crime?
+    - Is "Inception" classified under the documentary genre?
+    - Could you share if "The Matrix" falls into the category of action?
+    - Is the genre of "Jawan" animation?
+    - Can you confirm if "Pathaan" is a comedy?
+    - Is "Inception" considered crime?
+    - Could you share if "The Matrix" is a documentary?
+    - Does the movie "Jawan" belong to the drama genre?
+    - Can you confirm if the genre of "Pathaan" is family?
+    - Is "Inception" classified under the fantasy genre?
+    - Could you share if "The Matrix" falls into the category of horror?
+    - Is the genre of "Jawan" history?
+    - Can you confirm if "Pathaan" is horror?
+    - Is "Inception" considered music?
+    - Could you share if "The Matrix" is mystery?
+    - Does the movie "Jawan" belong to the romance genre?
+    - Can you confirm if the genre of "Pathaan" is science fiction?
+    - Is "Inception" classified under the TV movie genre?
+    - Could you share if "The Matrix" falls into the category of thriller?
+    - Is the genre of "Jawan" science fiction?
+    - Can you confirm if "Pathaan" is thriller?
+    - Is "Inception" considered war?
+    - Could you share if "The Matrix" is western?
+    - Does the movie "Jawan" belong to the action genre?
+    - Can you confirm if the genre of "Pathaan" is drama?
+    - Is "Inception" classified under the science fiction genre?
+    - Could you share if "The Matrix" falls into the category of action?
+
+
+- intent: is_genre_belongs_without_movie_title_and_genre
+  examples: |
+    - Does the genre belong to the movie?
+    - Can you confirm if this genre is associated with the film?
+    - Is the genre attributed to the movie?
+    - Could you share if the movie is classified under this genre?
+    - Is this genre linked to the film?
+    - Can you confirm if the movie falls into this genre?
+    - Does this genre belong to the film?
+    - Can you share if the movie is categorized under this genre?
+    - Is the movie associated with this genre?
+    - Could you confirm if the genre is linked to the film?
+    - Is this genre connected to the movie?
+    - Can you share if the movie falls into this genre?
+    - Does this genre belong to the movie?
+    - Can you confirm if this genre is associated with the film?
+    - Is the genre attributed to the movie?
+    - Could you share if the movie is classified under this genre?
+    - Is this genre linked to the film?
+    - Can you confirm if the movie falls into this genre?
+    - Does this genre belong to the film?
+    - Can you share if the movie is categorized under this genre?
+    - Is the movie associated with this genre?
+    - Could you confirm if the genre is linked to the film?
+
+- intent: about_cast_or_crew_with_cast_or_crew_name
+  examples: |
+    - Tell me more about Robert Downey Jr.
+    - Share details about Scarlett Johansson.
+    - Can you provide information on Tom Hanks?
+    - I'd like to know more about Emma Watson.
+    - What can you tell me about Chris Hemsworth?
+    - Provide details on Natalie Portman, please.
+    - I'm curious, tell me about Leonardo DiCaprio.
+    - Inform me about Jennifer Lawrence.
+    - Share insights into Dwayne Johnson.
+    - Can you give me information on Charlize Theron?
+    - I'm interested in Samuel L. Jackson, tell me more.
+    - What's there to know about Cate Blanchett?
+    - Provide details on Brad Pitt.
+    - Tell me more about Ryan Reynolds, please.
+    - Can you provide information on Angelina Jolie?
+    - I'd like to know more about Morgan Freeman.
+    - What can you tell me about Anne Hathaway?
+    - Share insights into Joaquin Phoenix.
+    - Can you give me information on Meryl Streep?
+    - I'm interested in Jason Momoa, tell me more.
+    - What's there to know about Nicole Kidman?
+    - Provide details on Keanu Reeves.
+    - Tell me more about Charlize Theron, please.
+    - Can you provide information on Chris Evans?
+    - I'd like to know more about Margot Robbie.
+    - What can you tell me about Will Smith?
+    - Share insights into Zendaya.
+    - Can you give me information on Robert Pattinson?
+    - I'm interested in Viola Davis, tell me more.
+    - What's there to know about Hugh Jackman?
+    - Provide details on Chris Pratt.
+    - Tell me more about Gal Gadot, please.
+    - Can you provide information on Benedict Cumberbatch?
+    - I'd like to know more about Tom Holland.
+    - What can you tell me about Margot Robbie?
+    - Share insights into Idris Elba.
+    - Can you give me information on Jennifer Aniston?
+    - I'm interested in Cillian Murphy, tell me more.
+    - What's there to know about Emily Blunt?
+    - Provide details on Jason Statham.
+
+- intent: about_cast_or_crew_without_cast_or_crew_name
+  examples: |
+    - Can you provide information on an actor?
+    - Tell me more about a film director.
+    - Share details about a famous actress.
+    - I'd like to know about a movie producer.
+    - What can you tell me about a renowned actor?
+    - Provide insights into a well-known filmmaker.
+    - I'm curious, tell me about a talented actress.
+    - Inform me about a notable screenwriter.
+    - Share insights into an actor's career.
+    - Can you give me information on a film editor?
+    - I'm interested in learning about a cinematographer.
+    - What's there to know about a costume designer?
+    - Provide details on a music composer.
+    - Tell me more about a choreographer.
+    - Can you provide information on a playback singer?
+    - I'd like to know about a renowned producer.
+    - What can you tell me about a TV series creator?
+    - Share insights into a stunt coordinator.
+    - Can you give me information on a production company?
+    - I'm curious, tell me about a film's writer.
+    - Inform me about a talented set designer.
+    - Share insights into a visual effects artist.
+    - Can you provide information on a sound designer?
+    - I'm interested in learning about a casting director.
+    - What's there to know about a film's makeup artist?
+    - Provide details on a movie's sound engineer.
+    - Tell me more about a famous costume designer.
+    - Can you give me information on a film's composer?
+    - I'm curious, tell me about a TV series' editor.
+    - What can you tell me about a renowned choreographer?
+    - Share insights into a well-known casting director.
+    - Can you provide information on a movie's producer?
+    - I'm interested in learning about a talented writer.
+    - What's there to know about a film's director of photography?
+    - Provide details on a renowned film director.
+
+
+- intent: movie_related_with_cast_or_crew_with_cast_or_crew_name
+  examples: |
+    - Can you tell me about movies featuring Tom Hanks?
+    - Provide a list of films Angelina Jolie has worked on.
+    - Tell me about the movies Leonardo DiCaprio has been part of.
+    - Share details about the films featuring Scarlett Johansson.
+    - I'd like information on the movies involving Robert Downey Jr.
+    - Which movies have Natalie Portman as part of the cast or crew?
+    - Tell me about the films where Samuel L. Jackson played a role.
+    - Provide a list of movies that include Charlize Theron.
+    - Can you give me details about the films with Brad Pitt?
+    - Share insights into movies that Jennifer Lawrence has worked on.
+    - I'm curious about the films in which Chris Hemsworth participated.
+    - Inform me about the movies featuring Emma Watson.
+    - Can you provide information on films involving Ryan Reynolds?
+    - Tell me about the movies where Julia Roberts had a role.
+    - Provide a list of films that feature Johnny Depp.
+    - I'd like details about movies with Chris Evans in the cast or crew.
+    - Share insights into the films with Anne Hathaway.
+    - Can you give me information on movies Dwayne Johnson worked on?
+    - I'm interested in learning about the films with Margot Robbie.
+    - Inform me about movies featuring Will Smith.
+    - What are the movies in which Cate Blanchett is involved?
+    - Can you tell me about films with Hugh Jackman in the cast or crew?
+    - Provide details on the movies Tom Cruise contributed to.
+    - I'd like information on movies featuring Gal Gadot.
+    - Share insights into the films with Keanu Reeves.
+    - Can you give me details about the movies with Scarlett Johansson?
+    - I'm curious about films involving Ryan Gosling.
+    - Inform me about movies featuring Charlize Theron.
+    - What are the movies in which Chris Pratt is involved?
+    - Can you tell me about films with Jennifer Aniston in the cast or crew?
+    - Provide details on the movies Mark Wahlberg contributed to.
+    - I'd like information on movies featuring Margot Robbie.
+    - Share insights into the films with Chris Hemsworth.
+    - Can you give me details about the movies with Emma Stone?
+    - I'm interested in learning about films involving Christian Bale.
+    - Inform me about movies featuring Amy Adams.
+    - What are the movies in which Bradley Cooper is involved?
+    - Can you tell me about films with Natalie Portman in the cast or crew?
+    - Provide details on the movies Charlize Theron contributed to.
+    - I'd like information on movies featuring Matt Damon.
+    - Share insights into the films with Mila Kunis.
+    - Can you give me details about the movies with Tom Hardy?
+    - I'm curious about films involving Jessica Chastain.
+    - Inform me about movies featuring Jake Gyllenhaal.
+    - What are the movies in which Emma Watson is involved?
+    - Can you tell me about films with Robert Pattinson in the cast or crew?
+    - Provide details on the movies Anne Hathaway contributed to.
+    - I'd like information on movies featuring Daniel Radcliffe.
+    - Share insights into the films with Gal Gadot.
+    - Can you give me details about the movies with Johnny Depp?
+    - I'm interested in learning about films involving Jennifer Lawrence.
+    - Inform me about movies featuring Margot Robbie.
+    - What are the movies in which Ryan Reynolds is involved?
+    - Can you tell me about films with Chris Evans in the cast or crew?
+    - Provide details on the movies Scarlett Johansson contributed to.
+    - I'd like information on movies featuring Brad Pitt.
+    - Share insights into the films with Leonardo DiCaprio.
+    - Can you give me details about the movies with Angelina Jolie?
+    - I'm curious about films involving Tom Hanks.
+    - Inform me about movies featuring Natalie Portman.
+    - What are the movies in which Samuel L. Jackson is involved?
+    - Can you tell me about films with Charlize Theron in the cast or crew?
+    - Provide details on the movies Robert Downey Jr. contributed to.
+    - I'd like information on movies featuring Scarlett Johansson.
+    - Share insights into the films with Jennifer Lawrence.
+    - Can you give me details about the movies with Chris Hemsworth?
+    - I'm interested in learning about films involving Emma Watson.
+    - Inform me about movies featuring Ryan Reynolds.
+    - What are the movies in which Julia Roberts is involved?
+    - Can you tell me about films with Johnny Depp in the cast or crew?
+    - Provide details on the movies Chris Evans contributed to.
+    - I'd like information on movies featuring Anne Hathaway.
+    - Share insights into the films with Dwayne Johnson.
+    - Can you give me details about the movies with Margot Robbie?
+    - I'm curious about films involving Will Smith.
+    - Inform me about movies featuring Tom Cruise.
+    - What are the movies in which Gal Gadot is involved?
+    - Can you tell me about films with Keanu Reeves in the cast or crew?
+    - Provide details on the movies Scarlett Johansson contributed to.
+    - I'd like information on movies featuring Charlize Theron.
+    - Share insights into the films with Chris Pratt.
+    - Can you give me details about the movies with Jennifer Aniston?
+    - I'm interested in learning about films involving Mark Wahlberg.
+    - Inform me about movies featuring Margot Robbie.
+    - What are the movies in which Chris Hemsworth is involved?
+    - Can you tell me about films with Emma Stone in the cast or crew?
+    - Provide details on the movies Christian Bale contributed to.
+    - I'd like information on movies featuring Amy Adams.
+    - Share insights into the films with Bradley Cooper.
+    - Can you give me details about the movies with Natalie Portman?
+    - I'm curious about films involving Mila Kunis.
+    - Inform me about movies featuring Matt Damon.
+    - What are the movies in which Tom Hardy is involved?
+    - Can you tell me about films with Robert Pattinson in the cast or crew?
+    - Provide details on the movies Anne Hathaway contributed to.
+    - I'd like information on movies featuring Daniel Radcliffe.
+    - Share insights into the films with Gal Gadot.
+    - Can you give me details about the movies with Johnny Depp?
+    - I'm interested in learning about films involving Jennifer Lawrence.
+    - Inform me about movies featuring Margot Robbie.
+    - What are the movies in which Ryan Reynolds is involved?
+    - Can you tell me about films with Chris Evans in the cast or crew?
+    - Provide details on the movies Scarlett Johansson contributed to.
+    - I'd like information on movies featuring Brad Pitt.
+    - Share insights into the films with Leonardo DiCaprio.
+    - Can you give me details about the movies with Angelina Jolie?
+    - I'm curious about films involving Tom Hanks.
+    - Inform me about movies featuring Natalie Portman.
+    - What are the movies in which Samuel L. Jackson is involved?
+    - Can you tell me about films with Charlize Theron in the cast or crew?
+    - Provide details on the movies Robert Downey Jr. contributed to.
+    - I'd like information on movies featuring Scarlett Johansson.
+    - Share insights into the films with Jennifer Lawrence.
+    - Can you give me details about the movies with Chris Hemsworth?
+    - I'm interested in learning about films involving Emma Watson.
+    - Inform me about movies featuring Ryan Reynolds.
+    - What are the movies in which Julia Roberts is involved?
+    - Can you tell me about films with Johnny Depp in the cast or crew?
+    - Provide details on the movies Chris Evans contributed to.
+    - I'd like information on movies featuring Anne Hathaway.
+    - Share insights into the films with Dwayne Johnson.
+    - Can you give me details about the movies with Margot Robbie?
+    - I'm curious about films involving Will Smith.
+    - Inform me about movies featuring Tom Cruise.
+    - What are the movies in which Gal Gadot is involved?
+    - Can you tell me about films with Keanu Reeves in the cast or crew?
+    - Provide details on the movies Scarlett Johansson contributed to.
+    - I'd like information on movies featuring Charlize Theron.
+    - Share insights into the films with Chris Pratt.
+    - Can you give me details about the movies with Jennifer Aniston?
+    - I'm interested in learning about films involving Mark Wahlberg.
+    - Inform me about movies featuring Margot Robbie.
+    - What are the movies in which Chris Hemsworth is involved?
+    - Can you tell me about films with Emma Stone in the cast or crew?
+    - Provide details on the movies Christian Bale contributed to.
+    - I'd like information on movies featuring Amy Adams.
+    - Share insights into the films with Bradley Cooper.
+    - Can you give me details about the movies with Natalie Portman?
+    - I'm curious about films involving Mila Kunis.
+    - Inform me about movies featuring Matt Damon.
+    - What are the movies in which Tom Hardy is involved?
+    - Can you tell me about films with Robert Pattinson in the cast or crew?
+    - Provide details on the movies Anne Hathaway contributed to.
+    - I'd like information on movies featuring Daniel Radcliffe.
+    - Share insights into the films with Gal Gadot.
+    - Can you give me details about the movies with Johnny Depp?
+    - I'm interested in learning about films involving Jennifer Lawrence.
+    - Inform me about movies featuring Margot Robbie.
+    - What are the movies in which Ryan Reynolds is involved?
+    - Can you tell me about films with Chris Evans in the cast or crew?
+    - Provide details on the movies Scarlett Johansson contributed to.
+    - I'd like information on movies featuring Brad Pitt.
+    - Share insights into the films with Leonardo DiCaprio.
+    - Can you give me details about the movies with Angelina Jolie?
+    - I'm curious about films involving Tom Hanks.
+    - Inform me about movies featuring Natalie Portman.
+    - What are the movies in which Samuel L. Jackson is involved?
+    - Can you tell me about films with Charlize Theron in the cast or crew?
+    - Provide details on the movies Robert Downey Jr. contributed to.
+    - I'd like information on movies featuring Scarlett Johansson.
+    - Share insights into the films with Jennifer Lawrence.
+    - Can you give me details about the movies with Chris Hemsworth?
+    - I'm interested in learning about films involving Emma Watson.
+    - Inform me about movies featuring Ryan Reynolds.
+    - What are the movies in which Julia Roberts is involved?
+    - Can you tell me about films with Johnny Depp in the cast or crew?
+    - Provide details on the movies Chris Evans contributed to.
+    - I'd like information on movies featuring Anne Hathaway.
+    - Share insights into the films with Dwayne Johnson.
+    - Can you give me details about the movies with Margot Robbie?
+    - I'm curious about films involving Will Smith.
+    - Inform me about movies featuring Tom Cruise.
+    - What are the movies in which Gal Gadot is involved?
+    - Can you tell me about films with Keanu Reeves in the cast or crew?
+    - Provide details on the movies Scarlett Johansson contributed to.
+    - I'd like information on movies featuring Charlize Theron.
+    - Share insights into the films with Chris Pratt.
+    - Can you give me details about the movies with Jennifer Aniston?
+    - I'm interested in learning about films involving Mark Wahlberg.
+    - Inform me about movies featuring Margot Robbie.
+    - What are the movies in which Chris Hemsworth is involved?
+    - Can you tell me about films with Emma Stone in the cast or crew?
+    - Provide details on the movies Christian Bale contributed to.
+    - I'd like information on movies featuring Amy Adams.
+    - Share insights into the films with Bradley Cooper.
+    - Can you give me details about the movies with Natalie Portman?
+    - I'm curious about films involving Mila Kunis.
+    - Inform me about movies featuring Matt Damon.
+    - What are the movies in which Tom Hardy is
+
+
+- intent: movie_related_with_cast_or_crew_without_cast_or_crew_name
+  examples: |
+    - Tell me more about the movies they have worked on.
+    - Provide information about their filmography.
+    - Can you share details about the films they are part of?
+    - I'd like to know more about the movies they have been involved in.
+    - What can you tell me about the films they participated in?
+    - Share insights into their work in movies.
+    - Can you provide information on the films they contributed to?
+    - Tell me about movies they are associated with.
+    - Provide details about their involvement in movies.
+    - I'm curious about the films they have worked on.
+    - Tell me more about the movies they have been part of.
+    - Can you share information about their film career?
+    - I'd like to know about the films they played a role in.
+    - What can you tell me about their contributions to movies?
+    - Share insights into the movies they have worked on.
+    - Can you provide information on the films they are known for?
+    - Tell me about movies they have worked on recently.
+    - Provide details about their filmography.
+    - I'm interested in learning about the movies they are known for.
+    - Tell me more about the films they have been part of.
+    - Can you share information about their contributions to movies?
+    - I'd like to know about the movies they played a role in.
+    - What can you tell me about their film career?
+    - Share insights into the movies they have worked on.
+    - Can you provide information on the films they are associated with?
+    - Tell me about movies they have worked on recently.
+    - Provide details about their filmography.
+    - I'm interested in learning about the movies they have been part of.
+    - Tell me more about the films they have worked on.
+    - Can you share information about their film career?
+    - I'd like to know about the movies they played a role in.
+    - What can you tell me about their contributions to movies?
+    - Share insights into the movies they have worked on.
+    - Can you provide information on the films they are known for?
+    - Tell me about movies they have worked on recently.
+    - Provide details about their filmography.
+    - I'm curious about the films they are associated with.
+    - Tell me more about the movies they have been part of.
+    - Can you share information about their contributions to movies?
+    - I'd like to know about the movies they played a role in.
+    - What can you tell me about their film career?
+    - Share insights into the movies they have worked on.
+    - Can you provide information on the films they are known for?
+    - Tell me about movies they have worked on recently.
+    - Provide details about their filmography.
+    - I'm interested in learning about the movies they are known for.
+    - Tell me more about the films they have been part of.
+    - Can you share information about their contributions to movies?
+    - I'd like to know about the movies they played a role in.
+    - What can you tell me about their film career?
+    - Share insights into the movies they have worked on.
+    - Can you provide information on the films they are associated with?
+    - Tell me about movies they have worked on recently.
+    - Provide details about their filmography.
+    - I'm curious about the films they are associated with.
+    - Tell me more about the movies they have been part of.
+    - Can you share information about their contributions to movies?
+    - I'd like to know about the movies they played a role in.
+    - What can you tell me about their film career?
+    - Share insights into the movies they have worked on.
+    - Can you provide information on the films they are known for?
+    - Tell me about movies they have worked on recently.
+    - Provide details about their filmography.
+    - I'm interested in learning about the movies they are known for.
+    - Tell me more about the films they have been part of.
+    - Can you share information about their contributions to movies?
+    - I'd like to know about the movies they played a role in.
+    - What can you tell me about their film career?
+    - Share insights into the movies they have worked on.
+    - Can you provide information on the films they are associated with?
+    - Tell me about movies they have worked on recently.
+    - Provide details about their filmography.
+    - I'm curious about the films they are associated with.
+    - Tell me more about the movies they have been part of.
+    - Can you share information about their contributions to movies?
+    - I'd like to know about the movies they played a role in.
+    - What can you tell me about their film career?
+    - Share insights into the movies they have worked on.
+    - Can you provide information on the films they are known for?
+    - Tell me about movies they have worked on recently.
+    - Provide details about their filmography.
+    - I'm interested in learning about the movies they are known for.
+    - Tell me more about the films they have been part of.
+    - Can you share information about their contributions to movies?
+    - I'd like to know about the movies they played a role in.
+    - What can you tell me about their film career?
+    - Share insights into the movies they have worked on.
+    - Can you provide information on the films they are associated with?
+    - Tell me about movies they have worked on recently.
+    - Provide details about their filmography.
+    - I'm curious about the films they are associated with.
+    - Tell me more about the movies they have been part of.
+    - Can you share information about their contributions to movies?
+    - I'd like to know about the movies they played a role in.
+    - What can you tell me about their film career?
+    - Share insights into the movies they have worked on.
+    - Can you provide information on the films they are known for?
+    - Tell me about movies they have worked on recently.
+    - Provide details about their filmography.
+    - I'm interested in learning about the movies they are known for.
+    - Tell me more about the films they have been part of.
+    - Can you share information about their contributions to movies?
+    - I'd like to know about the movies they played a role in.
+    - What can you tell me about their film career?
+    - Share insights into the movies they have worked on.
+    - Can you provide information on the films they are associated with?
+    - Tell me about movies they have worked on recently.
+    - Provide details about their filmography.
+    - I'm curious about the films they are associated with.
+    - Tell me more about the movies they have been part of.
+    - Can you share information about their contributions to movies?
+    - I'd like to know about the movies they played a role in.
+    - What can you tell me about their film career?
+    - Share insights into the movies they have worked on.
+    - Can you provide information on the films they are known for?
+    - Tell me about movies they have worked on recently.
+    - Provide details about their filmography.
+    - I'm interested in learning about the movies they are known for.
+    - Tell me more about the films they have been part of.
+    - Can you share information about their contributions to movies?
+    - I'd like to know about the movies they played a role in.
+    - What can you tell me about their film career?
+    - Share insights into the movies they have worked on.
+    - Can you provide information on the films they are associated with?
+    - Tell me about movies they have worked on recently.
+    - Provide details about their filmography.
+    - I'm curious about the films they are associated with.
+    - Tell me more about the movies they have been part of.
+    - Can you share information about their contributions to movies?
+    - I'd like to know about the movies they played a role in.
+    - What can you tell me about their film career?
+    - Share insights into the movies they have worked on.
+    - Can you provide information on the films they are known for?
+    - Tell me about movies they have worked on recently.
+    - Provide details about their filmography.
+    - I'm interested in learning about the movies they are known for.
+    - Tell me more about the films they have been part of.
+    - Can you share information about their contributions to movies?
+    - I'd like to know about the movies they played a role in.
+    - What can you tell me about their film career?
+    - Share insights into the movies they have worked on.
+    - Can you provide information on the films they are associated with?
+    - Tell me about movies they have worked on recently.
+    - Provide details about their filmography.
+    - I'm curious about the films they are associated with.
+    - Tell me more about the movies they have been part of.
+    - Can you share information about their contributions to movies?
+    - I'd like to know about the movies they played a role in.
+    - What can you tell me about their film career?
+    - Share insights into the movies they have worked on.
+    - Can you provide information on the films they are known for?
+    - Tell me about movies they have worked on recently.
+    - Provide details about their filmography.
+    - I'm interested in learning about the movies they are known for.
+    - Tell me more about the films they have been part of.
+    - Can you share information about their contributions to movies?
+    - I'd like to know about the movies they played a role in.
+    - What can you tell me about their film career?
+    - Share insights into the movies they have worked on.
+    - Can you provide information on the films they are associated with?
+    - Tell me about movies they have worked on recently.
+    - Provide details about their filmography.
+    - I'm curious about the films they are associated with.
+    - Tell me more about the movies they have been part of.
+    - Can you share information about their contributions to movies?
+    - I'd like to know about the movies they played a role in.
+    - What can you tell me about their film career?
+    - Share insights into the movies they have worked on.
+    - Can you provide information on the films they are known for?
+    - Tell me about movies they have worked on recently.
+    - Provide details about their filmography.
+    - I'm interested in learning about the movies they are known for.
+    - Tell me more about the films they have been part of.
+    - Can you share information about their contributions to movies?
+    - I'd like to know about the movies they played a role in.
+    - What can you tell me about their film career?
+    - Share insights into the movies they have worked on.
+    - Can you provide information on the films they are associated with?
+    - Tell me about movies they have worked on recently.
+    - Provide details about their filmography.
+    - I'm curious about the films they are associated with.
+    - Tell me more about the movies they have been part of.
+    - Can you share information about their contributions to movies?
+    - I'd like to know about the movies they played a role in.
+    - What can you tell me about their film career?
+    - Share insights into the movies they have worked on.
+    - Can you provide information on the films they are known for?
+    - Tell me about movies they have worked on recently.
+    - Provide details about their filmography.
+    - I'm interested in learning about the movies they are known for.
+    - Tell me more about the films they have been part of.
+    - Can you share information about their contributions to movies?
+    - I'd like to know about the movies they played a role in.
+    - What can you tell me about their film career?
+    - Share insights into the movies they have worked on.
+    - Can you provide information on the films they are associated with?
+    - Tell me about movies they have worked on recently.
+    - Provide details about their filmography.
+    - I'm curious about the films they are associated with.
+    - Tell me more about the movies they have been part of.
+    - Can you share information about their contributions to movies?
+    - I'd like to know about the movies they played a role in.
+    - What can you tell me about their film career?
+    - Share insights into the movies they have worked on.
+    - Can you provide information on the films they are known for?
+    - Tell me about movies they have worked on recently.
+    - Provide details about their filmography.
+    - I'm interested in learning about the movies they are known for.
+    - Tell me more about the films they have been part of.
+    - Can you share information about their contributions to movies?
+    - I'd like to know about the movies they played a role in.
+    - What can you tell me about their film career?
+    - Share insights into the movies they have worked on.
+    - Can you provide information on the films they are associated with?
+    - Tell me about movies they have worked on recently.
+    - Provide details about their filmography.
+    - I'm curious about the films they are associated with.
+    - Tell me more about the movies they have been part of.
+    - Can you share information about their contributions to movies?
+    - I'd like to know about the movies they played a role in.
+    - What can you tell me about their film career?
+    - Share insights into the movies they have worked on.
+    - Can you provide information on the films they are known for?
+    - Tell me about movies they have worked on recently.
+    - Provide details about their filmography.
+    - I'm interested in learning about the movies they are known for.
+    - Tell me more about the films they have been part of.
+    - Can you share information about their contributions to movies?
+    - I'd like to know about the movies they played a role in.
+    - What can you tell me about their film career?
+    - Share insights into the movies they have worked on.
+    - Can you provide information on the films they are associated with?
+    - Tell me about movies they have worked on recently.
+    - Provide details about their filmography.
+    - I'm curious about the films they are associated with.
+    - Tell me more about the movies they have been part of.
+    - Can you share information about their contributions to movies?
+    - I'd like to know about the movies they played a role in.
+    - What can you tell me about their film career?
+    - Share insights into the movies they have worked on.
+    - Can you provide information on the films they are known for?
+    - Tell me about movies they have worked on recently.
+    - Provide details about their filmography.
+    - I'm interested in learning about the movies they are known for.
+    - Tell me more about the films they have been part of.
+    - Can you share information about their contributions to movies?
+    - I'd like to know about the movies they played a role in.
+    - What can you tell me about their film career?
+    - Share insights into the movies they have worked on.
+    - Can you provide information on the films they are associated with?
+    - Tell me about movies they have worked on recently.
+    - Provide details about their filmography.
+    - I'm curious about the films they are associated with.
+    - Tell me more about the movies they have been part of.
+    - Can you share information about their contributions to movies?
+    - I'd like to know about the movies they played a role in.
+    - What can you tell me about their film career?
+    - Share insights into the movies they have worked on.
+    - Can you provide information on the films they are known for?
+    - Tell
+

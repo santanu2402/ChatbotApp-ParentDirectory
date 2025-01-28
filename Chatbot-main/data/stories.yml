@@ -1,0 +1,582 @@
+version: "3.1"
+
+stories:
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: bot challenge
+  steps:
+  - intent: bot_challenge
+  - action:
+
+- story: good bye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: Introduce CinePulse Bot
+  steps:
+  - intent: introduce_bot
+  - action: action_introduce_bot
+
+- story: general question path
+  steps:
+  - intent: general_question
+  - action: respond_to_general_question
+
+- story: user query path
+  steps:
+  - intent: user_query
+  - action: respond_to_user_query
+
+
+- story: Say Thanks
+  steps:
+  - intent: thanks
+  - action: utter_you_are_welcome
+
+- story: Ask if Bot is a Bot
+  steps:
+  - intent: is_bot
+  - action: utter_iamabot
+
+- story: Ask for Help
+  steps:
+  - intent: ask_for_help
+  - action: utter_help
+
+- story: Unknown Intent
+  steps:
+  - intent: unknown
+  - action: utter_unknown
+
+- story: Bot Capabilities
+  steps:
+  - intent: bot_capabilities
+  - action: utter_bot_capabilities
+
+- story: Ask for Bot's Name
+  steps:
+  - intent: bot_name
+  - action: utter_name
+
+- story: Inquire about Bot's Inventor
+  steps:
+  - intent: bot_inventor
+  - action: utter_bot_inventor
+
+- story: Handle Negative Feedback
+  steps:
+  - intent: negative_feedback
+  - action: action_handle_negative_feedback
+
+- story: Acknowledge Positive Feedback
+  steps:
+  - intent: positive_feedback
+  - action: action_acknowledge_positive_feedback
+
+- story: Director of Movie With Title
+  steps:
+  - intent: get_director_with_movie_title
+  - action: utter_for_intent_with_movie_title
+  - intent: movie_title
+  - action: action_set_movie_title
+  - action: action_get_movie_director
+
+- story: Director of Movie Without Title
+  steps:
+  - intent: get_director_without_movie_title
+  - action: utter_for_intent_without_movie_title
+  - intent: movie_title
+  - action: action_set_movie_title
+  - action: action_get_movie_director
+
+- story: Genre of Movie With Title
+  steps:
+  - intent: get_genres_with_movie_title
+  - action: utter_for_intent_with_movie_title
+  - intent: movie_title
+  - action: action_set_movie_title
+  - action: action_get_movie_genres
+
+- story: Genre of Movie Without Title
+  steps:
+  - intent: get_genres_without_movie_title
+  - action: utter_for_intent_without_movie_title
+  - intent: movie_title
+  - action: action_set_movie_title
+  - action: action_get_movie_genres
+
+- story: Overview of Movie With Title
+  steps:
+  - intent: get_overview_with_movie_title
+  - action: utter_for_intent_with_movie_title
+  - intent: movie_title
+  - action: action_set_movie_title
+  - action: action_get_movie_overview
+
+- story: Overview of Movie Without Title
+  steps:
+  - intent: get_overview_without_movie_title
+  - action: utter_for_intent_without_movie_title
+  - intent: movie_title
+  - action: action_set_movie_title
+  - action: action_get_movie_overview
+
+- story: Rating of Movie With Title
+  steps:
+  - intent: get_rating_with_movie_title
+  - action: utter_for_intent_with_movie_title
+  - intent: movie_title
+  - action: action_set_movie_title
+  - action: action_get_movie_rating
+
+- story: Rating of Movie Without Title
+  steps:
+  - intent: get_rating_without_movie_title
+  - action: utter_for_intent_without_movie_title
+  - intent: movie_title
+  - action: action_set_movie_title
+  - action: action_get_movie_rating
+
+- story: Released Date of Movie With Title
+  steps:
+  - intent: get_released_date_with_movie_title
+  - action: utter_for_intent_with_movie_title
+  - intent: movie_title
+  - action: action_set_movie_title
+  - action: action_get_movie_released_date
+
+- story: Released Date of Movie Without Title
+  steps:
+  - intent: get_released_date_without_movie_title
+  - action: utter_for_intent_without_movie_title
+  - intent: movie_title
+  - action: action_set_movie_title
+  - action: action_get_movie_released_date
+
+- story: Released Status of Movie With Title
+  steps:
+  - intent: get_released_status_with_movie_title
+  - action: utter_for_intent_with_movie_title
+  - intent: movie_title
+  - action: action_set_movie_title
+  - action: action_get_movie_released_status
+
+- story: Released Status of Movie Without Title
+  steps:
+  - intent: get_released_status_without_movie_title
+  - action: utter_for_intent_without_movie_title
+  - intent: movie_title
+  - action: action_set_movie_title
+  - action: action_get_movie_released_status
+
+- story: Runtime of Movie With Title
+  steps:
+  - intent: get_runtime_with_movie_title
+  - action: utter_for_intent_with_movie_title
+  - intent: movie_title
+  - action: action_set_movie_title
+  - action: action_get_movie_runtime
+
+- story: Runtime of Movie Without Title
+  steps:
+  - intent: get_runtime_without_movie_title
+  - action: utter_for_intent_without_movie_title
+  - intent: movie_title
+  - action: action_set_movie_title
+  - action: action_get_movie_runtime
+
+- story: Budget of Movie With Title
+  steps:
+  - intent: get_budget_with_movie_title
+  - action: utter_for_intent_with_movie_title
+  - intent: movie_title
+  - action: action_set_movie_title
+  - action: action_get_movie_budget
+
+- story: Budget of Movie Without Title
+  steps:
+  - intent: get_budget_without_movie_title
+  - action: utter_for_intent_without_movie_title
+  - intent: movie_title
+  - action: action_set_movie_title
+  - action: action_get_movie_budget
+
+- story: Revenue of Movie With Title
+  steps:
+  - intent: get_revenue_with_movie_title
+  - action: utter_for_intent_with_movie_title
+  - intent: movie_title
+  - action: action_set_movie_title
+  - action: action_get_movie_revenue
+
+- story: Revenue of Movie Without Title
+  steps:
+  - intent: get_revenue_without_movie_title
+  - action: utter_for_intent_without_movie_title
+  - intent: movie_title
+  - action: action_set_movie_title
+  - action: action_get_movie_revenue
+
+- story: Country Of Origin of Movie With Title
+  steps:
+  - intent: get_country_of_origin_with_movie_title
+  - action: utter_for_intent_with_movie_title
+  - intent: movie_title
+  - action: action_set_movie_title
+  - action: action_get_movie_country_of_origin
+
+- story: Country Of Origin of Movie Without Title
+  steps:
+  - intent: get_country_of_origin_without_movie_title
+  - action: utter_for_intent_without_movie_title
+  - intent: movie_title
+  - action: action_set_movie_title
+  - action: action_get_movie_country_of_origin
+
+- story: Language Spoken of Movie With Title
+  steps:
+  - intent: get_language_spoken_with_movie_title
+  - action: utter_for_intent_with_movie_title
+  - intent: movie_title
+  - action: action_set_movie_title
+  - action: action_get_movie_language_spoken
+
+- story: Language Spoken of Movie Without Title
+  steps:
+  - intent: get_language_spoken_without_movie_title
+  - action: utter_for_intent_without_movie_title
+  - intent: movie_title
+  - action: action_set_movie_title
+  - action: action_get_movie_language_spoken
+
+- story: Cast of Movie With Title
+  steps:
+  - intent: get_cast_with_movie_title
+  - action: utter_for_intent_with_movie_title
+  - intent: movie_title
+  - action: action_set_movie_title
+  - action: action_get_movie_cast
+
+- story: Cast of Movie Without Title
+  steps:
+  - intent: get_cast_without_movie_title
+  - action: utter_for_intent_without_movie_title
+  - intent: movie_title
+  - action: action_set_movie_title
+  - action: action_get_movie_cast
+
+- story: Production Company of Movie With Title
+  steps:
+  - intent: get_production_company_with_movie_title
+  - action: utter_for_intent_with_movie_title
+  - intent: movie_title
+  - action: action_set_movie_title
+  - action: action_get_movie_production_company
+
+- story: Production Company of Movie Without Title
+  steps:
+  - intent: get_production_company_without_movie_title
+  - action: utter_for_intent_without_movie_title
+  - intent: movie_title
+  - action: action_set_movie_title
+  - action: action_get_movie_production_company
+
+- story: Playback_Singer of Movie With Title
+  steps:
+  - intent: get_playback_singer_with_movie_title
+  - action: utter_for_intent_with_movie_title
+  - intent: movie_title
+  - action: action_set_movie_title
+  - action: action_get_movie_playback_singer
+
+- story: Playback_Singer of Movie Without Title
+  steps:
+  - intent: get_playback_singer_without_movie_title
+  - action: utter_for_intent_without_movie_title
+  - intent: movie_title
+  - action: action_set_movie_title
+  - action: action_get_movie_playback_singer
+
+- story: Costume Designer of Movie With Title
+  steps:
+  - intent: get_costume_designer_with_movie_title
+  - action: utter_for_intent_with_movie_title
+  - intent: movie_title
+  - action: action_set_movie_title
+  - action: action_get_movie_costume_designer
+
+- story: Costume Designer of Movie Without Title
+  steps:
+  - intent: get_costume_designer_without_movie_title
+  - action: utter_for_intent_without_movie_title
+  - intent: movie_title
+  - action: action_set_movie_title
+  - action: action_get_movie_costume_designer
+
+- story: Writer of Movie With Title
+  steps:
+  - intent: get_writer_with_movie_title
+  - action: utter_for_intent_with_movie_title
+  - intent: movie_title
+  - action: action_set_movie_title
+  - action: action_get_movie_writer
+
+- story: Writer of Movie Without Title
+  steps:
+  - intent: get_writer_without_movie_title
+  - action: utter_for_intent_without_movie_title
+  - intent: movie_title
+  - action: action_set_movie_title
+  - action: action_get_movie_writer
+
+- story: Composer of Movie With Title
+  steps:
+  - intent: get_composer_with_movie_title
+  - action: utter_for_intent_with_movie_title
+  - intent: movie_title
+  - action: action_set_movie_title
+  - action: action_get_movie_composer
+
+- story: Composer of Movie Without Title
+  steps:
+  - intent: get_composer_without_movie_title
+  - action: utter_for_intent_without_movie_title
+  - intent: movie_title
+  - action: action_set_movie_title
+  - action: action_get_movie_composer
+
+- story: Choreographer of Movie With Title
+  steps:
+  - intent: get_choreographer_with_movie_title
+  - action: utter_for_intent_with_movie_title
+  - intent: movie_title
+  - action: action_set_movie_title
+  - action: action_get_movie_choreographer
+
+- story: Choreographer of Movie Without Title
+  steps:
+  - intent: get_choreographer_without_movie_title
+  - action: utter_for_intent_without_movie_title
+  - intent: movie_title
+  - action: action_set_movie_title
+  - action: action_get_movie_choreographer
+
+- story: Composer of Movie With Title
+  steps:
+  - intent: get_composer_with_movie_title
+  - action: utter_for_intent_with_movie_title
+  - intent: movie_title
+  - action: action_set_movie_title
+  - action: action_get_movie_composer
+
+- story: Composer of Movie Without Title
+  steps:
+  - intent: get_composer_without_movie_title
+  - action: utter_for_intent_without_movie_title
+  - intent: movie_title
+  - action: action_set_movie_title
+  - action: action_get_movie_composer
+
+- story: Editor of Movie With Title
+  steps:
+  - intent: get_editor_with_movie_title
+  - action: utter_for_intent_with_movie_title
+  - intent: movie_title
+  - action: action_set_movie_title
+  - action: action_get_movie_editor
+
+- story: Editor of Movie Without Title
+  steps:
+  - intent: get_editor_without_movie_title
+  - action: utter_for_intent_without_movie_title
+  - intent: movie_title
+  - action: action_set_movie_title
+  - action: action_get_movie_editor
+
+- story: Producer of Movie With Title
+  steps:
+  - intent: get_producer_with_movie_title
+  - action: utter_for_intent_with_movie_title
+  - intent: movie_title
+  - action: action_set_movie_title
+  - action: action_get_movie_producer
+
+- story: Producer of Movie Without Title
+  steps:
+  - intent: get_producer_without_movie_title
+  - action: utter_for_intent_without_movie_title
+  - intent: movie_title
+  - action: action_set_movie_title
+  - action: action_get_movie_producer
+
+- story: Whether Movie Is Released Or Not With Title
+  steps:
+  - intent: is_released_with_movie_title
+  - action: utter_for_intent_with_movie_title
+  - intent: movie_title
+  - action: action_set_movie_title
+  - action: action_is_released
+
+- story: Whether Movie Is Released Or Not Without Title
+  steps:
+  - intent: is_released_without_movie_title
+  - action: utter_for_intent_without_movie_title
+  - intent: movie_title
+  - action: action_set_movie_title
+  - action: action_is_released
+
+- story: Whether Movie Is Good Or Not With Title
+  steps:
+  - intent: is_good_with_movie_title
+  - action: utter_for_intent_with_movie_title
+  - intent: movie_title
+  - action: action_set_movie_title
+  - action: action_is_good_or_bad
+
+- story: Whether Movie Is Good Or Not Without Title
+  steps:
+  - intent: is_good_without_movie_title
+  - action: utter_for_intent_without_movie_title
+  - intent: movie_title
+  - action: action_set_movie_title
+  - action: action_is_good_or_bad
+
+- story: Whether Movie Is Bad Or Not With Title
+  steps:
+  - intent: is_bad_with_movie_title
+  - action: utter_for_intent_with_movie_title
+  - intent: movie_title
+  - action: action_set_movie_title
+  - action: action_is_good_or_bad
+
+- story: Whether Movie Is Bad Or Not Without Title
+  steps:
+  - intent: is_bad_without_movie_title
+  - action: utter_for_intent_without_movie_title
+  - intent: movie_title
+  - action: action_set_movie_title
+  - action: action_is_good_or_bad
+
+- story: Whether Movie Has Cast Or Not With Title And Name
+  steps:
+  - intent: whether_movie_has_cast_with_movie_title_and_cast_name
+  - action: utter_for_intent_with_movie_title
+  - intent: movie_title
+  - action: action_set_movie_title
+  - action: utter_for_intent_with_cast_name
+  - intent: cast_name
+  - action: action_set_movie_cast_name
+  - action: action_whether_movie_has_cast
+
+- story: Whether Movie Has Cast Or Not Without Title And Name
+  steps:
+  - intent: whether_movie_has_cast_without_movie_title_and_cast_name
+  - action: utter_for_intent_without_movie_title
+  - intent: movie_title
+  - action: action_set_movie_title
+  - action: utter_for_intent_without_cast_name
+  - intent: cast_name
+  - action: action_set_movie_cast_name
+  - action: action_whether_movie_has_cast
+
+- story: Whether Movie Directed By With Title And Name
+  steps:
+  - intent: is_director_with_movie_title_and_director_name
+  - action: utter_for_intent_with_movie_title
+  - intent: movie_title
+  - action: action_set_movie_title
+  - action: utter_for_intent_with_director_name
+  - intent: cast_name
+  - action: action_set_movie_cast_name
+  - action: action_whether_movie_has_director
+
+- story: Whether Movie Directed By Without Title And Name
+  steps:
+  - intent: is_director_without_movie_title_and_director_name
+  - action: utter_for_intent_without_movie_title
+  - intent: movie_title
+  - action: action_set_movie_title
+  - action: utter_for_intent_without_director_name
+  - intent: cast_name
+  - action: action_set_movie_cast_name
+  - action: action_whether_movie_has_director
+
+- story: Whether Genre Belongs To Movie With Title And Name
+  steps:
+  - intent: is_genre_belongs_with_movie_title_and_genre
+  - action: utter_for_intent_with_movie_title
+  - intent: movie_title
+  - action: action_set_movie_title
+  - action: utter_for_intent_with_genres
+  - intent: genre
+  - action: action_set_movie_genre
+  - action: action_whether_movie_has_genre
+
+- story: Whether Genre Belongs To Movie Without Title And Name
+  steps:
+  - intent: is_genre_belongs_without_movie_title_and_genre
+  - action: utter_for_intent_without_movie_title
+  - intent: movie_title
+  - action: action_set_movie_title
+  - action: utter_for_intent_without_genres
+  - intent: genre
+  - action: action_set_movie_genre
+  - action: action_whether_movie_has_genre
+
+- story: About Cast Or Crew With cast Or Crew Name
+  steps:
+  - intent: about_cast_or_crew_with_cast_or_crew_name
+  - action: utter_for_intent_with_cast_name
+  - intent: cast_name
+  - action: action_set_movie_cast_name
+  - action: action_details_of_cast_n_crew
+
+- story: About Cast Or Crew Without cast Or Crew Name
+  steps:
+  - intent: about_cast_or_crew_without_cast_or_crew_name
+  - action: utter_for_intent_without_cast_name
+  - intent: cast_name
+  - action: action_set_movie_cast_name
+  - action: action_details_of_cast_n_crew
+
+- story: Movie Related To Cast Or Crew With cast Or Crew Name
+  steps:
+  - intent: movie_related_with_cast_or_crew_with_cast_or_crew_name
+  - action: utter_for_intent_with_cast_name
+  - intent: cast_name
+  - action: action_set_movie_cast_name
+  - action: action_details_of_cast_n_crew
+
+- story: Movie Related To Cast Or Crew Without cast Or Crew Name
+  steps:
+  - intent: movie_related_with_cast_or_crew_without_cast_or_crew_name
+  - action: utter_for_intent_without_cast_name
+  - intent: cast_name
+  - action: action_set_movie_cast_name
+  - action: action_details_of_cast_n_crew

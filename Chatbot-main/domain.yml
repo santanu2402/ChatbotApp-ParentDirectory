@@ -1,0 +1,206 @@
+version: "3.1"
+
+intents:
+  - cast_name
+  - genre
+  - movie_title
+  - get_director_with_movie_title
+  - get_director_without_movie_title
+  - get_overview_with_movie_title
+  - get_overview_without_movie_title
+  - get_genres_with_movie_title
+  - get_genres_without_movie_title
+  - get_rating_with_movie_title
+  - get_rating_without_movie_title
+  - get_released_date_with_movie_title
+  - get_released_date_without_movie_title
+  - get_released_status_with_movie_title
+  - get_released_status_without_movie_title
+  - get_runtime_with_movie_title
+  - get_runtime_without_movie_title
+  - get_budget_with_movie_title
+  - get_budget_without_movie_title
+  - get_revenue_with_movie_title
+  - get_revenue_without_movie_title
+  - get_country_of_origin_with_movie_title
+  - get_country_of_origin_without_movie_title
+  - get_language_spoken_with_movie_title
+  - get_language_spoken_without_movie_title
+  - get_cast_with_movie_title
+  - get_cast_without_movie_title
+  - get_production_company_with_movie_title
+  - get_production_company_without_movie_title
+  - get_playback_singer_with_movie_title
+  - get_playback_singer_without_movie_title
+  - get_costume_designer_with_movie_title
+  - get_costume_designer_without_movie_title
+  - get_writer_with_movie_title
+  - get_writer_without_movie_title
+  - get_composer_with_movie_title
+  - get_composer_without_movie_title
+  - get_choreographer_with_movie_title
+  - get_choreographer_without_movie_title
+  - get_editor_with_movie_title
+  - get_editor_without_movie_title
+  - get_producer_with_movie_title
+  - get_producer_without_movie_title
+  - is_released_with_movie_title
+  - is_released_without_movie_title
+  - is_good_with_movie_title
+  - is_good_without_movie_title
+  - is_bad_with_movie_title
+  - is_bad_without_movie_title
+  - whether_movie_has_cast_with_movie_title_and_cast_name
+  - whether_movie_has_cast_without_movie_title_and_cast_name
+  - is_director_with_movie_title_and_director_name
+  - is_director_without_movie_title_and_director_name
+  - is_genre_belongs_with_movie_title_and_genre
+  - is_genre_belongs_without_movie_title_and_genre
+  - about_cast_or_crew_with_cast_or_crew_name
+  - about_cast_or_crew_without_cast_or_crew_name
+  - movie_related_with_cast_or_crew_with_cast_or_crew_name
+  - movie_related_with_cast_or_crew_without_cast_or_crew_name
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - introduce_bot
+  - general_question
+  - user_query
+  - thanks
+  - is_bot
+  - ask_for_help
+  - unknown
+  - bot_capabilities
+  - bot_name
+  - negative_feedback
+  - positive_feedback
+  - bot_inventor
+
+actions:
+  - action_set_movie_title
+  - action_get_movie_director
+  - action_get_movie_overview
+  - action_get_movie_genres
+  - action_get_movie_rating
+  - action_get_movie_released_date
+  - action_get_movie_released_status
+  - action_get_movie_runtime
+  - action_get_movie_budget
+  - action_get_movie_revenue
+  - action_get_movie_country_of_origin
+  - action_get_movie_language_spoken
+  - action_get_movie_cast
+  - action_get_movie_production_company
+  - action_get_movie_playback_singer
+  - action_get_movie_costume_designer
+  - action_get_movie_writer
+  - action_get_movie_composer
+  - action_get_movie_choreographer
+  - action_get_movie_editor
+  - action_get_movie_producer
+  - action_is_released
+  - action_is_good_or_bad
+  - action_set_movie_cast_name
+  - action_whether_movie_has_cast
+  - action_whether_movie_has_director
+  - action_set_movie_genre
+  - action_whether_movie_has_genre
+  - action_details_of_cast_n_crew
+  - action_introduce_bot
+  - respond_to_general_question
+  - respond_to_user_query
+  - utter_you_are_welcome
+  - utter_iamabot
+  - utter_help
+  - utter_unknown
+  - utter_bot_capabilities
+  - action_handle_negative_feedback
+  - action_acknowledge_positive_feedback
+
+slots:
+  movie_title:
+    type: any
+    mappings:
+      - type: from_text
+  cast_name:
+    type: any
+    mappings:
+      - type: from_text
+  genre:
+    type: any
+    mappings:
+      - type: from_text
+
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  utter_bot_challenge:
+  - text: "I am a virtual assistant created by CinePulse Team. I cannot prove I'm human because I'm a machine, but I can provide information on Movies."
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+  utter_you_are_welcome:
+  - text: "You're welcome!"
+
+  utter_help:
+  - text: "Sure, I'm here to help. What do you need assistance with?"
+
+  utter_unknown:
+  - text: "I'm not sure I understand. Can you please rephrase or ask another question?"
+
+  utter_bot_capabilities:
+  - text: "I am Cinepulse Bot, a powerful movie-specialized chatbot powered by TMDb API. Feel free to ask about my capabilities or anything else!"
+
+  utter_name:
+  - text: "I am a bot, and my name is CinePulse Bot."
+
+  utter_bot_inventor:
+  - text: "I was created by the amazing CinePulse team [Santanu, Ansuka,and Isshita]."
+
+  utter_for_intent_with_movie_title:
+  - text: "Could you kindly provide the Movie Title once more?"
+
+  utter_for_intent_without_movie_title:
+  - text: "I'd appreciate it if you could please enter the Movie Title."
+
+  utter_for_intent_with_cast_name:
+  - text: "Could you kindly provide the Cast Title once more?"
+
+  utter_for_intent_without_cast_name:
+  - text: "I'd appreciate it if you could please enter the Cast Title."
+
+  utter_for_intent_with_director_name:
+  - text: "Could you kindly provide the Director Name once more?"
+
+  utter_for_intent_without_director_name:
+  - text: "I'd appreciate it if you could please enter Director Name."
+
+  utter_for_intent_with_genres:
+  - text: "Could you kindly provide the Genres once more? [Please note that Cinepulse only supports the following genres: Action, Adventure, Animation, Comedy, Crime, Documentary, Drama, Family, Fantasy, History, Horror, Music, Mystery, Romance, Science Fiction, TV Movie, Thriller, War, Western]"
+
+  utter_for_intent_without_genres :
+  - text: "I'd appreciate it if you could please enter the Genres. [Please note that Cinepulse only supports the following genres: Action, Adventure, Animation, Comedy, Crime, Documentary, Drama, Family, Fantasy, History, Horror, Music, Mystery, Romance, Science Fiction, TV Movie, Thriller, War, Western]"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
