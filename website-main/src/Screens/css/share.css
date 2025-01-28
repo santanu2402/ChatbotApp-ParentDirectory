@@ -1,0 +1,39 @@
+.middle {
+    margin: 0 auto;
+}
+
+
+.container {
+    background-color: #00061A;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.middle {
+    background-color: #00061A;
+    width: 90vw;
+    max-width: 600px;
+    padding: 20px;
+    text-align: center;
+}
+
+.animation {
+    margin-top: 10px;
+    width: 100%;
+    height: auto;
+}
+
+.message {
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+@media (max-width: 600px) {
+    .middle {
+        width: 95vw;
+    }
+}

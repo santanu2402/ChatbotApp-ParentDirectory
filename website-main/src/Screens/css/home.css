@@ -1,0 +1,36 @@
+.homenavitems{
+    text-decoration: none;
+    transition: color 0.3s;
+}
+.homenavitems:hover{
+    color: #FFD601;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+div h1{
+        font-weight: bold!important;;
+        letter-spacing: 5px!important;
+        overflow: hidden;
+        border-right: 2px solid hsl(0, 0%, 80%);
+        white-space: nowrap;
+        animation: typewriter 4s steps(44) 1s 1 normal both,
+          blinkTextCursor 500ms infinite;
+}
+
+@keyframes typewriter {
+    from {
+      width: 0;
+    }
+    to {
+      width: 450px;
+    }
+  }
+  @keyframes blinkTextCursor {
+    from {
+      border-right-color: hsl(0, 0%, 80%);
+    }
+    to {
+      border-right-color: transparent;
+    }
+  }

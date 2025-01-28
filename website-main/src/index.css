@@ -1,0 +1,85 @@
+/* body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+} */
+
+
+* {
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scrollbar-width: none;
+}
+
+.roboto-regular {
+  font-weight: 400;
+  font-style: normal;
+}
+
+.roboto-medium {
+  font-weight: 500;
+  font-style: normal;
+}
+
+.roboto-bold {
+  font-weight: 700;
+  font-style: normal;
+}
+
+.roboto-black {
+  font-weight: 900;
+  font-style: normal;
+}
+
+.colorprimaryDarkOrange {
+  color: #FF4F01;
+}
+
+.colorsecondaryDarkYellow {
+  color: #FFD601;
+}
+
+.bkgrndcolorprimaryDarkOrange {
+  background-color: #FF4F01;
+}
+
+.bkgrndcolorsecondaryDarkYellow {
+  background-color: #FFD601;
+}
+
+.darkBackground {
+  background-color: #00061A;
+}
+
+.lightBackground {
+  background-color: #F8F9F9;
+}
+
+.darkText1 {
+  color: #303740;
+}
+
+.darkText2 {
+  color: #434D5B;
+}
+
+.lightText1 {
+  color: #F3F6F9;
+}
+
+.lightText2 {
+  color: #E5EAF2;
+}

@@ -1,0 +1,1 @@
+export const serverlink="https://cinepulse-server.onrender.com/cinepulse/api/user/web";
